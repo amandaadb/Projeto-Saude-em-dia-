@@ -29,8 +29,11 @@ def health():
     return {"status": "online"}
 
 # Rotas.
-from routes import auth
+from routes import auth # Autenticação.
 app.include_router(auth.router, prefix="/api/auth")
+
+from routes import medicines # Medicamentos.
+app.include_router(medicines.router, prefix="/api/medicines")
 
 # Executar a API.
 if __name__ == "__main__":
