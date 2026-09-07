@@ -1,12 +1,14 @@
 from fastapi import APIRouter, HTTPException, Depends
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from datetime import datetime, timedelta
 import jwt
 import bcrypt
 from config import settings
-from database import get_user_by_email, get_user_by_id, insert_user
-from models import UserCreate, UserLogin, UserResponse, TokenResponse
+from database import get_user_by_email, get_user_by_id, insert_user, update_user, delete_user
+from models import UserCreate, UserLogin, UserUpdate, UserResponse, TokenResponse
 
 router = APIRouter()
+security = HTTPBearer()
 
 # Funções auxiliares para autenticação e segurança.
 def hash_password(password: str) -> str:
@@ -39,17 +41,10 @@ def verify_token(token: str) -> str:
     except jwt.InvalidTokenError:
         raise HTTPException(status_code=401, detail="Token inválido.") # Verifica se o token é inválido.
 
-def get_current_user(authorization: str = None) -> str:
-    """Pega o usuário a partir do token no header."""
-    if not authorization:
-        raise HTTPException(status_code=401, detail="Token não fornecido.") # Verifica se o token está preenchido.
-    try:
-        scheme, token = authorization.split()
-        if scheme.lower() != "bearer":
-            raise HTTPException(status_code=401, detail="Tipo de autenticação inválido") # Verifica se o tipo de autenticação é Bearer.
-        return verify_token(token) # Verifica se o token é válido e retorna o ID do usuário.
-    except ValueError:
-        raise HTTPException(status_code=401, detail="Formato de token inválido")
+def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security)) -> str:
+    """Pega o usuário a partir do token JWT."""
+    token = credentials.credentials
+    return verify_token(token)
 
 # Rotas.
 @router.post("/register", response_model=TokenResponse, tags=["Auth"])
@@ -81,21 +76,43 @@ def login(user: UserLogin):
     return {"access_token": access_token, "token_type": "bearer"}  #  Retorna token de acesso e tipo do token (Bearer).
 
 @router.get("/me", response_model=UserResponse, tags=["Auth"])
-def get_current_user_info(authorization: str = None):
+def get_current_user_info(user_id: str = Depends(get_current_user)):
     """Ver dados do usuário logado."""
-    user_id = get_current_user(authorization) # Verifica token e pega ID do usuário.
     user = get_user_by_id(user_id) # Busca usuário no banco de dados.
     if not user:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.") # Verifica se o usuário existe no banco de dados.
     return user
 
+@router.put("/me", response_model=UserResponse, tags=["Auth"])
+def update_current_user(user_update: UserUpdate, user_id: str = Depends(get_current_user)):
+    """Atualizar dados do usuário logado."""
+    current_user = get_user_by_id(user_id) # Busca usuário no banco de dados.
+    if not current_user:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado.") # Verifica se o usuário existe no banco de dados.
+    if user_update.email and user_update.email != current_user["email"]:
+        existing_user = get_user_by_email(user_update.email) # Verifica se email já existe.
+        if existing_user and existing_user["id"] != user_id:
+            raise HTTPException(status_code=400, detail="Email já cadastrado.") # Verifica se o email já está cadastrado no banco de dados.
+
+    password_hash = None
+    if user_update.password:
+        password_hash = hash_password(user_update.password) # Criptografa a nova senha.
+    updated_user = update_user(
+        user_id=user_id,
+        email=user_update.email,
+        name=user_update.name,
+        password_hash=password_hash
+    )
+    if not updated_user:
+        raise HTTPException(status_code=500, detail="Erro ao atualizar usuário.")
+    return updated_user
+
 @router.delete("/delete-account", tags=["Auth"])
-def delete_account(authorization: str = None):
+def delete_account(user_id: str = Depends(get_current_user)):
     """Deletar conta do usuário."""
-    user_id = get_current_user(authorization) # Verifica token e pega ID do usuário.
-    
-    # TODO: Implementar soft delete no banco
-    # Por enquanto, retorna sucesso
+    deleted_user = delete_user(user_id)
+    if not deleted_user:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado.")
     return {"mensagem": "Conta deletada com sucesso."}
 
 @router.post("/logout", tags=["Auth"])

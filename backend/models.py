@@ -14,6 +14,12 @@ class UserLogin(BaseModel):
     email: EmailStr # Email (obrigatório e validado).
     password: str # Senha (obrigatório).
 
+class UserUpdate(BaseModel):
+    """Dados para atualizar o usuário."""
+    email: Optional[EmailStr] = None # Email.
+    name: Optional[str] = None # Nome.
+    password: Optional[str] = None # Senha.
+
 class UserResponse(BaseModel):
     """Dados retornados do usuário (sem senha)"""
     id: str # ID do usuário.
