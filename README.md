@@ -11,7 +11,7 @@ Familiares e cuidadores: Pessoas responsáveis por gerenciar, organizar e acompa
 
 # MedControl
 
-(Fazer uma logo)
+*Fazer logo*
 
 *Cores do aplicativo:*
 
@@ -125,15 +125,15 @@ Podemos enviar uma notificação
 
 # Funcionalidades extras
 
-Reconhecimento por voz: o usuário pode dizer “Copilot, tomei meu remédio” e o app registra (Acho que é pago, peguei de exemplo o app da onde eu trabalho)
+*Reconhecimento por voz:* o usuário pode dizer “Copilot, tomei meu remédio” e o app registra (Acho que é pago, peguei de exemplo o app da onde eu trabalho)
 
-Modo cuidador inteligente: envia alertas automáticos se o paciente não confirmar a dose
+*Modo cuidador inteligente:* envia alertas automáticos se o paciente não confirmar a dose
 
-Integração com calendário médico (Google, Microsoft etc): sincroniza consultas e exames no calendário pessoal do usuário
+*Integração com calendário médico (Google, Microsoft etc):* sincroniza consultas e exames no calendário pessoal do usuário
 
-Relatórios exportáveis: PDF com adesão ao tratamento para levar ao médico (Algo mais simples mesmo, não precisa ser cheio de detalhes)
+*Relatórios exportáveis:* PDF com adesão ao tratamento para levar ao médico (Algo mais simples mesmo, não precisa ser cheio de detalhes)
 
-Modo offline: lembretes funcionam mesmo sem internet
+*Modo offline:* lembretes funcionam mesmo sem internet
 
 # Acessibilidade aprimorada
 
