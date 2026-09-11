@@ -1,3 +1,7 @@
+# CHANGELOG 11-09-26
+README.md atualizado com mais informações gerais do projeto.
+Criados UI-UX.md, COMPONENTS.md e SUPPORT.md.
+
 # CHANGELOG 10-09-26
 README.md atualizado com mais informações gerais do projeto, incluindo as telas e funcionalidades do aplicativo.
 
