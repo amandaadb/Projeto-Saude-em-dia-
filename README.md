@@ -1,6 +1,18 @@
 # Projeto-Saude-em-dia-
 O Medcontrol é um aplicativo desenvolvido com o objetivo de ajudar os usuários a organizar medicamentos, horários, consultas e tratamentos, reduzindo o risco de esquecimentos ou de uso fora do horário recomendado.
 
+## 👥 Equipe
+
+| RA | Integrante |
+| :--- | :--- |
+| `3024104773` | Amanda Dias Barreto |
+| `3024100161` | Daniela Rosa |
+| `3024103168` | Gabriel Cruz Sanchez |
+| `3024105062` | Guilherme Alves Galeano |
+| `3024103605` | Luana Marcelino Andrade |
+| `3024107159` | Lucas Gomes Barboza |
+| `3024106574` | Renan Abeu Cerqueira de Lima |
+
 # Para quem este aplicativo é voltado?
 
 O Medcontrol é um aplicativo voltado para o público geral, com foco na gestão da saúde e no acompanhamento de tratamentos contínuos. O nosso público-alvo principal inclui:
