@@ -7,52 +7,178 @@ O Medcontrol é um app voltado a um público geral com foco em saúde, e gerenci
 -Pessoas com tratamentos contínuos;  
 -Familiares/cuidadores que acompanham outra pessoa.  
 
-# -📱 Funcionalidades principais-
-*Cadastro de medicamentos*  
-Nome do medicamento;  
-Dosagem;  
-Quantidade;  
-Forma de uso;  
-Observações.
+# MedControl
 
-*Horários, O usuário informa, por exemplo:*  
-💊 Losartana 50 mg  
-⏰ 08:00 e 20:00  
-📅 Todos os dias  
-Com uma integração com o app de Agendas do Google, o Medcontrol disponibiliza os horários e os define automaticamente.
+(Fazer uma logo)
 
-*🔔 Lembretes de Notificação:*  
-💊 Hora do medicamento!  
-Losartana 50 mg — 1 comprimido.  
-O usuário pode marcar:  
-✅ Tomei  
-⏰ Lembrar depois  
-❌ Não tomei  
+*Cores do aplicativo*
 
-*📊 Histórico, Mostrar o que aconteceu durante o tratamento:*  
--Segunda-  
-✅ 08:00 — Tomado  
-✅ 20:00 — Tomado  
--Terça-  
-✅ 08:00 — Tomado  
-❌ 20:00 — Não tomado  
-O histórico auxilia o usuário a manter-se atualizado com o seu tratamento.  
+Azul = Calma / Confiável: #6A89A7, #BDDDFC, #88BDF2, #384959.
 
-*📦 Controle de estoque*  
-O usuário cadastra:
-Quantidade inicial: 60 comprimidos  
-2 comprimidos/dia  
-O app estima quando o medicamento vai acabar e avisa:
-⚠️ Seu medicamento provavelmente acabará em 5 dias.
+Verde = Frescor / Bem‑estar: #80EF80, #E3F0A3, #BADBA2, #42D674.
 
-*Perfil de Cuidador*  
-O usuário pode adicionar um familiar/cuidador para acompanhar o tratamento.  
-Por exemplo:
-Amanda  
-💊 08:00 — Tomou ✅  
-💊 14:00 — Tomou ✅  
-💊 20:00 — Não registrado  
-Essa funcionalidade permite que familiares e cuidadores possam acompanhar o tratamento do usuário.
+# Tela inicial
 
-# Nosso Diferencial
-O App Medcontrol vai além de um aplicativo de alarmes de remédio. O seu foco e objetivo é ser um app totalmente voltado ao gerenciamento de tratamentos continuos. 
+Exemplo:
+
+Bom dia, Maria!
+
+Próximo medicamento
+
+💊 Losartana 50 mg
+1 comprimido
+Hoje às 08:00
+
+[ ✅ Tomei ]
+
+[ ⏰ Lembrar depois ]
+
+[ ❌ Não tomei ]
+
+# Resumo do dia
+
+Hoje
+
+✅ 08:00 — Losartana
+✅ 14:00 — Dipirona
+⏰ 20:00 — Losartana
+
+Medicamentos: 2 de 3 tomados
+
+# Menu principal
+
+Navegação:
+
+Início | Medicamentos | Histórico | Consultas | Perfil
+
+🏠 Início
+💊 Medicamentos
+📊 Histórico
+📅 Consultas
+👤 Perfil
+
+E manter o menu inferior sempre visível (Exemplo o Duolingo, Instagram ou Clash Royale)
+
+# Tela de histórico
+
+Histórico
+
+Segunda-feira
+
+✅ 08:00 — Losartana — Tomado
+✅ 20:00 — Losartana — Tomado
+
+Terça-feira
+
+✅ 08:00 — Losartana — Tomado
+❌ 20:00 — Losartana — Não tomado
+
+Quarta-feira
+
+✅ 08:00 — Losartana — Tomado
+⏰ 20:00 — Aguardando
+
+# Controle de estoque
+
+Cadastro de medicamento: assistente guiado passo a passo
+
+Estoque
+
+💊 Losartana 50 mg
+
+Quantidade atual:
+
+32 comprimidos
+
+Consumo:
+
+2 por dia
+
+Previsão:
+
+16 dias
+
+⚠️ Seu medicamento pode acabar em aproximadamente 16 dias.
+
+Podemos enviar uma notificação
+
+[ Configurar alerta ]
+
+# Consultas e receitas
+
+Próxima consulta
+
+📅 18 de setembro
+🕐 14:30
+🏥 Cardiologista
+
+Lembrar-me:
+○ 1 dia antes
+○ 2 horas antes
+
+Receita
+
+💊 Losartana 50 mg
+Renovação prevista: 25/09
+
+# Funcionalidades extras
+
+Reconhecimento por voz: o usuário pode dizer “Copilot, tomei meu remédio” e o app registra (Acho que é pago, peguei de exemplo o app da onde eu trabalho)
+
+Modo cuidador inteligente: envia alertas automáticos se o paciente não confirmar a dose
+
+Integração com calendário médico (Google, Microsoft etc): sincroniza consultas e exames no calendário pessoal do usuário
+
+Relatórios exportáveis: PDF com adesão ao tratamento para levar ao médico (Algo mais simples mesmo, não precisa ser cheio de detalhes)
+
+Modo offline: lembretes funcionam mesmo sem internet
+
+# Acessibilidade aprimorada
+
+Botões grandes e ícones intuitivos (💊, ⏰, ✅)
+
+Modo “alto contraste” e “texto ampliado” (Ou já deixar por padrão aplicado)
+
+Tutorial inicial com voz explicando cada função
+
+Feedback sonoro suave para confirmar ações
+
+# Recompensas
+
+Medalhas por adesão (“7 dias sem esquecer!”)
+
+Ranking pessoal de consistência (Exemplo sequência do Duolingo)
+
+Recompensas simbólicas (ex.: “Você está cuidando bem da sua saúde!”)
+
+# Fluxo
+
+                    ABRIR APP
+                        ↓
+                  LOGIN / CADASTRO
+                        ↓
+                 CONFIGURAR PERFIL
+                        ↓
+               ADICIONAR MEDICAMENTO
+                        ↓
+                       Nome
+                      Dosagem
+                     Quantidade
+                    Forma de uso
+                      Horários
+                         ↓
+                       SALVAR
+                         ↓
+             MEDCONTROL GERA OS HORÁRIOS
+                         ↓
+                    NOTIFICAÇÃO
+                         ↓
+               "Hora do medicamento!"
+                         ↓
+┌──────────────┬──────────────────┬────────────────┐
+│   ✅ Tomei   │ ⏰ Lembrar depois │ ❌ Não tomei │
+└──────────────┴──────────────────┴────────────────┘
+                         ↓
+                     HISTÓRICO
+                         ↓
+                   ACOMPANHAMENTO
