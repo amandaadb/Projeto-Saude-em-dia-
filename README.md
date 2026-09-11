@@ -1,5 +1,5 @@
 # Projeto-Saude-em-dia-
-O App Medcontrol é uma aplicação desenvolvida com objetivo de ajudar usuários a organizar medicamentos, horários, consultas e tratamentos, reduzindo o risco de esquecer doses ou tomar medicamentos fora do horário.
+O Medcontrol é um aplicativo desenvolvido com o objetivo de ajudar os usuários a organizar medicamentos, horários, consultas e tratamentos, reduzindo o risco de esquecimentos ou de uso fora do horário recomendado.
 
 # Para quem este aplicativo é voltado?
 
@@ -13,7 +13,7 @@ Familiares e cuidadores: Pessoas responsáveis por gerenciar, organizar e acompa
 
 (Fazer uma logo)
 
-*Cores do aplicativo*
+*Cores do aplicativo:*
 
 Azul = Calma / Confiável: #6A89A7, #BDDDFC, #88BDF2, #384959.
 
@@ -23,105 +23,105 @@ Verde = Frescor / Bem‑estar: #80EF80, #E3F0A3, #BADBA2, #42D674.
 
 Exemplo:
 
-                                       Bom dia, Maria!
+                                                            Bom dia, Maria!
 
-                                     Próximo medicamento
+                                                          Próximo medicamento
 
-                                     💊 Losartana 50 mg
-                                        1 comprimido
-                                        Hoje às 08:00
+                                                         💊 Losartana 50 mg
+                                                             1 comprimido
+                                                             Hoje às 08:00
 
-                                        [ ✅ Tomei ]
+                                                             [ ✅ Tomei ]
 
-                                   [ ⏰ Lembrar depois ]
+                                                        [ ⏰ Lembrar depois ]
 
-                                      [ ❌ Não tomei ]
+                                                           [ ❌ Não tomei ]
 
 # Resumo do dia
 
-                                           Hoje
+                                                                 Hoje
 
-                                    ✅ 08:00 — Losartana
-                                    ✅ 14:00 — Dipirona
-                                    ⏰ 20:00 — Losartana
+                                                        ✅ 08:00 — Losartana
+                                                        ✅ 14:00 — Dipirona
+                                                        ⏰ 20:00 — Losartana
 
-                                  Medicamentos: 2 de 3 tomados
+                                                     Medicamentos: 2 de 3 tomados
 
 # Menu principal
 
 Navegação:
 
-Início | Medicamentos | Histórico | Consultas | Perfil
+                                        Início | Medicamentos | Histórico | Consultas | Perfil
 
-🏠 Início
-💊 Medicamentos
-📊 Histórico
-📅 Consultas
-👤 Perfil
+                                                            🏠 Início
+                                                         💊 Medicamentos
+                                                           📊 Histórico
+                                                           📅 Consultas
+                                                            👤 Perfil
 
-E manter o menu inferior sempre visível (Exemplo o Duolingo, Instagram ou Clash Royale)
+Manter o menu inferior sempre visível (Exemplo o Duolingo, Instagram ou Clash Royale)
 
 # Tela de histórico
 
-Histórico
+                                                             Histórico
 
-Segunda-feira
+                                                           Segunda-feira
 
-✅ 08:00 — Losartana — Tomado
-✅ 20:00 — Losartana — Tomado
+                                                  ✅ 08:00 — Losartana — Tomado
+                                                  ✅ 20:00 — Losartana — Tomado
 
-Terça-feira
+                                                            Terça-feira
 
-✅ 08:00 — Losartana — Tomado
-❌ 20:00 — Losartana — Não tomado
-
-Quarta-feira
-
-✅ 08:00 — Losartana — Tomado
-⏰ 20:00 — Aguardando
+                                                  ✅ 08:00 — Losartana — Tomado
+                                                  ❌ 20:00 — Losartana — Não tomado
+ 
+                                                            Quarta-feira
+ 
+                                                  ✅ 08:00 — Losartana — Tomado
+                                                  ⏰ 20:00 — Aguardando
 
 # Controle de estoque
 
 Cadastro de medicamento: assistente guiado passo a passo
 
-Estoque
+                                                               Estoque
 
-💊 Losartana 50 mg
+                                                         💊 Losartana 50 mg
 
-Quantidade atual:
+                                                           Quantidade atual:
 
-32 comprimidos
+                                                            32 comprimidos
 
-Consumo:
+                                                               Consumo:
 
-2 por dia
+                                                              2 por dia
 
-Previsão:
+                                                               Previsão:
 
-16 dias
+                                                               16 dias
 
-⚠️ Seu medicamento pode acabar em aproximadamente 16 dias.
+                                      ⚠️ Seu medicamento pode acabar em aproximadamente 16 dias.
 
 Podemos enviar uma notificação
 
-[ Configurar alerta ]
+                                                        [ Configurar alerta ]
 
 # Consultas e receitas
 
-Próxima consulta
+                                                           Próxima consulta
 
-📅 18 de setembro
-🕐 14:30
-🏥 Cardiologista
+                                                          📅 18 de setembro
+                                                              🕐 14:30
+                                                          🏥 Cardiologista
 
-Lembrar-me:
-○ 1 dia antes
-○ 2 horas antes
+                                                             Lembrar-me:
+                                                             1 dia antes
+                                                             2 horas antes
 
-Receita
+                                                               Receita
 
-💊 Losartana 50 mg
-Renovação prevista: 25/09
+                                                         💊 Losartana 50 mg
+                                                      Renovação prevista: 25/09
 
 # Funcionalidades extras
 
