@@ -153,32 +153,32 @@ Recompensas simbólicas (ex.: “Você está cuidando bem da sua saúde!”)
 
 # Fluxo
 
-                    ABRIR APP
-                        ↓
-                  LOGIN / CADASTRO
-                        ↓
-                 CONFIGURAR PERFIL
-                        ↓
-               ADICIONAR MEDICAMENTO
-                        ↓
-                       Nome
-                      Dosagem
-                     Quantidade
-                    Forma de uso
-                      Horários
-                         ↓
-                       SALVAR
-                         ↓
-             MEDCONTROL GERA OS HORÁRIOS
-                         ↓
-                    NOTIFICAÇÃO
-                         ↓
-               "Hora do medicamento!"
-                         ↓
-            ┌──────────────┬──────────────────┬────────────────┐
-            │   ✅ Tomei   │ ⏰ Lembrar depois │ ❌ Não tomei │
-            └──────────────┴──────────────────┴────────────────┘
-                         ↓
-                     HISTÓRICO
-                         ↓
-                   ACOMPANHAMENTO
+                                                  ABRIR APP
+                                                      ↓
+                                               LOGIN / CADASTRO
+                                                      ↓
+                                              CONFIGURAR PERFIL
+                                                      ↓
+                                            ADICIONAR MEDICAMENTO
+                                                      ↓
+                                                     Nome
+                                                   Dosagem
+                                                  Quantidade
+                                                 Forma de uso
+                                                   Horários
+                                                      ↓
+                                                   SALVAR
+                                                      ↓
+                                         MEDCONTROL GERA OS HORÁRIOS
+                                                      ↓
+                                                 NOTIFICAÇÃO
+                                                      ↓
+                                           "Hora do medicamento!"
+                                                      ↓
+                             ┌──────────────┬──────────────────┬────────────────┐
+                             │   ✅ Tomei   │ ⏰ Lembrar depois │ ❌ Não tomei │
+                             └──────────────┴──────────────────┴────────────────┘
+                                                      ↓
+                                                  HISTÓRICO
+                                                      ↓
+                                               ACOMPANHAMENTO
