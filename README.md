@@ -19,6 +19,8 @@ Azul = Calma / Confiável: #6A89A7, #BDDDFC, #88BDF2, #384959.
 
 Verde = Frescor / Bem‑estar: #80EF80, #E3F0A3, #BADBA2, #42D674.
 
+Rosa = Acolhimento / Cuidado: #FAD2E1, #F8B4CD, #E06D95, #7D2845.
+
 # Tela inicial
 
 Exemplo:
@@ -59,7 +61,7 @@ Navegação:
                                                            📅 Consultas
                                                             👤 Perfil
 
-Manter o menu inferior sempre visível (Exemplo o Duolingo, Instagram ou Clash Royale)
+Manter o menu inferior sempre visível (Exemplo Duolingo, Instagram ou Clash Royale)
 
 # Tela de histórico
 
@@ -135,7 +137,7 @@ Podemos enviar uma notificação
 
 *Modo offline:* lembretes funcionam mesmo sem internet
 
-# Acessibilidade aprimorada
+# Acessibilidade
 
 Botões grandes e ícones intuitivos (💊, ⏰, ✅)
 
@@ -155,32 +157,32 @@ Recompensas simbólicas (ex.: “Você está cuidando bem da sua saúde!”)
 
 # Fluxo
 
-                                                                   ABRIR APP
-                                                                       ↓
-                                                                LOGIN / CADASTRO
-                                                                       ↓
-                                                               CONFIGURAR PERFIL
-                                                                       ↓
-                                                             ADICIONAR MEDICAMENTO
-                                                                       ↓
-                                                                      Nome
-                                                                    Dosagem
-                                                                   Quantidade
-                                                                  Forma de uso
-                                                                    Horários
-                                                                       ↓
-                                                                    SALVAR
-                                                                       ↓
-                                                          MEDCONTROL GERA OS HORÁRIOS
-                                                                       ↓
-                                                                  NOTIFICAÇÃO
-                                                                       ↓
-                                                            "Hora do medicamento!"
-                                                                       ↓
-                                              ┌──────────────┬──────────────────┬────────────────┐
-                                              │   ✅ Tomei   │ ⏰ Lembrar depois │ ❌ Não tomei │
-                                              └──────────────┴──────────────────┴────────────────┘
-                                                                       ↓
-                                                                   HISTÓRICO
-                                                                       ↓
-                                                                ACOMPANHAMENTO
+                                                           ABRIR APP
+                                                               ↓
+                                                        LOGIN / CADASTRO
+                                                               ↓
+                                                       CONFIGURAR PERFIL
+                                                               ↓
+                                                      ADICIONAR MEDICAMENTO
+                                                               ↓
+                                                              Nome
+                                                            Dosagem
+                                                           Quantidade
+                                                          Forma de uso
+                                                             Horários
+                                                               ↓
+                                                             SALVAR
+                                                               ↓
+                                                   MEDCONTROL GERA OS HORÁRIOS
+                                                               ↓
+                                                           NOTIFICAÇÃO
+                                                               ↓
+                                                     "Hora do medicamento!"
+                                                               ↓
+                                      ┌──────────────┬──────────────────┬────────────────┐
+                                      │   ✅ Tomei   │ ⏰ Lembrar depois │ ❌ Não tomei │
+                                      └──────────────┴──────────────────┴────────────────┘
+                                                               ↓
+                                                           HISTÓRICO
+                                                               ↓
+                                                        ACOMPANHAMENTO
