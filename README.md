@@ -175,9 +175,9 @@ Recompensas simbólicas (ex.: “Você está cuidando bem da sua saúde!”)
                          ↓
                "Hora do medicamento!"
                          ↓
-┌──────────────┬──────────────────┬────────────────┐
-│   ✅ Tomei   │ ⏰ Lembrar depois │ ❌ Não tomei │
-└──────────────┴──────────────────┴────────────────┘
+            ┌──────────────┬──────────────────┬────────────────┐
+            │   ✅ Tomei   │ ⏰ Lembrar depois │ ❌ Não tomei │
+            └──────────────┴──────────────────┴────────────────┘
                          ↓
                      HISTÓRICO
                          ↓
