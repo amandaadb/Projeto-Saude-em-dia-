@@ -1,5 +1,8 @@
+# CHANGELOG 10-09-26
+README.md atualizado com mais informações gerais do projeto, incluindo as telas e funcionalidades do aplicativo.
+
 # CHANGELOG 09-09-26
-README.MD atualizado com informações gerais do projeto.  
+README.md atualizado com informações gerais do projeto.  
 
 # CHANGELOG 07-09-26
 Backend:  
