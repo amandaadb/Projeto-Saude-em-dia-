@@ -1,11 +1,13 @@
 # Projeto-Saude-em-dia-
 O App Medcontrol é uma aplicação desenvolvida com objetivo de ajudar usuários a organizar medicamentos, horários, consultas e tratamentos, reduzindo o risco de esquecer doses ou tomar medicamentos fora do horário.
 
-# Para quem esse app é voltado?
-O Medcontrol é um app voltado a um público geral com foco em saúde, e gerenciamento de tratamento continuo. O publico alvo seria pessoas:  
--Que utilizam remédios diariamente;  
--Pessoas com tratamentos contínuos;  
--Familiares/cuidadores que acompanham outra pessoa.  
+# Para quem este aplicativo é voltado?
+
+O Medcontrol é um aplicativo voltado para o público geral, com foco na gestão da saúde e no acompanhamento de tratamentos contínuos. O nosso público-alvo principal inclui:
+
+Pacientes em tratamento: Pessoas que fazem uso diário de medicamentos ou que possuem condições de saúde que exigem acompanhamento contínuo.
+
+Familiares e cuidadores: Pessoas responsáveis por gerenciar, organizar e acompanhar a rotina de medicação de entes queridos ou pacientes sob seus cuidados.
 
 # MedControl
 
@@ -21,29 +23,29 @@ Verde = Frescor / Bem‑estar: #80EF80, #E3F0A3, #BADBA2, #42D674.
 
 Exemplo:
 
-Bom dia, Maria!
+                                       Bom dia, Maria!
 
-Próximo medicamento
+                                     Próximo medicamento
 
-💊 Losartana 50 mg
-1 comprimido
-Hoje às 08:00
+                                     💊 Losartana 50 mg
+                                        1 comprimido
+                                        Hoje às 08:00
 
-[ ✅ Tomei ]
+                                        [ ✅ Tomei ]
 
-[ ⏰ Lembrar depois ]
+                                   [ ⏰ Lembrar depois ]
 
-[ ❌ Não tomei ]
+                                      [ ❌ Não tomei ]
 
 # Resumo do dia
 
-Hoje
+                                           Hoje
 
-✅ 08:00 — Losartana
-✅ 14:00 — Dipirona
-⏰ 20:00 — Losartana
+                                    ✅ 08:00 — Losartana
+                                    ✅ 14:00 — Dipirona
+                                    ⏰ 20:00 — Losartana
 
-Medicamentos: 2 de 3 tomados
+                                  Medicamentos: 2 de 3 tomados
 
 # Menu principal
 
