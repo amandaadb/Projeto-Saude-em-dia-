@@ -1,5 +1,5 @@
 # CHANGELOG 11-09-26
-README.md atualizado com mais informações gerais do projeto.
+README.md atualizado com mais informações gerais do projeto, incluindo os membros da equipe e seus RAs.
 
 Criados UI-UX.md, COMPONENTS.md e SUPPORT.md.
 
