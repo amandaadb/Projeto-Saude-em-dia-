@@ -1,7 +1,7 @@
 # Projeto-Saude-em-dia-
 O Medcontrol é um aplicativo desenvolvido com o objetivo de ajudar os usuários a organizar medicamentos, horários, consultas e tratamentos, reduzindo o risco de esquecimentos ou de uso fora do horário recomendado.
 
-## 👥 Equipe
+# Equipe
 
 | RA | Integrante |
 | :--- | :--- |
