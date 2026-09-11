@@ -4,7 +4,7 @@ README.md atualizado com mais informações gerais do projeto, incluindo os memb
 Criados UI-UX.md, COMPONENTS.md e SUPPORT.md.
 
 # CHANGELOG 10-09-26
-README.md atualizado com mais informações gerais do projeto, incluindo as telas e funcionalidades do aplicativo.
+README.md atualizado: Adicionadas informações gerais e detalhadas sobre o projeto, abrangendo as telas do sistema, funcionalidades principais, diretrizes de acessibilidade e o fluxo de navegação do usuário.
 
 # CHANGELOG 09-09-26
 README.md atualizado com informações gerais do projeto.  
