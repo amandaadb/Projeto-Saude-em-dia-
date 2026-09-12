@@ -29,7 +29,7 @@ Responsáveis pela experiência e identidade visual do aplicativo:
 - Elaboração do fluxo de navegação
 - Foco em usabilidade, com atenção especial ao público idoso
 
-### Front-end — Telas e Medicamentos - *Daniela e Luana*
+### Front-end - Telas e Medicamentos - *Daniela e Luana*
 Responsáveis pelo desenvolvimento das interfaces do aplicativo:
 - Telas de login, cadastro, dashboard, perfil e navegação principal
 - Integração das telas com o sistema
