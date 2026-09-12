@@ -1,3 +1,6 @@
+# CHANGELOG 12-09-26
+README.md atualizado com mais informações gerais do projeto, incluindo as funções dos membros da equipe e o copyright.
+
 # CHANGELOG 11-09-26
 README.md atualizado com mais informações gerais do projeto, incluindo os membros da equipe e seus RAs.
 
