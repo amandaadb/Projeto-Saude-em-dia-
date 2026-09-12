@@ -13,6 +13,44 @@ O Medcontrol é um aplicativo desenvolvido com o objetivo de ajudar os usuários
 | `3024107159` | Lucas Gomes Barboza |
 | `3024106574` | Renan Abeu Cerqueira de Lima |
 
+# Responsabilidades
+
+### Gestão e Análise - *Amanda*
+Responsável pelo planejamento e acompanhamento do projeto:
+- Organização do cronograma e das entregas
+- Acompanhamento das tarefas da equipe
+- Levantamento de requisitos
+- Definição de objetivos, público-alvo e regras de negócio
+
+### UX/UI e Protótipo - *Amanda e Gabriel*
+Responsáveis pela experiência e identidade visual do aplicativo:
+- Criação da identidade visual (cores, fontes e componentes)
+- Prototipação das telas
+- Elaboração do fluxo de navegação
+- Foco em usabilidade, com atenção especial ao público idoso
+
+### Front-end — Telas e Medicamentos - *Daniela e Luana*
+Responsáveis pelo desenvolvimento das interfaces do aplicativo:
+- Telas de login, cadastro, dashboard, perfil e navegação principal
+- Integração das telas com o sistema
+- Cadastro de medicamentos, horários e tratamentos
+- Registro de doses e tela de histórico
+
+### Back-end e Banco de Dados - *Lucas e Renan*
+Responsáveis pela estrutura de dados e lógica do sistema:
+- Modelagem do banco de dados
+- Criação de tabelas e entidades
+- Implementação de CRUD
+- Autenticação e regras de acesso
+- Integração entre aplicativo e banco de dados
+
+### Testes e Documentação - *Guilherme*
+Responsável pela qualidade e documentação do projeto:
+- Criação e execução de casos de teste
+- Registro e acompanhamento de bugs
+- Elaboração do README e da documentação técnica
+- Apoio na criação dos diagramas UML
+
 # Para quem este aplicativo é voltado?
 
 O Medcontrol é um aplicativo voltado para o público geral, com foco na gestão da saúde e no acompanhamento de tratamentos contínuos. O nosso público-alvo principal inclui:
@@ -163,13 +201,13 @@ Recompensas simbólicas (ex.: “Você está cuidando bem da sua saúde!”)
                                                                ↓
                                                        CONFIGURAR PERFIL
                                                                ↓
-                                                      ADICIONAR MEDICAMENTO
+                                                     ADICIONAR MEDICAMENTO
                                                                ↓
                                                               Nome
                                                             Dosagem
                                                            Quantidade
                                                           Forma de uso
-                                                             Horários
+                                                            Horários
                                                                ↓
                                                              SALVAR
                                                                ↓
@@ -186,3 +224,7 @@ Recompensas simbólicas (ex.: “Você está cuidando bem da sua saúde!”)
                                                            HISTÓRICO
                                                                ↓
                                                         ACOMPANHAMENTO
+
+---
+
+© 2026 MedControl. Todos os direitos reservados.
