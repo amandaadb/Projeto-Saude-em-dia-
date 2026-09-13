@@ -1,13 +1,46 @@
-Documentação visual do app, contendo o link para o protótipo no Figma, a paleta de cores oficial e a tipografia utilizada.
+# UI/UX - MedControl
 
-# MedControl
+> Documentação visual do aplicativo, contendo o link para o protótipo no Figma, a paleta de cores oficial e a tipografia utilizada.
 
-*Fazer logo*
+## Logo
 
-*Cores do aplicativo:*
+*(Colocar)*
 
-Azul = Calma / Confiável: #6A89A7, #BDDDFC, #88BDF2, #384959.
+## Protótipo
 
-Verde = Frescor / Bem‑estar: #80EF80, #E3F0A3, #BADBA2, #42D674.
+- **Figma:** *(Colocar)*
 
-Rosa = Acolhimento / Cuidado: #FAD2E1, #F8B4CD, #E06D95, #7D2845.
+## Paleta de cores
+
+### 🔵 Azul - Calma / Confiança
+
+| Cor | Hex |
+|---|---|
+| Azul claro | `#BDDDFC` |
+| Azul médio | `#88BDF2` |
+| Azul principal | `#6A89A7` |
+| Azul escuro | `#384959` |
+
+### 🟢 Verde - Frescor / Bem-estar
+
+| Cor | Hex |
+|---|---|
+| Verde claro | `#E3F0A3` |
+| Verde suave | `#BADBA2` |
+| Verde principal | `#80EF80` |
+| Verde vibrante | `#42D674` |
+
+### 🌸 Rosa - Acolhimento / Cuidado
+
+| Cor | Hex |
+|---|---|
+| Rosa claro | `#FAD2E1` |
+| Rosa médio | `#F8B4CD` |
+| Rosa principal | `#E06D95` |
+| Rosa escuro | `#7D2845` |
+
+## Tipografia
+
+- **Fonte principal:** *(Colocar)*
+- **Fonte secundária:** *(Colocar)*
+- **Pesos utilizados:** *(Colocar)*
