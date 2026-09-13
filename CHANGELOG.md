@@ -1,3 +1,6 @@
+# CHANGELOG 13-09-26
+UI-UX.md, SUPPORT.md e COMPONENTS.md atualizados com repaginação e padronização visual. Criado o SECURITY.md.
+
 # CHANGELOG 12-09-26
 README.md atualizado com mais informações gerais do projeto, incluindo as funções dos membros da equipe e o copyright.
 
