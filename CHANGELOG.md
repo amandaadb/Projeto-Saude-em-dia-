@@ -1,24 +1,60 @@
-# CHANGELOG 13-09-26
-UI-UX.md, SUPPORT.md e COMPONENTS.md atualizados com repaginação e padronização visual. Criado o SECURITY.md.
+# Changelog - MedControl
 
-# CHANGELOG 12-09-26
-README.md atualizado com mais informações gerais do projeto, incluindo as funções dos membros da equipe e o copyright.
+Todas as mudanças notáveis deste projeto serão documentadas neste arquivo.
 
-# CHANGELOG 11-09-26
-README.md atualizado com mais informações gerais do projeto, incluindo os membros da equipe e seus RAs.
+O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
-Criados UI-UX.md, COMPONENTS.md e SUPPORT.md.
+---
 
-# CHANGELOG 10-09-26
-README.md atualizado: Adicionadas informações gerais e detalhadas sobre o projeto, abrangendo as telas do sistema, funcionalidades principais, diretrizes de acessibilidade e o fluxo de navegação do usuário.
+## [2026-09-14]
 
-# CHANGELOG 09-09-26
-README.md atualizado com informações gerais do projeto.  
+### Alterado
+- `README.md` atualizado com repaginação e padronização visual.
 
-# CHANGELOG 07-09-26
-Backend:  
-Alteração na estrutura do banco de dados.  
-*Nota do Dev: Criação de rota de medicamentos (cadastro, atualização, exclusão e listagem), correção no cadastro de usuários (atualização e exclusão) e ajuste para conta permanecer logada.*  
+## [2026-09-13]
 
-# CHANGELOG 04-09-26
-Criação de estrutura de banco de dados: Implementação da estrutura inicial do backend com FastAPI, autenticação JWT e integração com Supabase.
+### Adicionado
+- Criado `SECURITY.md`.
+
+### Alterado
+- `UI-UX.md`, `SUPPORT.md` e `COMPONENTS.md` atualizados com repaginação e padronização visual.
+
+## [2026-09-12]
+
+### Alterado
+- `README.md` atualizado com mais informações gerais do projeto, incluindo as funções dos membros da equipe e o copyright.
+
+## [2026-09-11]
+
+### Adicionado
+- Criados `UI-UX.md`, `COMPONENTS.md` e `SUPPORT.md`.
+
+### Alterado
+- `README.md` atualizado com mais informações gerais do projeto, incluindo os membros da equipe e seus RAs.
+
+## [2026-09-10]
+
+### Alterado
+- `README.md` atualizado com informações gerais e detalhadas sobre o projeto, abrangendo as telas do sistema, funcionalidades principais, diretrizes de acessibilidade e o fluxo de navegação do usuário.
+
+## [2026-09-09]
+
+### Alterado
+- `README.md` atualizado com informações gerais do projeto.
+
+## [2026-09-07]
+
+### Adicionado
+- Rota de medicamentos (cadastro, atualização, exclusão e listagem).
+
+### Alterado
+- Estrutura do banco de dados.
+
+### Corrigido
+- Cadastro de usuários (atualização e exclusão).
+- Ajuste para a conta permanecer logada.
+
+## [2026-09-04]
+
+### Adicionado
+- Estrutura inicial do backend com FastAPI, autenticação JWT e integração com Supabase.
