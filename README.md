@@ -2,7 +2,7 @@
 
 O **MedControl** é um aplicativo desenvolvido com o objetivo de ajudar os usuários a organizar medicamentos, horários, consultas e tratamentos, reduzindo o risco de esquecimentos ou de uso fora do horário recomendado.
 
-📄 Documentação relacionada: [UI/UX](./UI-UX.md) · [Componentes](./COMPONENTS.md) · [Suporte](./SUPPORT.md) · [Segurança](./SECURITY.md)
+📄 Documentação relacionada: [UI/UX](./UI-UX.md) · [Componentes](./COMPONENTS.md) · [Suporte](./SUPPORT.md) · [Segurança](./SECURITY.md) · [Changelog](./CHANGELOG.md)
 
 ---
 
