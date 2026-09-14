@@ -9,7 +9,7 @@ O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.
 ## [2026-09-14]
 
 ### Alterado
-- `README.md` atualizado com repaginação e padronização visual.
+- `README.md` e `CHANGELOG.md` atualizados com repaginação e padronização visual.
 
 ## [2026-09-13]
 
