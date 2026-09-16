@@ -62,21 +62,11 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 
 ### Tela inicial
 
-> "Bom dia, Maria!"
-
-**Próximo medicamento**
-- 💊 Losartana 50 mg - 1 comprimido
-- 🕐 Hoje às 08:00
-
-Ações disponíveis: `✅ Tomei` · `⏰ Lembrar depois` · `❌ Não tomei`
+<img width="853" height="1843" alt="Tela Inicial" src="https://github.com/user-attachments/assets/c30618dd-ccf6-4a56-b3fc-95ea82420f6a" />
 
 ### Resumo do dia
 
-- ✅ 08:00 - Losartana
-- ✅ 14:00 - Dipirona
-- ⏰ 20:00 - Losartana
-
-**Medicamentos:** 2 de 3 tomados
+<img width="853" height="1844" alt="Resumo do Dia" src="https://github.com/user-attachments/assets/2edf7236-0f3f-4c45-8c5b-30e1161571b2" />
 
 ### Menu principal
 
