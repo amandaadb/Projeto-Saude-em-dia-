@@ -6,6 +6,12 @@ O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.
 
 ---
 
+## [2026-09-16]
+
+### Alterado
+- Inserido o protótipo de logo do MedControl na `UI-UX.md`.
+- `README.md` atualizado com parte dos protótipos das telas do aplicativo.
+
 ## [2026-09-14]
 
 ### Alterado
