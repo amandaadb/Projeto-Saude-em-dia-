@@ -72,31 +72,15 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 
 ### Menu principal
 
-Navegação inferior sempre visível:
-
-`🏠 Início` · `💊 Medicamentos` · `📊 Histórico` · `📅 Consultas` · `👤 Perfil`
+<img width="853" height="1844" alt="Menu principal" src="https://github.com/user-attachments/assets/ace90a22-aa17-43b9-b215-f9e5d059def0" />
 
 ### Tela de histórico
 
-| Dia | Horário | Medicamento | Status |
-|---|---|---|---|
-| Segunda-feira | 08:00 | Losartana | ✅ Tomado |
-| Segunda-feira | 20:00 | Losartana | ✅ Tomado |
-| Terça-feira | 08:00 | Losartana | ✅ Tomado |
-| Terça-feira | 20:00 | Losartana | ❌ Não tomado |
-| Quarta-feira | 08:00 | Losartana | ✅ Tomado |
-| Quarta-feira | 20:00 | Losartana | ⏰ Aguardando |
+<img width="853" height="1844" alt="Tela de histórico" src="https://github.com/user-attachments/assets/28d4e420-d10b-4ae9-8d27-0b745905fb96" />
 
 ### Controle de estoque
 
-Cadastro de medicamento via assistente guiado passo a passo.
-
-- 💊 Losartana 50 mg
-- **Quantidade atual:** 32 comprimidos
-- **Consumo:** 2 por dia
-- **Previsão:** 16 dias
-- ⚠️ Alerta: "Seu medicamento pode acabar em aproximadamente 16 dias."
-- Notificação: `Configurar alerta`
+<img width="853" height="1844" alt="Controle de estoque" src="https://github.com/user-attachments/assets/e5c0557e-cded-4283-ad65-753184a7e517" />
 
 ### Consultas e receitas
 
