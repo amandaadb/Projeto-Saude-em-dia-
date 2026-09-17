@@ -93,6 +93,26 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 - 💊 Losartana 50 mg
 - Renovação prevista: 25/09
 
+### Perfil
+
+**Foto de perfil**
+- Upload/edição de foto (avatar padrão se não houver)
+
+**Dados Pessoais**
+- Nome completo
+- Idade / Data de nascimento
+- Tipo sanguíneo
+
+**Contato de Emergência**
+- Nome do contato
+- Telefone
+- Grau de parentesco/relação (opcional, mas recomendado)
+
+**Dados Clínicos**
+- Alergias conhecidas (destaque visual — ex: badge vermelho)
+- Condições crônicas (ex: diabetes, hipertensão)
+- Dados do convênio médico (operadora, nº da carteirinha, plano)
+
 ## ✨ Funcionalidades extras
 
 - **Modo cuidador inteligente:** envia alertas automáticos se o paciente não confirmar a dose;
