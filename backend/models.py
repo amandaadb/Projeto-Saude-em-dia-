@@ -138,7 +138,7 @@ class HistoryCreate(BaseModel):
     """Dados para registrar se tomou medicamento."""
 
     routine_id: str
-    dt_hour: Optional[datetime] = None
+    dt_hour: datetime
     fl_taken: bool
 
 
