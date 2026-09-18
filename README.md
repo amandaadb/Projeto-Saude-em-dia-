@@ -62,6 +62,10 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 
 ## 📱 Telas do aplicativo
 
+### Login e Cadastro
+
+<img width="852" height="1846" alt="Login e Cadastro" src="https://github.com/user-attachments/assets/8171d27a-e3f0-4cfd-be18-283992b61cd8" />
+
 ### Tela inicial
 
 <img width="853" height="1843" alt="Tela Inicial" src="https://github.com/user-attachments/assets/c30618dd-ccf6-4a56-b3fc-95ea82420f6a" />
@@ -74,44 +78,21 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 
 <img width="853" height="1844" alt="Menu principal" src="https://github.com/user-attachments/assets/ace90a22-aa17-43b9-b215-f9e5d059def0" />
 
-### Tela de histórico
-
-<img width="853" height="1844" alt="Tela de histórico" src="https://github.com/user-attachments/assets/28d4e420-d10b-4ae9-8d27-0b745905fb96" />
-
 ### Controle de estoque
 
 <img width="853" height="1844" alt="Controle de estoque" src="https://github.com/user-attachments/assets/e5c0557e-cded-4283-ad65-753184a7e517" />
 
+### Tela de histórico
+
+<img width="853" height="1844" alt="Tela de histórico" src="https://github.com/user-attachments/assets/28d4e420-d10b-4ae9-8d27-0b745905fb96" />
+
 ### Consultas e receitas
 
-**Próxima consulta**
-- 📅 18 de setembro, 🕐 14:30
-- 🏥 Cardiologista
-- Lembrar-me: 1 dia antes / 2 horas antes
-
-**Receita**
-- 💊 Losartana 50 mg
-- Renovação prevista: 25/09
+<img width="852" height="1846" alt="Consultas e receitas" src="https://github.com/user-attachments/assets/ab601445-ed48-43aa-af34-dde983af3c31" />
 
 ### Perfil
 
-**Foto de perfil**
-- Upload/edição de foto (avatar padrão se não houver)
-
-**Dados Pessoais**
-- Nome completo
-- Idade / Data de nascimento
-- Tipo sanguíneo
-
-**Contato de Emergência**
-- Nome do contato
-- Telefone
-- Grau de parentesco/relação (opcional, mas recomendado)
-
-**Dados Clínicos**
-- Alergias conhecidas (destaque visual — ex: badge vermelho)
-- Condições crônicas (ex: diabetes, hipertensão)
-- Dados do convênio médico (operadora, nº da carteirinha, plano)
+<img width="853" height="1844" alt="Perfil" src="https://github.com/user-attachments/assets/bc266c2d-11be-4df9-adcd-e920531c25f9" />
 
 ## ✨ Funcionalidades extras
 
