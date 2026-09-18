@@ -1,13 +1,20 @@
 from pydantic import BaseModel, EmailStr
 from typing import Optional
-from datetime import datetime
+from datetime import date, datetime, time as Time
 
 # Usuários.
 class UserCreate(BaseModel):
     """Dados para criar um novo usuário."""
+    name: str # Nome (obrigatório).
     email: EmailStr # Email (obrigatório e validado).
+    phone: str # Telefone (obrigatório).
     password: str # Senha (obrigatório).
-    name: Optional[str] = None # Nome (opcional).
+    dt_birth: date # Data de nascimento (obrigatório).
+    blood_type: Optional[str] = None # Tipo sanguíneo (opcional).
+    emergency_contact_name: Optional[str] = None # Nome do contato de emergência (opcional).
+    emergency_contact_phone: Optional[str] = None # Telefone do contato de emergência (opcional).
+    allergies: Optional[str] = None # Alergias (opcional).
+    chronic_conditions: Optional[str] = None # Condições crônicas (opcional).
 
 class UserLogin(BaseModel):
     """Dados para fazer login."""
@@ -16,28 +23,52 @@ class UserLogin(BaseModel):
 
 class UserUpdate(BaseModel):
     """Dados para atualizar o usuário."""
-    email: Optional[EmailStr] = None # Email.
     name: Optional[str] = None # Nome.
+    email: Optional[EmailStr] = None # Email.
+    phone: Optional[str] = None # Telefone.
     password: Optional[str] = None # Senha.
-
+    dt_birth: Optional[date] = None # Data de nascimento.
+    blood_type: Optional[str] = None # Tipo sanguíneo.
+    emergency_contact_name: Optional[str] = None # Nome do contato de emergência.
+    emergency_contact_phone: Optional[str] = None # Telefone do contato de emergência.
+    allergies: Optional[str] = None # Alergias.
+    chronic_conditions: Optional[str] = None # Condições crônicas.
+    
 class UserResponse(BaseModel):
     """Dados retornados do usuário (sem senha)"""
     id: str # ID do usuário.
+    name: str # Nome.
     email: str # Email.
-    name: Optional[str] # Nome.
+    phone: str # Telefone.
+    dt_birth: date # Data de nascimento.
+    blood_type: Optional[str] = None # Tipo sanguíneo.
+    emergency_contact_name: Optional[str] = None # Nome do contato de emergência.
+    emergency_contact_phone: Optional[str] = None # Telefone do contato de emergência.
+    allergies: Optional[str] = None # Alergias.
+    chronic_conditions: Optional[str] = None # Condições crônicas.
+    fl_active: bool # Indica se o usuário está ativo.
     dt_created: datetime # Data de criação.
+    dt_updated: datetime # Data de atualização.
 
 # Medicamentos.
 class MedicineCreate(BaseModel):
     """Dados para criar um medicamento."""
     name: str # Nome (obrigatório). 
-    dosage: Optional[str] = None # Dosagem (opcional).
+    dosage: str # Dosagem (obrigatório).
+    quantity: int # Quantidade (obrigatório).
+    usage_type: Optional[str] = None # Tipo de uso (opcional).
+    usage_instructions: Optional[str] = None # Instruções de uso (opcional).
+    stock: int = 0 # Estoque (padrão: 0).
     description: Optional[str] = None # Descrição (opcional).
 
 class MedicineUpdate(BaseModel):
     """Dados para atualizar um medicamento."""
     name: Optional[str] = None # Nome (opcional).
     dosage: Optional[str] = None # Dosagem (opcional).
+    quantity: Optional[int] = None # Quantidade (opcional).
+    usage_type: Optional[str] = None # Tipo de uso (opcional).
+    usage_instructions: Optional[str] = None # Instruções de uso (opcional).
+    stock: Optional[int] = None # Estoque (opcional).
     description: Optional[str] = None # Descrição (opcional).
 
 class MedicineResponse(BaseModel):
@@ -45,21 +76,26 @@ class MedicineResponse(BaseModel):
     id: str # ID do medicamento.
     user_id: str # ID do usuário (dono do medicamento).
     name: str # Nome.
-    dosage: Optional[str] # Dosagem (pode ser None).
+    dosage: str # Dosagem (pode ser None).
+    quantity: int # Quantidade (pode ser None).
+    usage_type: Optional[str] = None # Tipo de uso (pode ser None).
+    usage_instructions: Optional[str] = None # Instruções de uso (pode ser None).
+    stock: int # Estoque (pode ser None).
     description: Optional[str] # Descrição (pode ser None).
     fl_active: bool # Indica se o medicamento está ativo.
     dt_created: datetime # Data de criação.
+    dt_updated: datetime # Data de atualização.
 
 # Rotinas.
 class RoutineCreate(BaseModel):
     """Dados para criar uma rotina."""
-    medicine_id: str # ID do medicamento (obrigatório).
-    time: str  # Horário (obrigatório) - Formato HH:MM.
-    days_of_week: Optional[str] = None  # Dias da semana (opcional).
+    medicine_id: str # ID do medicamento.
+    time: Time # Horário  - Formato HH:MM.
+    days_of_week: str = "Todos" # Dias da semana.
 
 class RoutineUpdate(BaseModel):
     """Dados para atualizar uma rotina."""
-    time: Optional[str] = None # Mudar horário (opcional).
+    time: Optional[Time] = None # Mudar horário (opcional).
     days_of_week: Optional[str] = None # Mudar dias da semana (opcional).
 
 class RoutineResponse(BaseModel):
@@ -67,16 +103,18 @@ class RoutineResponse(BaseModel):
     id: str # ID da rotina.
     medicine_id: str # ID do medicamento.
     user_id: str # ID do usuário (dono da rotina).
-    time: str # Horário.
-    days_of_week: Optional[str] # Dias da semana.
+    time: Time # Horário.
+    days_of_week: str # Dias da semana.
     fl_active: bool # Indica se a rotina está ativa.
     dt_created: datetime # Data de criação.
+    dt_updated: datetime # Data de atualização.
 
 # Histórico.
 class HistoryCreate(BaseModel):
     """Dados para registrar se tomou medicamento."""
     routine_id: str # ID da rotina.
     fl_taken: bool  # True = tomou, False = não tomou.
+    dt_hour: Optional[datetime] = None # Data e hora.
 
 class HistoryResponse(BaseModel):
     """Histórico retornado."""

@@ -57,7 +57,14 @@ def register(user: UserCreate):
     new_user = insert_user(
         email=user.email,
         password_hash=password_hash,
-        name=user.name
+        name=user.name,
+        phone=user.phone,
+        dt_birth=user.dt_birth.isoformat(),
+        blood_type=user.blood_type,
+        emergency_contact_name=user.emergency_contact_name,
+        emergency_contact_phone=user.emergency_contact_phone,
+        allergies=user.allergies,
+        chronic_conditions=user.chronic_conditions
     ) # Insere usuário no banco de dados.
     if not new_user:
         raise HTTPException(status_code=500, detail="Erro ao criar usuário.") # Verifica se o usuário foi criado com sucesso.
@@ -101,7 +108,14 @@ def update_current_user(user_update: UserUpdate, user_id: str = Depends(get_curr
         user_id=user_id,
         email=user_update.email,
         name=user_update.name,
-        password_hash=password_hash
+        phone=user_update.phone,
+        password_hash=password_hash,
+        dt_birth=user_update.dt_birth.isoformat() if user_update.dt_birth else None,
+        blood_type=user_update.blood_type,
+        emergency_contact_name=user_update.emergency_contact_name,
+        emergency_contact_phone=user_update.emergency_contact_phone,
+        allergies=user_update.allergies,
+        chronic_conditions=user_update.chronic_conditions
     )
     if not updated_user:
         raise HTTPException(status_code=500, detail="Erro ao atualizar usuário.")
