@@ -6,6 +6,11 @@ O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.
 
 ---
 
+## [2026-09-18]
+
+### Alterado
+- `README.md` atualizado com a parte que faltava dos protótipos das telas do aplicativo.
+
 ## [2026-09-16]
 
 ### Alterado
