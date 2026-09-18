@@ -1,94 +1,161 @@
-from pydantic import BaseModel, EmailStr
+from datetime import date, datetime, time
 from typing import Optional
-from datetime import datetime
+
+from pydantic import BaseModel, EmailStr, Field
+
 
 # Usuários.
 class UserCreate(BaseModel):
     """Dados para criar um novo usuário."""
-    email: EmailStr # Email (obrigatório e validado).
-    password: str # Senha (obrigatório).
-    name: Optional[str] = None # Nome (opcional).
+
+    name: str
+    email: EmailStr
+    phone: str
+    password: str
+    dt_birth: date
+    blood_type: Optional[str] = None
+    emergency_contact_name: Optional[str] = None
+    emergency_contact_phone: Optional[str] = None
+    allergies: Optional[str] = None
+    chronic_conditions: Optional[str] = None
+
 
 class UserLogin(BaseModel):
     """Dados para fazer login."""
-    email: EmailStr # Email (obrigatório e validado).
-    password: str # Senha (obrigatório).
+
+    email: EmailStr
+    password: str
+
 
 class UserUpdate(BaseModel):
     """Dados para atualizar o usuário."""
-    email: Optional[EmailStr] = None # Email.
-    name: Optional[str] = None # Nome.
-    password: Optional[str] = None # Senha.
+
+    name: Optional[str] = None
+    email: Optional[EmailStr] = None
+    phone: Optional[str] = None
+    password: Optional[str] = None
+    dt_birth: Optional[date] = None
+    blood_type: Optional[str] = None
+    emergency_contact_name: Optional[str] = None
+    emergency_contact_phone: Optional[str] = None
+    allergies: Optional[str] = None
+    chronic_conditions: Optional[str] = None
+
 
 class UserResponse(BaseModel):
-    """Dados retornados do usuário (sem senha)"""
-    id: str # ID do usuário.
-    email: str # Email.
-    name: Optional[str] # Nome.
-    dt_created: datetime # Data de criação.
+    """Dados públicos retornados do usuário."""
+
+    id: str
+    name: str
+    email: EmailStr
+    phone: str
+    dt_birth: date
+    blood_type: Optional[str] = None
+    emergency_contact_name: Optional[str] = None
+    emergency_contact_phone: Optional[str] = None
+    allergies: Optional[str] = None
+    chronic_conditions: Optional[str] = None
+    fl_active: bool
+    dt_created: datetime
+    dt_updated: datetime
+
 
 # Medicamentos.
 class MedicineCreate(BaseModel):
     """Dados para criar um medicamento."""
-    name: str # Nome (obrigatório). 
-    dosage: Optional[str] = None # Dosagem (opcional).
-    description: Optional[str] = None # Descrição (opcional).
+
+    name: str
+    dosage: str
+    quantity: int = Field(..., ge=1)
+    usage_type: Optional[str] = None
+    usage_instructions: Optional[str] = None
+    stock: int = Field(default=0, ge=0)
+    description: Optional[str] = None
+
 
 class MedicineUpdate(BaseModel):
     """Dados para atualizar um medicamento."""
-    name: Optional[str] = None # Nome (opcional).
-    dosage: Optional[str] = None # Dosagem (opcional).
-    description: Optional[str] = None # Descrição (opcional).
+
+    name: Optional[str] = None
+    dosage: Optional[str] = None
+    quantity: Optional[int] = Field(default=None, ge=1)
+    usage_type: Optional[str] = None
+    usage_instructions: Optional[str] = None
+    stock: Optional[int] = Field(default=None, ge=0)
+    description: Optional[str] = None
+
 
 class MedicineResponse(BaseModel):
     """Medicamento retornado."""
-    id: str # ID do medicamento.
-    user_id: str # ID do usuário (dono do medicamento).
-    name: str # Nome.
-    dosage: Optional[str] # Dosagem (pode ser None).
-    description: Optional[str] # Descrição (pode ser None).
-    fl_active: bool # Indica se o medicamento está ativo.
-    dt_created: datetime # Data de criação.
+
+    id: str
+    user_id: str
+    name: str
+    dosage: str
+    quantity: int
+    usage_type: Optional[str] = None
+    usage_instructions: Optional[str] = None
+    stock: int
+    description: Optional[str] = None
+    fl_active: bool
+    dt_created: datetime
+    dt_updated: datetime
+
 
 # Rotinas.
 class RoutineCreate(BaseModel):
     """Dados para criar uma rotina."""
-    medicine_id: str # ID do medicamento (obrigatório).
-    time: str  # Horário (obrigatório) - Formato HH:MM.
-    days_of_week: Optional[str] = None  # Dias da semana (opcional).
+
+    medicine_id: str
+    time: time
+    days_of_week: Optional[str] = None
+
 
 class RoutineUpdate(BaseModel):
     """Dados para atualizar uma rotina."""
-    time: Optional[str] = None # Mudar horário (opcional).
-    days_of_week: Optional[str] = None # Mudar dias da semana (opcional).
+
+    medicine_id: Optional[str] = None
+    time: Optional[time] = None
+    days_of_week: Optional[str] = None
+    fl_active: Optional[bool] = None
+
 
 class RoutineResponse(BaseModel):
-    """Rotina retornada"""
-    id: str # ID da rotina.
-    medicine_id: str # ID do medicamento.
-    user_id: str # ID do usuário (dono da rotina).
-    time: str # Horário.
-    days_of_week: Optional[str] # Dias da semana.
-    fl_active: bool # Indica se a rotina está ativa.
-    dt_created: datetime # Data de criação.
+    """Rotina retornada."""
+
+    id: str
+    user_id: str
+    medicine_id: str
+    time: time
+    days_of_week: Optional[str] = None
+    fl_active: bool
+    dt_created: datetime
+    dt_updated: datetime
+
 
 # Histórico.
 class HistoryCreate(BaseModel):
     """Dados para registrar se tomou medicamento."""
-    routine_id: str # ID da rotina.
-    fl_taken: bool  # True = tomou, False = não tomou.
+
+    routine_id: str
+    dt_hour: Optional[datetime] = None
+    fl_taken: bool
+
 
 class HistoryResponse(BaseModel):
     """Histórico retornado."""
-    id: str # ID do histórico.
-    routine_id: str # ID da rotina.
-    user_id: str # ID do usuário (dono do histórico).
-    dt_hour: datetime # Data e hora.
-    fl_taken: bool # Indica se o medicamento foi tomado.
-    dt_created: datetime # Data de criação.
+
+    id: str
+    routine_id: str
+    user_id: str
+    dt_hour: datetime
+    fl_taken: bool
+    dt_created: datetime
+
 
 # Autenticação.
 class TokenResponse(BaseModel):
     """Token retornado após login."""
-    access_token: str # Token de acesso (JWT).
-    token_type: str = "bearer" # Tipo do token (padrão: "bearer").
+
+    access_token: str
+    token_type: str = "bearer"
