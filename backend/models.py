@@ -1,4 +1,4 @@
-from datetime import UTC, date, datetime, time
+from datetime import date, datetime, time
 from typing import Optional
 
 from pydantic import BaseModel, EmailStr, Field
@@ -138,7 +138,6 @@ class HistoryCreate(BaseModel):
     """Dados para registrar se tomou medicamento."""
 
     routine_id: str
-    dt_hour: datetime = Field(default_factory=lambda: datetime.now(UTC))
     fl_taken: bool
 
 
