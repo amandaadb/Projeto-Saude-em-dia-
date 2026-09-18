@@ -1,12 +1,8 @@
 fastapi
 uvicorn
-pydantic
 pydantic[email]
-email-validator
 python-dotenv
 supabase
-postgrest-py
-jwt
 PyJWT
 bcrypt
 python-multipart

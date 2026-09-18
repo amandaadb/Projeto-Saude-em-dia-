@@ -22,7 +22,16 @@ def create_medicine(medicine: MedicineCreate, user_id: str = Depends(get_current
         if (existing["name"] == medicine.name and existing.get("dosage") == medicine.dosage):
             raise HTTPException(status_code=400, detail="Medicamento já existe.")
     # Insere medicamento.
-    new_medicine = insert_medicine(user_id=user_id, name=medicine.name, dosage=medicine.dosage, description=medicine.description)
+    new_medicine = insert_medicine(
+        user_id=user_id,
+        name=medicine.name,
+        dosage=medicine.dosage,
+        quantity=medicine.quantity,
+        usage_type=medicine.usage_type,
+        usage_instructions=medicine.usage_instructions,
+        stock=medicine.stock,
+        description=medicine.description
+    )
 
     if not new_medicine:
         raise HTTPException(status_code=500, detail="Erro ao criar medicamento.")
@@ -47,15 +56,23 @@ def update_medicine(medicine_id: str, medicine: MedicineUpdate, user_id: str = D
     if not existing_medicine:
         raise HTTPException(status_code=404, detail="Medicamento não encontrado.")
     # Verifica quais campos foram enviados.
-    name = (medicine.name if medicine.name is not None else existing_medicine["name"])
-    dosage = (medicine.dosage if medicine.dosage is not None else existing_medicine["dosage"])
-    description = (medicine.description if medicine.description is not None else existing_medicine["description"])
+    name = medicine.name if medicine.name is not None else existing_medicine["name"]
+    dosage = medicine.dosage if medicine.dosage is not None else existing_medicine["dosage"]
+    quantity = medicine.quantity if medicine.quantity is not None else existing_medicine["quantity"]
+    usage_type = medicine.usage_type if medicine.usage_type is not None else existing_medicine["usage_type"]
+    usage_instructions = medicine.usage_instructions if medicine.usage_instructions is not None else existing_medicine["usage_instructions"]
+    stock = medicine.stock if medicine.stock is not None else existing_medicine["stock"]
+    description = medicine.description if medicine.description is not None else existing_medicine["description"]
     # Atualiza medicamento.
     updated_medicine = update_medicine_db(
         medicine_id=medicine_id,
         user_id=user_id,
         name=name,
         dosage=dosage,
+        quantity=quantity,
+        usage_type=usage_type,
+        usage_instructions=usage_instructions,
+        stock=stock,
         description=description
     )
     if not updated_medicine:
