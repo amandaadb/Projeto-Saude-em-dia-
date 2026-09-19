@@ -94,12 +94,6 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 
 <img width="853" height="1844" alt="Perfil" src="https://github.com/user-attachments/assets/bc266c2d-11be-4df9-adcd-e920531c25f9" />
 
-## ✨ Funcionalidades extras
-
-- **Modo cuidador inteligente:** envia alertas automáticos se o paciente não confirmar a dose;
-- **Relatórios exportáveis:** PDF simples com adesão ao tratamento, para levar ao médico;
-- **Modo offline:** lembretes funcionam mesmo sem internet.
-
 ## ♿ Acessibilidade
 
 - Botões grandes e ícones intuitivos (💊, ⏰, ✅);
