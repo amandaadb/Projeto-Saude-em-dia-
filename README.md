@@ -96,29 +96,15 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 
 ## ♿ Acessibilidade
 
-- Botões grandes e ícones intuitivos (💊, ⏰, ✅);
-- Modo "alto contraste" e "texto ampliado" (avaliar deixar como padrão);
-- Tutorial inicial com voz explicando cada função;
-- Feedback sonoro suave para confirmar ações.
+<img width="853" height="1844" alt="Acessibilidade" src="https://github.com/user-attachments/assets/825d034c-58b5-48d2-8285-b3233c1027e3" />
 
 ## 🏅 Recompensas
 
-- Medalhas por adesão (ex.: "7 dias sem esquecer!");
-- Ranking pessoal de consistência;
-- Recompensas simbólicas (ex.: "Você está cuidando bem da sua saúde!").
+<img width="853" height="1844" alt="Recompensas" src="https://github.com/user-attachments/assets/f9f2ce36-7409-4a0e-b2a2-f52e305356e3" />
 
-## 🔄 Fluxo do aplicativo
+## 🔄 Fluxo
 
-1. Abrir app
-2. Login / Cadastro
-3. Configurar perfil
-4. Adicionar medicamento (nome, dosagem, quantidade, forma de uso, horários)
-5. Salvar
-6. MedControl gera os horários automaticamente
-7. Notificação: *"Hora do medicamento!"*
-8. Usuário escolhe: `✅ Tomei` · `⏰ Lembrar depois` · `❌ Não tomei`
-9. Registro salvo no histórico
-10. Acompanhamento contínuo
+<img width="1024" height="1536" alt="Fluxo" src="https://github.com/user-attachments/assets/199d224a-224a-4247-9666-b676640eb4be" />
 
 ---
 
