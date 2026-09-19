@@ -6,7 +6,7 @@
 
 Caso tenha dúvidas, encontre algum problema ou queira relatar um bug, entre em contato pelo e-mail:
 
-📧 **suporte@medcontrol.com**
+📧 **amanda.db@uni9.edu.br**
 
 ## 🧑‍💻 Para colaboradores
 
