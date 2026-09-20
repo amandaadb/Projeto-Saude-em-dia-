@@ -35,6 +35,9 @@ app.include_router(auth.router, prefix="/api/auth")
 from routes import medicines # Medicamentos.
 app.include_router(medicines.router, prefix="/api/medicines")
 
+from routes import routines # Rotinas.
+app.include_router(routines.router, prefix="/api/routines")
+
 # Executar a API.
 if __name__ == "__main__":
     uvicorn.run(

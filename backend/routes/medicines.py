@@ -1,8 +1,6 @@
 from fastapi import APIRouter, HTTPException, Depends
 from typing import List
-
 from database import insert_medicine, get_medicines_by_user, get_medicine_by_id, update_medicine as update_medicine_db, delete_medicine as delete_medicine_db
-
 from models import MedicineCreate, MedicineUpdate, MedicineResponse
 from routes.auth import get_current_user
 

@@ -158,3 +158,55 @@ def delete_medicine(medicine_id: str, user_id: str):
     except Exception as e:
         print(f"Erro ao deletar medicamento: {e}")
         return None
+
+# Rotinas.
+def insert_routine(user_id: str, medicine_id: str, time: str, days_of_week: str = "Todos"):
+    """Insere uma nova rotina."""
+    data = {
+        "user_id": user_id,
+        "medicine_id": medicine_id,
+        "time": time,
+        "days_of_week": days_of_week,
+        "fl_active": True
+    }
+    try:
+        result = supabase.table("routines").insert(data).execute()
+        return result.data[0] if result.data else None # Retorna a rotina criada.
+    except Exception as e:
+        print(f"Erro ao inserir rotina: {e}")
+        return None
+
+def get_routines_by_user(user_id: str):
+    """Retorna todas as rotinas ativas de um usuário."""
+    result = supabase.table("routines").select("*").eq("user_id", user_id).eq("fl_active", True).execute()
+    return result.data if result.data else [] # Retorna a lista de rotinas ou uma lista vazia.
+
+def get_routine_by_id(routine_id: str, user_id: str):
+    """ Retorna uma rotina específica pelo ID e usuário."""
+    result = supabase.table("routines").select("*").eq("id", routine_id).eq("user_id", user_id).eq("fl_active", True).execute()
+    return result.data[0] if result.data else None # Retorna a rotina ou None.
+
+def update_routine(routine_id: str, user_id: str, time: str = None, days_of_week: str = None):
+    """Atualiza uma rotina existente."""
+    data = {}
+    if time is not None:
+        data["time"] = time
+    if days_of_week is not None:
+        data["days_of_week"] = days_of_week
+    if not data:
+        return None
+    try:
+        result = (supabase.table("routines").update(data).eq("id", routine_id).eq("user_id", user_id).eq("fl_active", True).execute())
+        return result.data[0] if result.data else None
+    except Exception as e:
+        print(f"Erro ao atualizar rotina: {e}")
+        return None
+
+def delete_routine(routine_id: str, user_id: str):
+    """Deleta uma rotina e todos seus dados (soft delete)."""
+    try:
+        result = (supabase.table("routines").update({"fl_active": False}).eq("id", routine_id).eq("user_id", user_id).eq("fl_active", True).execute())
+        return result.data[0] if result.data else None
+    except Exception as e:
+        print(f"Erro ao deletar rotina: {e}")
+        return None
