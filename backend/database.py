@@ -210,3 +210,30 @@ def delete_routine(routine_id: str, user_id: str):
     except Exception as e:
         print(f"Erro ao deletar rotina: {e}")
         return None
+
+# Histórico.
+def insert_history(user_id: str, routine_id: str, fl_taken: bool, dt_hour: str = None):
+    """Insere um registro no histórico de uma rotina."""
+    data = {
+        "user_id": user_id,
+        "routine_id": routine_id,
+        "fl_taken": fl_taken,
+    }
+    if dt_hour is not None:
+        data["dt_hour"] = dt_hour
+    try:
+        result = supabase.table("history").insert(data).execute()
+        return result.data[0] if result.data else None # Retorna o registro criado.
+    except Exception as e:
+        print(f"Erro ao inserir histórico: {e}")
+        return None
+
+def get_history_by_user(user_id: str):
+    """Retorna todo o histórico de um usuário."""
+    result = supabase.table("history").select("*").eq("user_id", user_id).order("dt_hour", desc=True).execute()
+    return result.data if result.data else [] # Retorna a lista de históricos.
+
+def get_history_by_id(history_id: str, user_id: str):
+    """Retorna um registro específico do histórico."""
+    result = supabase.table("history").select("*").eq("id", history_id).eq("user_id", user_id).execute()
+    return result.data[0] if result.data else None # Retorna o registro ou None.
