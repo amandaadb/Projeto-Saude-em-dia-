@@ -66,41 +66,67 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 
 <img width="852" height="1846" alt="Login e Cadastro" src="https://github.com/user-attachments/assets/8171d27a-e3f0-4cfd-be18-283992b61cd8" />
 
+<img width="1536" height="1024" alt="Login e Cadastro" src="https://github.com/user-attachments/assets/b81ebd98-5b8d-49b5-bce8-6eccdc1ac66b" />
+
+---
+
 ### Tela inicial
 
 <img width="853" height="1843" alt="Tela Inicial" src="https://github.com/user-attachments/assets/c30618dd-ccf6-4a56-b3fc-95ea82420f6a" />
+
+<img width="1536" height="1024" alt="Tela inicial" src="https://github.com/user-attachments/assets/10ba437b-32bd-462a-9589-ff549f6b2501" />
+
+---
 
 ### Resumo do dia
 
 <img width="853" height="1844" alt="Resumo do Dia" src="https://github.com/user-attachments/assets/2edf7236-0f3f-4c45-8c5b-30e1161571b2" />
 
+<img width="1536" height="1024" alt="Resumo do dia" src="https://github.com/user-attachments/assets/588003d7-63dc-4ca1-a901-e8a4ecef08af" />
+
+---
+
 ### Menu principal
 
 <img width="853" height="1844" alt="Menu principal" src="https://github.com/user-attachments/assets/ace90a22-aa17-43b9-b215-f9e5d059def0" />
+
+---
 
 ### Controle de estoque
 
 <img width="853" height="1844" alt="Controle de estoque" src="https://github.com/user-attachments/assets/e5c0557e-cded-4283-ad65-753184a7e517" />
 
+---
+
 ### Tela de histórico
 
 <img width="853" height="1844" alt="Tela de histórico" src="https://github.com/user-attachments/assets/28d4e420-d10b-4ae9-8d27-0b745905fb96" />
+
+---
 
 ### Consultas e receitas
 
 <img width="852" height="1846" alt="Consultas e receitas" src="https://github.com/user-attachments/assets/ab601445-ed48-43aa-af34-dde983af3c31" />
 
+---
+
 ### Perfil
 
 <img width="853" height="1844" alt="Perfil" src="https://github.com/user-attachments/assets/bc266c2d-11be-4df9-adcd-e920531c25f9" />
+
+---
 
 ## ♿ Acessibilidade
 
 <img width="853" height="1844" alt="Acessibilidade" src="https://github.com/user-attachments/assets/825d034c-58b5-48d2-8285-b3233c1027e3" />
 
+---
+
 ## 🏅 Recompensas
 
 <img width="853" height="1844" alt="Recompensas" src="https://github.com/user-attachments/assets/f9f2ce36-7409-4a0e-b2a2-f52e305356e3" />
+
+---
 
 ## 🔄 Fluxo
 
