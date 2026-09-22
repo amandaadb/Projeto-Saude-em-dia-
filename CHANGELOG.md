@@ -1,10 +1,15 @@
-# Changelog - MedControl
+# Registro de Alterações - MedControl
 
 Todas as mudanças notáveis deste projeto serão documentadas neste arquivo.
 
 O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
+
+## [2026-09-22]
+
+### Alterado
+- `README.md` atualizado com mais informações gerais do projeto.
 
 ## [2026-09-18]
 
