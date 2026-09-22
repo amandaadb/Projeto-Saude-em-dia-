@@ -134,7 +134,7 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 
 ---
 
-## 🔄 Fluxo
+## Fluxo
 
 <img width="1024" height="1536" alt="Fluxo" src="https://github.com/user-attachments/assets/558f113a-e67e-41bf-beed-48fd1a8513b7" />
 
