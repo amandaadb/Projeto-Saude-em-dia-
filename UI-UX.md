@@ -12,7 +12,7 @@
 
 ## Paleta de cores
 
-### 🔵 Azul - Calma / Confiança
+### Azul - Calma / Confiança
 
 | Cor | Hex |
 |---|---|
@@ -21,7 +21,7 @@
 | Azul principal | `#6A89A7` |
 | Azul escuro | `#384959` |
 
-### 🟢 Verde - Frescor / Bem-estar
+### Verde - Frescor / Bem-estar
 
 | Cor | Hex |
 |---|---|
@@ -30,7 +30,7 @@
 | Verde principal | `#80EF80` |
 | Verde vibrante | `#42D674` |
 
-### 🌸 Rosa - Acolhimento / Cuidado
+### Rosa - Acolhimento / Cuidado
 
 | Cor | Hex |
 |---|---|
@@ -41,6 +41,6 @@
 
 ## Tipografia
 
-- **Fonte principal:** *(Colocar)*
-- **Fonte secundária:** *(Colocar)*
-- **Pesos utilizados:** *(Colocar)*
+- **Fonte principal:** *Inter*
+- **Fonte secundária:** *Nunito Sans*
+- **Pesos utilizados:** *Regular (400), Medium (500), Semibold (600) e Bold (700)*
