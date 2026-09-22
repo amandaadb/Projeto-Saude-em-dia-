@@ -1,14 +1,14 @@
-# MedControl 💊
+# MedControl
 
 O **MedControl** é um aplicativo desenvolvido com o objetivo de ajudar os usuários a organizar medicamentos, horários, consultas e tratamentos, reduzindo o risco de esquecimentos ou de uso fora do horário recomendado.
 
 <img width="1254" height="1254" alt="Logo" src="https://github.com/user-attachments/assets/2dbb2cc5-7597-4df6-a664-2821c9ec5589" />
 
-📄 Documentação relacionada: [UI/UX](./UI-UX.md) · [Componentes](./COMPONENTS.md) · [Suporte](./SUPPORT.md) · [Segurança](./SECURITY.md) · [Changelog](./CHANGELOG.md)
+Documentação relacionada: [UI/UX](./UI-UX.md) · [Componentes](./COMPONENTS.md) · [Suporte](./SUPPORT.md) · [Segurança](./SECURITY.md) · [Changelog](./CHANGELOG.md)
 
 ---
 
-## 👥 Equipe
+## Equipe
 
 | RA | Integrante | GitHub |
 | :--- | :--- | :--- |
@@ -20,117 +20,123 @@ O **MedControl** é um aplicativo desenvolvido com o objetivo de ajudar os usuá
 | `3024107159` | Lucas Gomes Barboza | [@oLucasGBo](https://github.com/oLucasGBo) |
 | `3024106574` | Renan Abreu Cerqueira de Lima | [@RenanAbreuC](https://github.com/RenanAbreuC) |
 
-## 🧩 Responsabilidades
+## Responsabilidades
 
-### 📋 Gestão e Análise - *Amanda*
+### Gestão e Análise - *Amanda*
 - Organização do cronograma e das entregas
 - Acompanhamento das tarefas da equipe
 - Levantamento de requisitos
 - Definição de objetivos, público-alvo e regras de negócio
 
-### 🎨 UX/UI e Protótipo - *Amanda e Gabriel*
+### UX/UI e Protótipo - *Gabriel*
 - Criação da identidade visual (cores, fontes e componentes)
 - Prototipação das telas
 - Elaboração do fluxo de navegação
-- Foco em usabilidade, com atenção especial ao público idoso
+- Elaboração do README com apresentação visual do projeto
 
-### 💻 Front-end - Telas e Medicamentos - *Daniela e Luana*
-- Telas de login, cadastro, dashboard, perfil e navegação principal
-- Integração das telas com o sistema
-- Cadastro de medicamentos, horários e tratamentos
-- Registro de doses e tela de histórico
+### Front-end e Telas - *Daniela e Luana*
+- Desenvolvimento e estilização das telas de login, cadastro, início etc
+- Implementação da responsividade e acessibilidade visual
+- Configuração das rotas de navegação entre as telas do aplicativo
+- Consumo dos endpoints da API fornecida pelo Back-end
 
-### 🗄️ Back-end e Banco de Dados - *Lucas e Renan*
+### Back-end e Banco de Dados - *Lucas e Renan*
 - Modelagem do banco de dados
 - Criação de tabelas e entidades
 - Implementação de CRUD
 - Autenticação e regras de acesso
-- Integração entre aplicativo e banco de dados
+- Disponibilização dos endpoints da API para o Front-end
 
-### 🧪 Testes e Documentação - *Guilherme*
+### Testes e Documentação - *Guilherme*
 - Criação e execução de casos de teste
 - Registro e acompanhamento de bugs
-- Elaboração do README e da documentação técnica
-- Apoio na criação dos diagramas UML
+- Elaboração da documentação técnica
+- Criação dos diagramas UML
 
-## 🎯 Para quem este aplicativo é voltado?
+## Para quem este aplicativo é voltado?
 
 O MedControl é voltado para o público geral, com foco na gestão da saúde e no acompanhamento de tratamentos contínuos. Público-alvo principal:
 
 - **Pacientes em tratamento:** pessoas que fazem uso diário de medicamentos ou possuem condições de saúde que exigem acompanhamento contínuo;
 - **Familiares e cuidadores:** pessoas responsáveis por gerenciar, organizar e acompanhar a rotina de medicação de entes queridos ou pacientes sob seus cuidados.
 
-## 📱 Telas do aplicativo
+## Telas do Aplicativo
 
 ### Login e Cadastro
 
-<img width="852" height="1846" alt="Login e Cadastro" src="https://github.com/user-attachments/assets/8171d27a-e3f0-4cfd-be18-283992b61cd8" />
+<img width="852" height="1846" alt="Login e cadastro" src="https://github.com/user-attachments/assets/7a5fbd88-3e3e-4865-8728-049e16e3a15e" />
 
-<img width="1536" height="1024" alt="Login e Cadastro" src="https://github.com/user-attachments/assets/b81ebd98-5b8d-49b5-bce8-6eccdc1ac66b" />
-
----
-
-### Tela inicial
-
-<img width="853" height="1843" alt="Tela Inicial" src="https://github.com/user-attachments/assets/c30618dd-ccf6-4a56-b3fc-95ea82420f6a" />
-
-<img width="1536" height="1024" alt="Tela inicial" src="https://github.com/user-attachments/assets/10ba437b-32bd-462a-9589-ff549f6b2501" />
+<img width="1536" height="1024" alt="Login e cadastro" src="https://github.com/user-attachments/assets/1359fe1b-046e-4280-b9b4-a150be53ba5a" />
 
 ---
 
-### Resumo do dia
+### Início
 
-<img width="853" height="1844" alt="Resumo do Dia" src="https://github.com/user-attachments/assets/2edf7236-0f3f-4c45-8c5b-30e1161571b2" />
+<img width="853" height="1843" alt="Início" src="https://github.com/user-attachments/assets/30784122-c897-426d-9442-ad8b7272855a" />
 
-<img width="1536" height="1024" alt="Resumo do dia" src="https://github.com/user-attachments/assets/588003d7-63dc-4ca1-a901-e8a4ecef08af" />
-
----
-
-### Menu principal
-
-<img width="853" height="1844" alt="Menu principal" src="https://github.com/user-attachments/assets/ace90a22-aa17-43b9-b215-f9e5d059def0" />
+<img width="1536" height="1024" alt="Início" src="https://github.com/user-attachments/assets/2832bd46-22c7-432a-847f-7193de1bd21e" />
 
 ---
 
-### Controle de estoque
+### Resumo do Dia
 
-<img width="853" height="1844" alt="Controle de estoque" src="https://github.com/user-attachments/assets/e5c0557e-cded-4283-ad65-753184a7e517" />
+<img width="853" height="1844" alt="Resumo do dia" src="https://github.com/user-attachments/assets/5f317120-1b94-4ac9-bcc9-06c9f2c82b31" />
 
----
-
-### Tela de histórico
-
-<img width="853" height="1844" alt="Tela de histórico" src="https://github.com/user-attachments/assets/28d4e420-d10b-4ae9-8d27-0b745905fb96" />
+<img width="1536" height="1024" alt="Resumo do dia" src="https://github.com/user-attachments/assets/68c0a525-62f8-4309-93bf-47b714b943db" />
 
 ---
 
-### Consultas e receitas
+### Menu Principal
 
-<img width="852" height="1846" alt="Consultas e receitas" src="https://github.com/user-attachments/assets/ab601445-ed48-43aa-af34-dde983af3c31" />
+<img width="853" height="1844" alt="Menu principal" src="https://github.com/user-attachments/assets/38dd3ca0-05f7-435a-89e9-654cf4561749" />
+
+<img width="1536" height="1024" alt="Menu principal" src="https://github.com/user-attachments/assets/cb1427c3-de5d-47da-a18b-b4060ab7dfb8" />
+
+---
+
+### Controle de Estoque
+
+<img width="853" height="1844" alt="Controle de estoque" src="https://github.com/user-attachments/assets/67336fbe-8fc8-4c88-b051-c3a3a4d1e1d0" />
+
+<img width="1536" height="1024" alt="Controle de estoque" src="https://github.com/user-attachments/assets/b9752783-1b1f-4dab-a276-5471cec256a3" />
+
+---
+
+### Histórico
+
+<img width="853" height="1844" alt="Histórico" src="https://github.com/user-attachments/assets/503584d8-d4af-4c29-8cb2-e77fbd851817" />
+
+<img width="1536" height="1024" alt="Histórico" src="https://github.com/user-attachments/assets/07820e65-42ca-4b3a-a775-a81e0e4038b7" />
+
+---
+
+### Consultas e Receitas
+
+<img width="852" height="1846" alt="Consultas e receitas" src="https://github.com/user-attachments/assets/cda53cc6-e459-4638-b156-4b9de5c55cf7" />
 
 ---
 
 ### Perfil
 
-<img width="853" height="1844" alt="Perfil" src="https://github.com/user-attachments/assets/bc266c2d-11be-4df9-adcd-e920531c25f9" />
+<img width="853" height="1844" alt="Perfil" src="https://github.com/user-attachments/assets/5a02c69f-4f70-4170-b42b-e15e7eb448b9" />
 
 ---
 
-## ♿ Acessibilidade
+## Acessibilidade
 
-<img width="853" height="1844" alt="Acessibilidade" src="https://github.com/user-attachments/assets/825d034c-58b5-48d2-8285-b3233c1027e3" />
+<img width="853" height="1844" alt="Acessibilidade" src="https://github.com/user-attachments/assets/d632254a-0e1d-4d59-843a-19a817d96957" />
 
 ---
 
-## 🏅 Recompensas
+## Recompensas
 
-<img width="853" height="1844" alt="Recompensas" src="https://github.com/user-attachments/assets/f9f2ce36-7409-4a0e-b2a2-f52e305356e3" />
+<img width="853" height="1844" alt="Recompensas" src="https://github.com/user-attachments/assets/6bb4a966-13ba-41d5-8e38-c62cc29f884e" />
 
 ---
 
 ## 🔄 Fluxo
 
-<img width="1024" height="1536" alt="Fluxo" src="https://github.com/user-attachments/assets/199d224a-224a-4247-9666-b676640eb4be" />
+<img width="1024" height="1536" alt="Fluxo" src="https://github.com/user-attachments/assets/558f113a-e67e-41bf-beed-48fd1a8513b7" />
 
 ---
 
