@@ -114,17 +114,23 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 
 <img width="852" height="1846" alt="Consultas e receitas" src="https://github.com/user-attachments/assets/cda53cc6-e459-4638-b156-4b9de5c55cf7" />
 
+<img width="1536" height="1024" alt="Consultas e receitas" src="https://github.com/user-attachments/assets/00c818cc-0dde-4f5d-94cf-dd8ae50243c4" />
+
 ---
 
 ### Perfil
 
 <img width="853" height="1844" alt="Perfil" src="https://github.com/user-attachments/assets/5a02c69f-4f70-4170-b42b-e15e7eb448b9" />
 
+<img width="1536" height="1024" alt="Perfil" src="https://github.com/user-attachments/assets/8900ca04-18d8-4e4e-9171-d0c30adc0bf9" />
+
 ---
 
 ## Acessibilidade
 
 <img width="853" height="1844" alt="Acessibilidade" src="https://github.com/user-attachments/assets/d632254a-0e1d-4d59-843a-19a817d96957" />
+
+<img width="1536" height="1024" alt="Acessibilidade" src="https://github.com/user-attachments/assets/fd6f43b1-a139-4b09-bcbd-71b5ff838403" />
 
 ---
 
