@@ -138,6 +138,8 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 
 <img width="853" height="1844" alt="Recompensas" src="https://github.com/user-attachments/assets/6bb4a966-13ba-41d5-8e38-c62cc29f884e" />
 
+<img width="1536" height="1024" alt="Recompensas" src="https://github.com/user-attachments/assets/6a76d38d-c383-4491-8aba-3974eef5d95e" />
+
 ---
 
 ## Fluxo
