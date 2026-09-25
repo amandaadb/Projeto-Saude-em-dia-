@@ -12,7 +12,7 @@
 
 ## Paleta de cores
 
-### Azul - Calma / Confiança
+### Azul
 
 | Cor | Hex |
 |---|---|
@@ -21,7 +21,7 @@
 | Azul principal | `#6A89A7` |
 | Azul escuro | `#384959` |
 
-### Verde - Frescor / Bem-estar
+### Verde
 
 | Cor | Hex |
 |---|---|
@@ -30,7 +30,7 @@
 | Verde principal | `#80EF80` |
 | Verde vibrante | `#42D674` |
 
-### Rosa - Acolhimento / Cuidado
+### Rosa
 
 | Cor | Hex |
 |---|---|
