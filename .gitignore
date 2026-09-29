@@ -1,27 +1,3 @@
-# Arquivos Ignorados - MedControl
-
-> Lista dos arquivos e pastas que não devem ser versionados no Git, com o motivo de cada grupo.
-
-## Como Usar
-
-Para o Git aplicar essas regras, copie o conteúdo do bloco abaixo para um arquivo chamado `.gitignore` na raiz do repositório. Este documento serve como referência para a equipe.
-
-## O Que é Ignorado e Por Quê
-
-| Grupo | Motivo |
-| :--- | :--- |
-| Variáveis de ambiente (`.env`) | Contêm chaves do Supabase, segredo do JWT e senhas |
-| Ambientes virtuais e dependências | São gerados localmente e ocupam muito espaço |
-| Caches e arquivos compilados | São gerados automaticamente |
-| Configurações de editor | São pessoais de cada integrante |
-| Arquivos do sistema operacional | Não fazem parte do projeto |
-| Logs e builds | São gerados durante execução e publicação |
-
-> **Nunca** envie o `.env` para o repositório. Se isso acontecer, troque imediatamente as chaves do Supabase e o segredo do JWT.
-
-## Conteúdo do `.gitignore`
-
-```gitignore
 # ===== Segredos e variáveis de ambiente =====
 .env
 .env.*
