@@ -4,7 +4,7 @@ O **MedControl** é um aplicativo desenvolvido com o objetivo de ajudar os usuá
 
 <img width="1254" height="1254" alt="Logo" src="https://github.com/user-attachments/assets/2dbb2cc5-7597-4df6-a664-2821c9ec5589" />
 
-Documentação relacionada: [UI/UX](./UI-UX.md) · [Componentes](./COMPONENTS.md) · [Suporte](./SUPPORT.md) · [Segurança](./SECURITY.md) · [Changelog](./CHANGELOG.md)
+Documentação relacionada: [UI/UX](./UI-UX.md) · [Componentes](./COMPONENTS.md) · [Suporte](./SUPPORT.md) · [Segurança](./SECURITY.md) · [Ignorados](./IGNORE.md) · [Licença](./LICENSE) · [Changelog](./CHANGELOG.md)
 
 ---
 
