@@ -97,8 +97,3 @@ temp/
 .DS_Store
 Thumbs.db
 desktop.ini
-```
-
----
-
-© 2026 MedControl. Todos os direitos reservados.
