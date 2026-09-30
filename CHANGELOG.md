@@ -6,6 +6,11 @@ O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.
 
 ---
 
+## [2026-09-30]
+
+### Alterado
+- `.gitignore`, `LICENSE`, `IGNORE.md` e `LICENSED.md` atualizados com repaginação e padronização visual.
+
 ## [2026-09-29]
 
 ### Adicionado
