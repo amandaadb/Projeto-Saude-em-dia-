@@ -6,6 +6,11 @@ O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.
 
 ---
 
+## [2026-10-05]
+
+### Adicionado
+- Criado `docs/proposta.md`.
+
 ## [2026-09-30]
 
 ### Alterado
