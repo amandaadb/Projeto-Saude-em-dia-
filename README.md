@@ -146,6 +146,27 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 
 <img width="1024" height="1536" alt="Fluxo" src="https://github.com/user-attachments/assets/558f113a-e67e-41bf-beed-48fd1a8513b7" />
 
+## Melhorias Futuras (Roadmap)
+
+O **MedControl** foi desenvolvido para facilitar a organização de medicamentos e o acompanhamento de tratamentos contínuos. Nas próximas versões, planejamos ampliar suas funcionalidades, acessibilidade, segurança e praticidade, com foco em **suporte familiar**, **automação** e **facilidade de uso**.
+
+### Funcionalidades Planejadas
+
+- [ ] **Modo Cuidador:** vínculo entre contas para que familiares e cuidadores acompanhem a rotina de medicação, sempre mediante autorização do usuário.
+- [ ] **Notificações Inteligentes:** lembretes personalizáveis, alertas de doses atrasadas e opção de adiar notificações.
+- [ ] **Controle Avançado de Estoque:** estimativa de duração dos medicamentos disponíveis e aviso de reposição.
+- [ ] **Gestão de Consultas e Receitas:** registro de consultas e receitas, com lembretes de retorno e de renovação.
+- [ ] **Cadastro Facilitado de Medicamentos:** leitura de código de barras, QR Code ou OCR da embalagem para agilizar o cadastro.
+- [ ] **Relatórios e Estatísticas:** gráficos de adesão ao tratamento e exportação do histórico de doses em PDF para levar às consultas.
+- [ ] **Acessibilidade Aprimorada:** ajuste de fonte, alto contraste, suporte a leitores de tela e navegação simplificada.
+- [ ] **Segurança e Privacidade:** autenticação em dois fatores, controles de compartilhamento e proteção adicional dos dados, em conformidade com a LGPD.
+- [ ] **Modo Offline-First:** funcionamento sem internet, com sincronização automática via Supabase.
+- [ ] **Testes Automatizados:** testes unitários (Pytest) e de interface para maior estabilidade.
+
+> As melhorias serão avaliadas conforme a viabilidade técnica, as necessidades dos usuários e a evolução do projeto. As funcionalidades listadas são possibilidades futuras e **não estão implementadas** na versão atual.
+
+> **Aviso:** o MedControl é uma ferramenta de organização e acompanhamento e **não substitui a orientação de médicos ou outros profissionais de saúde**.
+
 ---
 
 © 2026 MedControl. Todos os direitos reservados.
