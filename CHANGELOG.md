@@ -6,6 +6,16 @@ O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.
 
 ---
 
+## [2026-10-14]
+
+### Adicionado
+- Criado `docs/diagramas.md` com fluxogramas e diagramas UML.
+
+## [2026-10-13]
+
+### Adicionado
+- `README.md` atualizado com a seção de Melhorias Futuras (Roadmap).
+
 ## [2026-10-05]
 
 ### Adicionado
