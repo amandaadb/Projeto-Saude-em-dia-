@@ -78,7 +78,8 @@ Antes de pedir a revisão, confira se:
 
 - Siga a identidade visual definida em [UI-UX.md](./UI-UX.md) (cores, fontes e componentes);
 - Reutilize os componentes catalogados em [COMPONENTS.md](./COMPONENTS.md) antes de criar novos;
-- Mantenha a acessibilidade: fontes legíveis, bom contraste e telas simples, pensando em idosos.
+- Mantenha a acessibilidade: fontes legíveis, bom contraste e telas simples, pensando em idosos;
+- Siga as expectativas de [ACCESSIBILITY.md](./ACCESSIBILITY.md) em toda mudança visual.
 
 ### Documentação
 
