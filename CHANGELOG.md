@@ -27,6 +27,14 @@ O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.
 ### Adicionado
 - `README.md` atualizado com a seção de Melhorias Futuras (Roadmap).
 
+## [2026-10-06]
+
+### Adicionado
+- Criadas branches para organização e suporte ao fluxo de trabalho:
+  - **Desenvolvimento e Features:** `dev`, `develop` e `feature`
+  - **Testes e Homologação:** `testes`, `sandbox`, `staging` e `homologação`
+  - **Produção e Backup:** `master` e `backup`
+
 ## [2026-10-05]
 
 ### Adicionado
