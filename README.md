@@ -165,6 +165,8 @@ O **MedControl** foi desenvolvido para facilitar a organização de medicamentos
 
 > As melhorias serão avaliadas conforme a viabilidade técnica, as necessidades dos usuários e a evolução do projeto. As funcionalidades listadas são possibilidades futuras e **não estão implementadas** na versão atual.
 
+---
+
 > **Aviso:** o MedControl é uma ferramenta de organização e acompanhamento e **não substitui a orientação de médicos ou outros profissionais de saúde**.
 
 ---
