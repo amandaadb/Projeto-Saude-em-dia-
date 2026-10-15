@@ -10,9 +10,11 @@ O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.
 
 ### Adicionado
 - Criados `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md` e `ACCESSIBILITY.md`.
+- Criados os templates de Pull Request (`.github/PULL_REQUEST_TEMPLATE.md`) e de issue (`.github/ISSUE_TEMPLATE/bug_report.md`, `feature_request.md` e `accessibility_issue.md`).
 
 ### Alterado
 - `README.md` atualizado com os links para `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md` e `ACCESSIBILITY.md`.
+- `CONTRIBUTING.md` atualizado com a referência ao `ACCESSIBILITY.md` na seção de Front-end e ao modelo de Pull Request na seção de Pull Requests.
 
 ## [2026-10-14]
 
