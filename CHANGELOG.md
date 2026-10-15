@@ -6,6 +6,14 @@ O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.
 
 ---
 
+## [2026-10-15]
+
+### Adicionado
+- Criados `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md` e `ACCESSIBILITY.md`.
+
+### Alterado
+- `README.md` atualizado com os links para `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md` e `ACCESSIBILITY.md`.
+
 ## [2026-10-14]
 
 ### Adicionado
