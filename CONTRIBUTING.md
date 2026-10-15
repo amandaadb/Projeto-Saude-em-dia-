@@ -53,6 +53,8 @@ Ao abrir um Pull Request, descreva:
 - Se há **mudanças no banco de dados** (o restante da equipe precisa saber);
 - Prints das telas, quando a mudança for visual.
 
+O repositório já traz um modelo de Pull Request (`.github/PULL_REQUEST_TEMPLATE.md`) com esses campos. Basta preenchê-lo ao abrir o PR.
+
 Antes de pedir a revisão, confira se:
 
 - [ ] O código roda localmente sem erros;
