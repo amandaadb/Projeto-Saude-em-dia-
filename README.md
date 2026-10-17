@@ -70,58 +70,7 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 | :---: | :---: | :---: | :---: | :---: |
 | <img width="160" alt="Tela de Histórico" src="https://github.com/user-attachments/assets/503584d8-d4af-4c29-8cb2-e77fbd851817" /> | <img width="160" alt="Tela de Consultas e Receitas" src="https://github.com/user-attachments/assets/cda53cc6-e459-4638-b156-4b9de5c55cf7" /> | <img width="160" alt="Tela de Perfil" src="https://github.com/user-attachments/assets/5a02c69f-4f70-4170-b42b-e15e7eb448b9" /> | <img width="160" alt="Tela de Acessibilidade" src="https://github.com/user-attachments/assets/d632254a-0e1d-4d59-843a-19a817d96957" /> | <img width="160" alt="Tela de Recompensas" src="https://github.com/user-attachments/assets/6bb4a966-13ba-41d5-8e38-c62cc29f884e" /> |
 
-<details>
-<summary><strong>Ver versões em formato horizontal (apresentação)</strong></summary>
-
-<br>
-
-**Login e Cadastro**
-
-<img width="700" alt="Tela de Login e Cadastro, versão horizontal" src="https://github.com/user-attachments/assets/1359fe1b-046e-4280-b9b4-a150be53ba5a" />
-
-**Início**
-
-<img width="700" alt="Tela de Início, versão horizontal" src="https://github.com/user-attachments/assets/2832bd46-22c7-432a-847f-7193de1bd21e" />
-
-**Resumo do Dia**
-
-<img width="700" alt="Tela de Resumo do Dia, versão horizontal" src="https://github.com/user-attachments/assets/68c0a525-62f8-4309-93bf-47b714b943db" />
-
-**Menu Principal**
-
-<img width="700" alt="Tela do Menu Principal, versão horizontal" src="https://github.com/user-attachments/assets/cb1427c3-de5d-47da-a18b-b4060ab7dfb8" />
-
-**Controle de Estoque**
-
-<img width="700" alt="Tela de Controle de Estoque, versão horizontal" src="https://github.com/user-attachments/assets/b9752783-1b1f-4dab-a276-5471cec256a3" />
-
-**Histórico**
-
-<img width="700" alt="Tela de Histórico, versão horizontal" src="https://github.com/user-attachments/assets/07820e65-42ca-4b3a-a775-a81e0e4038b7" />
-
-**Consultas e Receitas**
-
-<img width="700" alt="Tela de Consultas e Receitas, versão horizontal" src="https://github.com/user-attachments/assets/00c818cc-0dde-4f5d-94cf-dd8ae50243c4" />
-
-**Perfil**
-
-<img width="700" alt="Tela de Perfil, versão horizontal" src="https://github.com/user-attachments/assets/8900ca04-18d8-4e4e-9171-d0c30adc0bf9" />
-
-**Acessibilidade**
-
-<img width="700" alt="Tela de Acessibilidade, versão horizontal" src="https://github.com/user-attachments/assets/fd6f43b1-a139-4b09-bcbd-71b5ff838403" />
-
-**Recompensas**
-
-<img width="700" alt="Tela de Recompensas, versão horizontal" src="https://github.com/user-attachments/assets/6a76d38d-c383-4491-8aba-3974eef5d95e" />
-
-</details>
-
----
-
-## Fluxo
-
-<img width="500" alt="Fluxo de navegação do aplicativo" src="https://github.com/user-attachments/assets/558f113a-e67e-41bf-beed-48fd1a8513b7" />
+Veja todas as telas em tamanho maior, com as versões de apresentação e o fluxo de navegação, em [docs/prototipo.md](./docs/prototipo.md).
 
 ## Melhorias Futuras (Roadmap)
 
