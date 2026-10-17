@@ -13,9 +13,10 @@ Versões do MedControl que atualmente recebem atualizações de segurança:
 
 ## Relatando uma Vulnerabilidade
 
-Se você encontrar uma vulnerabilidade de segurança no MedControl, **não abra uma issue pública**. Em vez disso, entre em contato diretamente pelo e-mail:
+Se você encontrar uma vulnerabilidade de segurança no MedControl, **não abra uma issue pública**. Use um dos canais abaixo:
 
-**amanda.db@uni9.edu.br**
+- **GitHub (recomendado):** na aba **Security** do repositório, clique em **Report a vulnerability**. O relato fica privado e restrito à equipe;
+- **E-mail:** **amanda.db@uni9.edu.br**
 
 Ao relatar, inclua sempre que possível:
 
