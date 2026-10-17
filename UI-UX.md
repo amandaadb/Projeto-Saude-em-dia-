@@ -8,7 +8,7 @@
 
 ## Protótipo
 
-- **Figma:** *(Colocar)*
+- **Telas:** [docs/prototipo.md](./docs/prototipo.md)
 
 ## Paleta de cores
 
