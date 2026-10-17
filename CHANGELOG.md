@@ -6,6 +6,15 @@ O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.
 
 ---
 
+## [2026-10-19]
+
+### Adicionado
+- Criado `docs/prototipo.md` com as telas do protótipo e o fluxo de navegação.
+
+### Alterado
+- `README.md`: galeria de telas reduzida a uma prévia, com link para `docs/prototipo.md`.
+- `UI-UX.md`, wiki e barra lateral: adicionado o link para o protótipo.
+
 ## [2026-10-18]
 
 ### Alterado
