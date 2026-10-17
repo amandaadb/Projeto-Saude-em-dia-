@@ -6,6 +6,18 @@ O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.
 
 ---
 
+## [2026-10-16]
+
+### Adicionado
+- Configurada a ruleset `Proteção da main` para a branch `main`, com exigência de Pull Request e aprovação, bloqueio de force push e de exclusão da branch.
+- Ativados o Private vulnerability reporting e os recursos do Advanced Security (Dependabot alerts, Secret scanning e Push protection).
+- Adicionada a imagem de pré-visualização social (Social preview) do repositório, no tamanho 1280×640 px.
+
+### Alterado
+- `SECURITY.md` atualizado com o relato privado de vulnerabilidades pelo GitHub como canal recomendado, mantendo o e-mail como alternativa.
+- Detalhes do repositório (About) atualizados: nova descrição e inclusão dos topics.
+- Configurações do repositório ajustadas em Settings, nas seções General, Pull Requests e Branches.
+
 ## [2026-10-15]
 
 ### Adicionado
