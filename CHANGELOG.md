@@ -6,6 +6,12 @@ O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.
 
 ---
 
+## [2026-10-18]
+
+### Alterado
+- Wiki: barra lateral ampliada com todos os documentos, agrupados por assunto.
+- Topics do repositório ajustados.
+
 ## [2026-10-17]
 
 ### Alterado
