@@ -1,6 +1,6 @@
 # Interface do Usuário e Experiência do Usuário - MedControl
 
-> Documentação visual do aplicativo, contendo o link para o protótipo no Figma, a paleta de cores oficial e a tipografia utilizada.
+> Documentação visual do aplicativo, contendo o protótipo das telas, a paleta de cores oficial e a tipografia utilizada.
 
 ## Logo
 
