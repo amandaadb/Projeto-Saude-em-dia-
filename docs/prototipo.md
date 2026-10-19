@@ -4,7 +4,7 @@
 
 ## Sobre o Protótipo
 
-As imagens abaixo mostram o **protótipo visual** do MedControl, feito para definir a aparência e a navegação do aplicativo. Elas podem diferir da versão implementada, que está em desenvolvimento. A paleta, a tipografia e o link do Figma ficam em [UI-UX.md](../UI-UX.md).
+As imagens abaixo mostram o **protótipo visual** do MedControl, feito para definir a aparência e a navegação do aplicativo. Elas podem diferir da versão implementada, que está em desenvolvimento. A paleta e a tipografia ficam em [UI-UX.md](../UI-UX.md).
 
 ## Índice
 
