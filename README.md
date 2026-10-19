@@ -4,7 +4,7 @@ O **MedControl** é um aplicativo desenvolvido com o objetivo de ajudar os usuá
 
 <img width="1254" height="1254" alt="Logo" src="https://github.com/user-attachments/assets/2dbb2cc5-7597-4df6-a664-2821c9ec5589" />
 
-Documentação relacionada: [Proposta](./docs/proposta.md) · [Diagramas](./docs/diagramas.md) · [Protótipo](./docs/prototipo.md) · [UI/UX](./UI-UX.md) · [Componentes](./COMPONENTS.md) · [Acessibilidade](./ACCESSIBILITY.md) · [Changelog](./CHANGELOG.md) · [Suporte](./SUPPORT.md) · [Segurança](./SECURITY.md) · [Código de Conduta](./CODE_OF_CONDUCT.md) · [Contribuindo](./CONTRIBUTING.md) · [Licença](./LICENSE) · [Licenciados](./LICENSED.md) · [Ignorados](./IGNORE.md) · [Wiki](https://github.com/amandaadb/Projeto-Saude-em-dia-/wiki)
+Documentação relacionada: [Proposta](./docs/proposta.md) · [Diagramas](./docs/diagramas.md) · [Protótipo](./docs/prototipo.md) · [UI/UX](./UI-UX.md) · [Componentes](./COMPONENTS.md) · [Acessibilidade](./ACCESSIBILITY.md) · [Changelog](./CHANGELOG.md) · [Suporte](./SUPPORT.md) · [Segurança](./SECURITY.md) · [Privacidade](./docs/privacidade.md) · [Código de Conduta](./CODE_OF_CONDUCT.md) · [Contribuindo](./CONTRIBUTING.md) · [Licença](./LICENSE) · [Licenciados](./LICENSED.md) · [Ignorados](./IGNORE.md) · [Wiki](https://github.com/amandaadb/Projeto-Saude-em-dia-/wiki)
 
 ---
 
