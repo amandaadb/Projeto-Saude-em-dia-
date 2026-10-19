@@ -6,6 +6,23 @@
 
 As imagens abaixo mostram o **protótipo visual** do MedControl, feito para definir a aparência e a navegação do aplicativo. Elas podem diferir da versão implementada, que está em desenvolvimento. A paleta e a tipografia ficam em [UI-UX.md](../UI-UX.md).
 
+## Situação das Telas
+
+| Tela | Situação |
+| :--- | :--- |
+| Login e Cadastro | MVP |
+| Início | MVP |
+| Resumo do Dia | MVP |
+| Menu Principal | MVP |
+| Controle de Estoque | MVP |
+| Histórico | MVP |
+| Perfil | MVP |
+| Consultas e Receitas | Futura (fora do MVP) |
+| Acessibilidade | Futura (fora do MVP) |
+| Recompensas | Futura (fora do MVP) |
+
+> As telas marcadas como **futuras** fazem parte do protótipo, mas **não estão implementadas** na versão atual. Veja o escopo em [proposta.md](./proposta.md).
+
 ## Índice
 
 - [Login e Cadastro](#login-e-cadastro)
@@ -24,11 +41,15 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 
 ### Login e Cadastro
 
+**Situação:** MVP
+
 | Versão mobile | Versão de apresentação |
 | :---: | :---: |
 | <img width="240" alt="Tela de Login e Cadastro" src="https://github.com/user-attachments/assets/7a5fbd88-3e3e-4865-8728-049e16e3a15e" /> | <img width="520" alt="Tela de Login e Cadastro, versão de apresentação" src="https://github.com/user-attachments/assets/1359fe1b-046e-4280-b9b4-a150be53ba5a" /> |
 
 ### Início
+
+**Situação:** MVP
 
 | Versão mobile | Versão de apresentação |
 | :---: | :---: |
@@ -36,11 +57,15 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 
 ### Resumo do Dia
 
+**Situação:** MVP
+
 | Versão mobile | Versão de apresentação |
 | :---: | :---: |
 | <img width="240" alt="Tela de Resumo do Dia" src="https://github.com/user-attachments/assets/5f317120-1b94-4ac9-bcc9-06c9f2c82b31" /> | <img width="520" alt="Tela de Resumo do Dia, versão de apresentação" src="https://github.com/user-attachments/assets/68c0a525-62f8-4309-93bf-47b714b943db" /> |
 
 ### Menu Principal
+
+**Situação:** MVP
 
 | Versão mobile | Versão de apresentação |
 | :---: | :---: |
@@ -48,11 +73,15 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 
 ### Controle de Estoque
 
+**Situação:** MVP
+
 | Versão mobile | Versão de apresentação |
 | :---: | :---: |
 | <img width="240" alt="Tela de Controle de Estoque" src="https://github.com/user-attachments/assets/67336fbe-8fc8-4c88-b051-c3a3a4d1e1d0" /> | <img width="520" alt="Tela de Controle de Estoque, versão de apresentação" src="https://github.com/user-attachments/assets/b9752783-1b1f-4dab-a276-5471cec256a3" /> |
 
 ### Histórico
+
+**Situação:** MVP
 
 | Versão mobile | Versão de apresentação |
 | :---: | :---: |
@@ -60,17 +89,23 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 
 ### Consultas e Receitas
 
+**Situação:** futura, fora do MVP. Não implementada.
+
 | Versão mobile | Versão de apresentação |
 | :---: | :---: |
 | <img width="240" alt="Tela de Consultas e Receitas" src="https://github.com/user-attachments/assets/cda53cc6-e459-4638-b156-4b9de5c55cf7" /> | <img width="520" alt="Tela de Consultas e Receitas, versão de apresentação" src="https://github.com/user-attachments/assets/00c818cc-0dde-4f5d-94cf-dd8ae50243c4" /> |
 
 ### Perfil
 
+**Situação:** MVP
+
 | Versão mobile | Versão de apresentação |
 | :---: | :---: |
 | <img width="240" alt="Tela de Perfil" src="https://github.com/user-attachments/assets/5a02c69f-4f70-4170-b42b-e15e7eb448b9" /> | <img width="520" alt="Tela de Perfil, versão de apresentação" src="https://github.com/user-attachments/assets/8900ca04-18d8-4e4e-9171-d0c30adc0bf9" /> |
 
 ### Acessibilidade
+
+**Situação:** futura, fora do MVP. Não implementada.
 
 | Versão mobile | Versão de apresentação |
 | :---: | :---: |
@@ -79,6 +114,8 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 > As opções de acessibilidade desta tela (ajuste de fonte, alto contraste e outras) são parte do protótipo e **ainda não estão implementadas**. Veja as [limitações conhecidas](../ACCESSIBILITY.md#limitações-conhecidas).
 
 ### Recompensas
+
+**Situação:** futura, fora do MVP. Não implementada.
 
 | Versão mobile | Versão de apresentação |
 | :---: | :---: |
