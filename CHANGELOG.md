@@ -6,6 +6,14 @@ O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.
 
 ---
 
+## [2026-10-20]
+
+### Adicionado
+- Criado `docs/privacidade.md`.
+
+### Alterado
+- `README.md`, wiki e barra lateral da wiki: adicionado o link para `docs/privacidade.md`.
+
 ## [2026-10-19]
 
 ### Adicionado
