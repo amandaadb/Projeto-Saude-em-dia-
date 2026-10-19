@@ -31,10 +31,10 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 - [Menu Principal](#menu-principal)
 - [Controle de Estoque](#controle-de-estoque)
 - [Histórico](#histórico)
-- [Consultas e Receitas](#consultas-e-receitas)
+- [Consultas e Receitas](#consultas-e-receitas) *(futura)*
 - [Perfil](#perfil)
-- [Acessibilidade](#acessibilidade)
-- [Recompensas](#recompensas)
+- [Acessibilidade](#acessibilidade) *(futura)*
+- [Recompensas](#recompensas) *(futura)*
 - [Fluxo de Navegação](#fluxo-de-navegação)
 
 ## Telas
