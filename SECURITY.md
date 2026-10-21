@@ -2,21 +2,21 @@
 
 > Política de segurança do projeto: quais versões recebem atualizações de segurança e como relatar uma vulnerabilidade.
 
-## Versões Suportadas
+## Versões suportadas
 
 Versões do MedControl que atualmente recebem atualizações de segurança:
 
 | Versão | Suportada |
-| ------ | --------- |
-| 1.x.x  | ✅ |
-| < 1.0  | ❌ |
+| :--- | :--- |
+| 1.x.x | Sim |
+| < 1.0 | Não |
 
-## Relatando uma Vulnerabilidade
+## Relatando uma vulnerabilidade
 
 Se você encontrar uma vulnerabilidade de segurança no MedControl, **não abra uma issue pública**. Use um dos canais abaixo:
 
 - **GitHub (recomendado):** na aba **Security** do repositório, clique em **Report a vulnerability**. O relato fica privado e restrito à equipe;
-- **E-mail:** **amanda.db@uni9.edu.br**
+- **E-mail:** **amanda.db@uni9.edu.br**.
 
 Ao relatar, inclua sempre que possível:
 
