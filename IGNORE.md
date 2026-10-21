@@ -2,11 +2,11 @@
 
 > Lista dos arquivos e pastas que não devem ser versionados no Git, com o motivo de cada grupo.
 
-## Como Usar
+## Como usar?
 
 Para o Git aplicar essas regras, copie o conteúdo do bloco abaixo para um arquivo chamado `.gitignore` na raiz do repositório. Este documento serve como referência para a equipe.
 
-## O Que é Ignorado e Por Quê
+## O que é ignorado e por quê
 
 | Grupo | Motivo |
 | :--- | :--- |
