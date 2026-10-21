@@ -2,13 +2,13 @@
 
 > Termos de uso, cópia e distribuição do código-fonte e dos materiais do projeto.
 
-## Licença proprietária
+## Licença Proprietária
 
 **Copyright © 2026 MedControl. Todos os direitos reservados.**
 
 Este projeto e todo o seu conteúdo, incluindo código-fonte, protótipos, telas, logotipo, identidade visual e documentação, são de propriedade da equipe MedControl.
 
-## Titulares dos direitos
+## Titulares dos Direitos
 
 - Amanda Dias Barreto
 - Daniela Rosa
@@ -34,13 +34,13 @@ Sem autorização prévia e por escrito de todos os titulares, **não é permiti
 - Utilizar o nome, o logotipo ou a identidade visual do MedControl;
 - Usar o projeto para fins comerciais.
 
-## Isenção de garantia
+## Isenção de Garantia
 
 O software é fornecido **"como está"**, sem garantias de qualquer tipo, expressas ou implícitas, incluindo adequação a um fim específico.
 
 > O MedControl é uma ferramenta de organização e **não substitui orientação médica**. Consulte sempre um profissional de saúde sobre seu tratamento.
 
-## Limitação de responsabilidade
+## Limitação de Responsabilidade
 
 Em nenhuma hipótese os autores serão responsáveis por danos, perdas ou reclamações decorrentes do uso do software, incluindo esquecimentos de doses ou uso incorreto de medicamentos.
 
