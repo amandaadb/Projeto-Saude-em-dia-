@@ -11,11 +11,11 @@ flowchart LR
     B -.->|"Valida token"| D["Autenticação JWT"]
 ```
 
-## Casos de Uso
+## Casos de uso
 
 ```mermaid
 flowchart LR
-    U(["👤 Usuário"])
+    U(["Usuário"])
 
     subgraph MedControl
         UC1(["Criar conta e fazer login"])
@@ -35,7 +35,7 @@ flowchart LR
     UC4 -.->|"atualiza"| UC6
 ```
 
-## Fluxograma: Cadastro e Login
+## Fluxograma: cadastro e login
 
 ```mermaid
 flowchart TD
@@ -56,7 +56,7 @@ flowchart TD
     L --> M([Tela inicial])
 ```
 
-## Fluxograma: Lembrete e Registro de Dose
+## Fluxograma: lembrete e registro de dose
 
 ```mermaid
 flowchart TD
@@ -75,7 +75,7 @@ flowchart TD
     K --> H
 ```
 
-## Fluxograma: Gestão de Medicamentos
+## Fluxograma: gestão de medicamentos
 
 ```mermaid
 flowchart TD
@@ -95,7 +95,7 @@ flowchart TD
     J --> A
 ```
 
-## Diagrama de Sequência: Login
+## Diagrama de sequência: login
 
 ```mermaid
 sequenceDiagram
@@ -117,7 +117,7 @@ sequenceDiagram
     end
 ```
 
-## Diagrama de Sequência: Registro de Dose
+## Diagrama de sequência: registro de dose
 
 ```mermaid
 sequenceDiagram
@@ -140,7 +140,7 @@ sequenceDiagram
     end
 ```
 
-## Diagrama de Classes
+## Diagrama de classes
 
 ```mermaid
 classDiagram
@@ -194,7 +194,7 @@ classDiagram
     RegistroDose --> StatusDose
 ```
 
-## Modelo Entidade-Relacionamento
+## Modelo entidade-relacionamento
 
 ```mermaid
 erDiagram
