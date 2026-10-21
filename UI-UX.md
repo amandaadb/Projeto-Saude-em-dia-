@@ -10,7 +10,7 @@
 
 - **Telas:** [docs/prototipo.md](./docs/prototipo.md)
 
-## Paleta de cores
+## Paleta de Cores
 
 ### Azul
 
