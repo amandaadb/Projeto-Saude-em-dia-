@@ -1,6 +1,6 @@
-# Leia-me - Front-end - MedControl
+# Front-end - MedControl
 
-O **MedControl Front-end** é o aplicativo móvel do MedControl, desenvolvido em **React Native + Expo (SDK 57)** com **Expo Router**. Nesta etapa, o app utiliza **dados de teste** (`src/mocks/`); a integração com a API do `backend/` será feita em uma próxima etapa.
+> Aplicativo móvel do MedControl, desenvolvido em **React Native + Expo (SDK 57)** com **Expo Router**. Nesta etapa, o app utiliza **dados de teste** (`src/mocks/`); a integração com a API do `backend/` será feita em uma próxima etapa.
 
 Documentação relacionada: [Leia-me principal](../README.md) · [UI/UX](../UI-UX.md) · [Componentes](../COMPONENTS.md) · [Acessibilidade](../ACCESSIBILITY.md) · [Protótipo](../docs/prototipo.md) · [Changelog](../CHANGELOG.md) · [Contribuindo](../CONTRIBUTING.md)
 
@@ -34,9 +34,9 @@ Abra o **Expo Go** no celular e leia o QR code.
 
 > **Atenção:** o computador e o celular precisam estar conectados à **mesma rede Wi-Fi**.
 
-## Estrutura do Projeto
+## Estrutura do projeto
 
-```
+```text
 src/
 ├── app/          rotas (Expo Router): 4 abas + formulário de medicamento
 ├── screens/      telas (Hoje, Medicamentos, Formulário, Histórico, Ajustes)
@@ -49,18 +49,18 @@ src/
 └── mocks/        dados de teste
 ```
 
-## Estados Visuais
+## Estados visuais
 
 | Estado | Origem |
 | :--- | :--- |
-| ✅ **Tomado** | `history.fl_taken = true` |
-| ❌ **Não tomado** | `history.fl_taken = false` |
-| ⏰ **Pendente** | Rotina de hoje **sem** registro em `history` (calculado no front-end) |
-| ⚠️ **Estoque baixo** | `medicines.stock` menor ou igual ao limite (valor provisório: 5) |
+| **Tomado** | `history.fl_taken = true` |
+| **Não tomado** | `history.fl_taken = false` |
+| **Pendente** | Rotina de hoje **sem** registro em `history` (calculado no front-end) |
+| **Estoque baixo** | `medicines.stock` menor ou igual ao limite (valor provisório: 5) |
 
 ---
 
-> **Aviso:** o MedControl é uma ferramenta de organização e acompanhamento e **não substitui a orientação de médicos ou outros profissionais de saúde**.
+> O MedControl é uma ferramenta de organização e **não substitui orientação médica**.
 
 ---
 
