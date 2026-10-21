@@ -53,7 +53,7 @@ Documentação relacionada: [Proposta](./docs/proposta.md) · [Diagramas](./docs
 - Elaboração da documentação técnica
 - Criação dos diagramas UML
 
-## Para quem este aplicativo é voltado?
+## Para Quem Este Aplicativo é Voltado?
 
 O MedControl é voltado para o público geral, com foco na gestão da saúde e no acompanhamento de tratamentos contínuos. Público-alvo principal:
 
