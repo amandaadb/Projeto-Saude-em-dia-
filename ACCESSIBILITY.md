@@ -2,7 +2,7 @@
 
 > Compromissos de acessibilidade do projeto, expectativas para quem contribui e como relatar barreiras encontradas no aplicativo.
 
-## Por Que Isso Importa
+## Por que isso importa?
 
 O MedControl ajuda pessoas a organizar medicamentos e horários, e muitas delas são idosas, têm baixa visão, dificuldade de leitura, tremores nas mãos ou pouca familiaridade com tecnologia. Se o aplicativo for difícil de usar, o risco é real: uma dose esquecida ou uma informação mal compreendida.
 
@@ -23,7 +23,7 @@ Trabalhamos para que o aplicativo seja fácil de ver, entender e usar. Nossas pr
 
 Adotamos as diretrizes internacionais de acessibilidade para conteúdo web (WCAG, nível AA) como **meta de referência**. Isso é um objetivo, **não uma declaração de conformidade**: o MedControl ainda não passou por uma avaliação formal de acessibilidade. Se isso mudar, registraremos aqui o escopo avaliado, a data, o método e quem avaliou.
 
-## Expectativas para Quem Contribui
+## Expectativas para quem contribui
 
 Alterações que afetam a interface devem manter ou melhorar a acessibilidade. Antes de abrir um Pull Request com mudanças visuais, confira:
 
@@ -38,7 +38,7 @@ Alterações que afetam a interface devem manter ou melhorar a acessibilidade. A
 
 Ainda não usamos ferramentas automatizadas de acessibilidade. Quando passarmos a usar, elas serão listadas aqui.
 
-## Relatando Problemas de Acessibilidade
+## Relatando problemas de acessibilidade
 
 Se você encontrou uma barreira ou precisa de ajuda para usar o MedControl, escreva para:
 
@@ -67,7 +67,7 @@ Ao analisar o relato, a equipe define a severidade conforme o quanto a barreira 
 | **Média** | Causa incômodo ou exige esforço extra | Texto com contraste baixo em uma tela secundária |
 | **Baixa** | Melhoria que torna o uso mais agradável | Mensagem que poderia ser escrita de forma mais simples |
 
-### Como Respondemos
+### Como respondemos?
 
 - **Confirmação de recebimento:** em até 2 dias úteis;
 - **Atualização sobre o andamento:** em até 7 dias úteis;
@@ -77,7 +77,7 @@ Ao analisar o relato, a equipe define a severidade conforme o quanto a barreira 
 
 Por ser um projeto acadêmico mantido por uma equipe pequena, não prometemos prazo de correção, mas todo relato será lido e respondido.
 
-## Responsabilidade e Manutenção
+## Responsabilidade e manutenção
 
 A acessibilidade é responsabilidade de toda a equipe, com os seguintes papéis:
 
@@ -88,7 +88,7 @@ A acessibilidade é responsabilidade de toda a equipe, com os seguintes papéis:
 
 Este documento deve ser revisado a cada nova versão do aplicativo e sempre que uma limitação for corrigida ou descoberta. Se alguém sair do projeto, suas responsabilidades devem ser repassadas a outro integrante e o documento atualizado.
 
-## Ambientes Suportados
+## Ambientes suportados
 
 O MedControl é um aplicativo mobile. Até o momento, **não houve uma avaliação formal em uma lista definida de aparelhos, sistemas operacionais ou tecnologias assistivas**, e por isso não afirmamos suporte a nenhuma combinação específica.
 
@@ -99,7 +99,7 @@ Quando os testes forem feitos, esta seção listará:
 - Recursos de apoio testados, como leitor de tela, ampliação de tela e aumento do tamanho da fonte do sistema;
 - Suporte parcial, quando houver.
 
-## Limitações Conhecidas
+## Limitações conhecidas
 
 Estas são barreiras que já sabemos que existem, ou que ainda não foram tratadas:
 
@@ -113,7 +113,7 @@ Ajuste de fonte, alto contraste, leitor de tela e navegação simplificada estã
 
 Também ainda não fizemos testes com pessoas idosas ou com deficiência. Por isso, não afirmamos que o aplicativo não tem barreiras: apenas que ainda não as avaliamos por completo.
 
-## Sugestões e Melhorias
+## Sugestões e melhorias
 
 Quer sugerir uma melhoria neste documento ou nas nossas práticas de acessibilidade? Escreva para **amanda.db@uni9.edu.br** ou, se for da equipe, fale pelo grupo do WhatsApp do projeto.
 
