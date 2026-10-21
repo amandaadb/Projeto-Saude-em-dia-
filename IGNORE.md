@@ -6,7 +6,7 @@
 
 Para o Git aplicar essas regras, copie o conteúdo do bloco abaixo para um arquivo chamado `.gitignore` na raiz do repositório. Este documento serve como referência para a equipe.
 
-## O que é ignorado e por quê
+## O que é ignorado e por quê?
 
 | Grupo | Motivo |
 | :--- | :--- |
