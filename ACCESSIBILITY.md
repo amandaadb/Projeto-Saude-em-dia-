@@ -117,6 +117,6 @@ Também ainda não fizemos testes com pessoas idosas ou com deficiência. Por is
 
 Quer sugerir uma melhoria neste documento ou nas nossas práticas de acessibilidade? Escreva para **amanda.db@uni9.edu.br** ou, se for da equipe, fale pelo grupo do WhatsApp do projeto.
 
-Se você está enfrentando uma barreira agora, use o processo da seção [Relatando Problemas de Acessibilidade](#relatando-problemas-de-acessibilidade).
+Se você está enfrentando uma barreira agora, use o processo da seção [Relatando problemas de acessibilidade](#relatando-problemas-de-acessibilidade).
 
 > O MedControl é uma ferramenta de organização e **não substitui orientação médica**.
