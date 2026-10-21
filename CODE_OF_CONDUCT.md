@@ -26,7 +26,7 @@ Exemplos de comportamentos inaceitáveis:
 - Publicar informações privadas de outras pessoas, como endereço físico ou de e-mail, sem permissão explícita;
 - Outras condutas que possam ser consideradas inadequadas em um ambiente profissional.
 
-## Responsabilidades da Aplicação
+## Responsabilidades da aplicação
 
 Os líderes da comunidade são responsáveis por esclarecer e fazer cumprir nossos padrões de comportamento aceitável e tomarão ações corretivas apropriadas e justas diante de qualquer conduta que considerem inadequada, ameaçadora, ofensiva ou prejudicial.
 
@@ -46,7 +46,7 @@ Todas as denúncias serão analisadas e investigadas de forma rápida e justa.
 
 Todos os líderes são obrigados a respeitar a privacidade e a segurança de quem relatar um incidente.
 
-## Diretrizes de Aplicação
+## Diretrizes de aplicação
 
 Os líderes da comunidade seguirão estas diretrizes de impacto para definir as consequências de qualquer ação que considerem uma violação deste Código de Conduta:
 
@@ -62,13 +62,13 @@ Os líderes da comunidade seguirão estas diretrizes de impacto para definir as 
 
 **Consequência:** advertência com consequências em caso de continuidade do comportamento. Nenhuma interação com as pessoas envolvidas, incluindo contato não solicitado com quem aplica o Código de Conduta, por um período determinado. Isso inclui evitar interações nos espaços da comunidade e em canais externos, como redes sociais. O descumprimento destes termos pode levar a um banimento temporário ou permanente.
 
-### 3. Banimento Temporário
+### 3. Banimento temporário
 
 **Impacto na comunidade:** violação grave dos padrões da comunidade, incluindo comportamento inadequado prolongado.
 
 **Consequência:** banimento temporário de qualquer tipo de interação ou comunicação pública com a comunidade por um período determinado. Nenhuma interação pública ou privada com as pessoas envolvidas, incluindo contato não solicitado com quem aplica o Código de Conduta, é permitida durante esse período. O descumprimento destes termos pode levar a um banimento permanente.
 
-### 4. Banimento Permanente
+### 4. Banimento permanente
 
 **Impacto na comunidade:** demonstração de um padrão de violação dos padrões da comunidade, incluindo comportamento inadequado prolongado, assédio a uma pessoa ou agressão e desrespeito a grupos de pessoas.
 
