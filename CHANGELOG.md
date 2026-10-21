@@ -1,10 +1,14 @@
 # Registro de Alterações - MedControl
 
-Todas as mudanças notáveis deste projeto serão documentadas neste arquivo.
+> Registro das mudanças notáveis do projeto, seguindo o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
-O formato segue o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
+## [2026-10-21]
 
----
+### Alterado
+
+- Padronização visual dos documentos: títulos de seção, tabelas, listas, avisos médicos e remoção de emojis;
+- `README.md`, `frontend/README.md` e `CHANGELOG.md`: descrição em citação (`>`);
+- `COMPONENTS.md`: adicionada a seção Componentes.
 
 ## [2026-10-20]
 
