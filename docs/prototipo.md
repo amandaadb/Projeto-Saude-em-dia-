@@ -2,11 +2,11 @@
 
 > Telas do protótipo do aplicativo, em versão mobile e em versão de apresentação, e o fluxo de navegação entre elas.
 
-## Sobre o Protótipo
+## Sobre o protótipo
 
 As imagens abaixo mostram o **protótipo visual** do MedControl, feito para definir a aparência e a navegação do aplicativo. Elas podem diferir da versão implementada, que está em desenvolvimento. A paleta e a tipografia ficam em [UI-UX.md](../UI-UX.md).
 
-## Situação das Telas
+## Situação das telas
 
 | Tela | Situação |
 | :--- | :--- |
@@ -25,21 +25,21 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 
 ## Índice
 
-- [Login e Cadastro](#login-e-cadastro)
+- [Login e cadastro](#login-e-cadastro)
 - [Início](#início)
-- [Resumo do Dia](#resumo-do-dia)
-- [Menu Principal](#menu-principal)
-- [Controle de Estoque](#controle-de-estoque)
+- [Resumo do dia](#resumo-do-dia)
+- [Menu principal](#menu-principal)
+- [Controle de estoque](#controle-de-estoque)
 - [Histórico](#histórico)
-- [Consultas e Receitas](#consultas-e-receitas) *(futura)*
+- [Consultas e receitas](#consultas-e-receitas) *(futura)*
 - [Perfil](#perfil)
 - [Acessibilidade](#acessibilidade) *(futura)*
 - [Recompensas](#recompensas) *(futura)*
-- [Fluxo de Navegação](#fluxo-de-navegação)
+- [Fluxo de navegação](#fluxo-de-navegação)
 
 ## Telas
 
-### Login e Cadastro
+### Login e cadastro
 
 **Situação:** MVP
 
@@ -55,7 +55,7 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 | :---: | :---: |
 | <img width="240" alt="Tela de Início" src="https://github.com/user-attachments/assets/30784122-c897-426d-9442-ad8b7272855a" /> | <img width="520" alt="Tela de Início, versão de apresentação" src="https://github.com/user-attachments/assets/2832bd46-22c7-432a-847f-7193de1bd21e" /> |
 
-### Resumo do Dia
+### Resumo do dia
 
 **Situação:** MVP
 
@@ -63,7 +63,7 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 | :---: | :---: |
 | <img width="240" alt="Tela de Resumo do Dia" src="https://github.com/user-attachments/assets/5f317120-1b94-4ac9-bcc9-06c9f2c82b31" /> | <img width="520" alt="Tela de Resumo do Dia, versão de apresentação" src="https://github.com/user-attachments/assets/68c0a525-62f8-4309-93bf-47b714b943db" /> |
 
-### Menu Principal
+### Menu principal
 
 **Situação:** MVP
 
@@ -71,7 +71,7 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 | :---: | :---: |
 | <img width="240" alt="Tela do Menu Principal" src="https://github.com/user-attachments/assets/38dd3ca0-05f7-435a-89e9-654cf4561749" /> | <img width="520" alt="Tela do Menu Principal, versão de apresentação" src="https://github.com/user-attachments/assets/cb1427c3-de5d-47da-a18b-b4060ab7dfb8" /> |
 
-### Controle de Estoque
+### Controle de estoque
 
 **Situação:** MVP
 
@@ -87,9 +87,9 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 | :---: | :---: |
 | <img width="240" alt="Tela de Histórico" src="https://github.com/user-attachments/assets/503584d8-d4af-4c29-8cb2-e77fbd851817" /> | <img width="520" alt="Tela de Histórico, versão de apresentação" src="https://github.com/user-attachments/assets/07820e65-42ca-4b3a-a775-a81e0e4038b7" /> |
 
-### Consultas e Receitas
+### Consultas e receitas
 
-**Situação:** futura, fora do MVP. Não implementada.
+**Situação:** futura (fora do MVP). Não implementada.
 
 | Versão mobile | Versão de apresentação |
 | :---: | :---: |
@@ -105,7 +105,7 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 
 ### Acessibilidade
 
-**Situação:** futura, fora do MVP. Não implementada.
+**Situação:** futura (fora do MVP). Não implementada.
 
 | Versão mobile | Versão de apresentação |
 | :---: | :---: |
@@ -115,13 +115,13 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 
 ### Recompensas
 
-**Situação:** futura, fora do MVP. Não implementada.
+**Situação:** futura (fora do MVP). Não implementada.
 
 | Versão mobile | Versão de apresentação |
 | :---: | :---: |
 | <img width="240" alt="Tela de Recompensas" src="https://github.com/user-attachments/assets/6bb4a966-13ba-41d5-8e38-c62cc29f884e" /> | <img width="520" alt="Tela de Recompensas, versão de apresentação" src="https://github.com/user-attachments/assets/6a76d38d-c383-4491-8aba-3974eef5d95e" /> |
 
-## Fluxo de Navegação
+## Fluxo de navegação
 
 <img width="520" alt="Fluxo de navegação entre as telas do aplicativo" src="https://github.com/user-attachments/assets/558f113a-e67e-41bf-beed-48fd1a8513b7" />
 
