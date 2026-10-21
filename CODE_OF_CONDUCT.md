@@ -26,7 +26,7 @@ Exemplos de comportamentos inaceitáveis:
 - Publicar informações privadas de outras pessoas, como endereço físico ou de e-mail, sem permissão explícita;
 - Outras condutas que possam ser consideradas inadequadas em um ambiente profissional.
 
-## Responsabilidades da aplicação
+## Responsabilidades da liderança
 
 Os líderes da comunidade são responsáveis por esclarecer e fazer cumprir nossos padrões de comportamento aceitável e tomarão ações corretivas apropriadas e justas diante de qualquer conduta que considerem inadequada, ameaçadora, ofensiva ou prejudicial.
 
