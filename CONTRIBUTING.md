@@ -2,7 +2,7 @@
 
 > Guia para quem quer colaborar com o projeto: como organizar o trabalho, escrever commits, enviar alterações e manter a documentação em dia.
 
-## Antes de começar
+## Antes de Começar
 
 O MedControl é um projeto acadêmico sob **licença proprietária**. Por isso:
 
@@ -62,13 +62,13 @@ Antes de pedir a revisão, confira se:
 - [ ] A documentação afetada foi atualizada;
 - [ ] O `CHANGELOG.md` recebeu uma entrada com a alteração.
 
-## Segurança e segredos
+## Segurança e Segredos
 
 - **Nunca** envie o `.env`, chaves do Supabase, segredo do JWT, senhas ou certificados para o repositório. Veja a lista completa em [IGNORE.md](./IGNORE.md);
 - Se um segredo for enviado por engano, avise a equipe e **troque imediatamente** as chaves do Supabase e o segredo do JWT;
 - Para relatar vulnerabilidades, siga o [SECURITY.md](./SECURITY.md). **Não abra issue pública.**
 
-## Padrões do projeto
+## Padrões do Projeto
 
 ### Back-end (FastAPI)
 
@@ -89,7 +89,7 @@ Antes de pedir a revisão, confira se:
 - Alterações em fluxos, telas ou dados devem atualizar `docs/diagramas.md` e `docs/proposta.md`;
 - Mantenha o aviso de que o MedControl **não substitui orientação médica**.
 
-## Registro de alterações
+## Registro de Alterações
 
 Toda alteração relevante deve ser registrada no [CHANGELOG.md](./CHANGELOG.md), no formato [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/), com a data no topo e as categorias `Adicionado`, `Alterado` ou `Corrigido`.
 
