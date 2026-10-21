@@ -25,7 +25,7 @@ Ao relatar, inclua sempre que possível:
 - Versão do aplicativo afetada;
 - Sugestão de correção, se tiver uma.
 
-### O Que Esperar
+### O que esperar?
 
 - **Confirmação de recebimento:** em até 2 dias úteis;
 - **Atualização sobre o andamento:** em até 7 dias úteis;
