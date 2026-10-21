@@ -2,7 +2,7 @@
 
 > Guia para quem quer colaborar com o projeto: como organizar o trabalho, escrever commits, enviar alterações e manter a documentação em dia.
 
-## Antes de Começar
+## Antes de começar
 
 O MedControl é um projeto acadêmico sob **licença proprietária**. Por isso:
 
