@@ -2,13 +2,13 @@
 
 > Regras de convivência para todas as pessoas que participam do projeto, garantindo um ambiente respeitoso, acolhedor e seguro.
 
-## Nosso Compromisso
+## Nosso compromisso
 
 Nós, como integrantes, colaboradores e líderes, nos comprometemos a fazer da participação em nossa comunidade uma experiência livre de assédio para todas as pessoas, independentemente de idade, porte físico, deficiência visível ou invisível, etnia, características sexuais, identidade e expressão de gênero, nível de experiência, escolaridade, condição socioeconômica, nacionalidade, aparência pessoal, raça, religião ou identidade e orientação sexual.
 
 Nos comprometemos a agir e a interagir de maneira que contribua para uma comunidade aberta, acolhedora, diversa, inclusiva e saudável.
 
-## Nossos Padrões
+## Nossos padrões
 
 Exemplos de comportamentos que contribuem para um ambiente positivo:
 
