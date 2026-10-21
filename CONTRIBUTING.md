@@ -2,7 +2,7 @@
 
 > Guia para quem quer colaborar com o projeto: como organizar o trabalho, escrever commits, enviar alterações e manter a documentação em dia.
 
-## Antes de Começar
+## Antes de começar
 
 O MedControl é um projeto acadêmico sob **licença proprietária**. Por isso:
 
@@ -11,7 +11,7 @@ O MedControl é um projeto acadêmico sob **licença proprietária**. Por isso:
 
 Ao participar, você concorda em seguir o [Código de Conduta](./CODE_OF_CONDUCT.md).
 
-## Como Contribuir
+## Como contribuir?
 
 1. Combine a tarefa com a equipe (grupo do WhatsApp) para evitar trabalho duplicado;
 2. Atualize sua cópia local antes de começar;
