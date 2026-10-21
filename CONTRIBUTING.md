@@ -32,7 +32,7 @@ Nunca trabalhe direto na `main`. Use nomes curtos, em minúsculas e com hífens,
 | `refactor/` | Melhoria de código sem mudar o comportamento | `refactor/rotas-medicamentos` |
 | `test/` | Criação ou ajuste de testes | `test/cadastro-usuario` |
 
-## Mensagens de Commit
+## Mensagens de commit
 
 Escreva em português, no imperativo e de forma objetiva, com o tipo no início:
 
@@ -44,7 +44,7 @@ docs: cria CODE_OF_CONDUCT.md
 
 Um commit deve representar uma mudança com um único propósito.
 
-## Pull Requests
+## Pull requests
 
 Ao abrir um Pull Request, descreva:
 
@@ -62,13 +62,13 @@ Antes de pedir a revisão, confira se:
 - [ ] A documentação afetada foi atualizada;
 - [ ] O `CHANGELOG.md` recebeu uma entrada com a alteração.
 
-## Segurança e Segredos
+## Segurança e segredos
 
 - **Nunca** envie o `.env`, chaves do Supabase, segredo do JWT, senhas ou certificados para o repositório. Veja a lista completa em [IGNORE.md](./IGNORE.md);
 - Se um segredo for enviado por engano, avise a equipe e **troque imediatamente** as chaves do Supabase e o segredo do JWT;
 - Para relatar vulnerabilidades, siga o [SECURITY.md](./SECURITY.md). **Não abra issue pública.**
 
-## Padrões do Projeto
+## Padrões do projeto
 
 ### Back-end (FastAPI)
 
@@ -89,7 +89,7 @@ Antes de pedir a revisão, confira se:
 - Alterações em fluxos, telas ou dados devem atualizar `docs/diagramas.md` e `docs/proposta.md`;
 - Mantenha o aviso de que o MedControl **não substitui orientação médica**.
 
-## Registro de Alterações
+## Registro de alterações
 
 Toda alteração relevante deve ser registrada no [CHANGELOG.md](./CHANGELOG.md), no formato [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/), com a data no topo e as categorias `Adicionado`, `Alterado` ou `Corrigido`.
 
