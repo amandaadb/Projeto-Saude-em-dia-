@@ -22,36 +22,41 @@ Documentação relacionada: [Proposta](./docs/proposta.md) · [Diagramas](./docs
 
 ## Responsabilidades
 
-### Gestão e Análise - *Amanda*
-- Organização do cronograma e das entregas
-- Acompanhamento das tarefas da equipe
-- Levantamento de requisitos
-- Definição de objetivos, público-alvo e regras de negócio
+### Gestão e análise - *Amanda*
 
-### UX/UI e Protótipo - *Gabriel*
-- Criação da identidade visual (cores, fontes e componentes)
-- Prototipação das telas
-- Elaboração do fluxo de navegação
-- Elaboração do README com apresentação visual do projeto
+- Organização do cronograma e das entregas;
+- Acompanhamento das tarefas da equipe;
+- Levantamento de requisitos;
+- Definição de objetivos, público-alvo e regras de negócio.
 
-### Front-end e Telas - *Daniela e Luana*
-- Desenvolvimento e estilização das telas de login, cadastro, início etc
-- Implementação da responsividade e acessibilidade visual
-- Configuração das rotas de navegação entre as telas do aplicativo
-- Consumo dos endpoints da API fornecida pelo Back-end
+### UX/UI e protótipo - *Gabriel*
 
-### Back-end e Banco de Dados - *Lucas e Renan*
-- Modelagem do banco de dados
-- Criação de tabelas e entidades
-- Implementação de CRUD
-- Autenticação e regras de acesso
-- Disponibilização dos endpoints da API para o Front-end
+- Criação da identidade visual (cores, fontes e componentes);
+- Prototipação das telas;
+- Elaboração do fluxo de navegação;
+- Elaboração do README com apresentação visual do projeto.
 
-### Testes e Documentação - *Guilherme*
-- Criação e execução de casos de teste
-- Registro e acompanhamento de bugs
-- Elaboração da documentação técnica
-- Criação dos diagramas UML
+### Front-end e telas - *Daniela e Luana*
+
+- Desenvolvimento e estilização das telas de login, cadastro, início etc.;
+- Implementação da responsividade e acessibilidade visual;
+- Configuração das rotas de navegação entre as telas do aplicativo;
+- Consumo dos endpoints da API fornecida pelo Back-end.
+
+### Back-end e banco de dados - *Lucas e Renan*
+
+- Modelagem do banco de dados;
+- Criação de tabelas e entidades;
+- Implementação de CRUD;
+- Autenticação e regras de acesso;
+- Disponibilização dos endpoints da API para o Front-end.
+
+### Testes e documentação - *Guilherme*
+
+- Criação e execução de casos de teste;
+- Registro e acompanhamento de bugs;
+- Elaboração da documentação técnica;
+- Criação dos diagramas UML.
 
 ## Para quem este aplicativo é voltado?
 
@@ -60,7 +65,7 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 - **Pacientes em tratamento:** pessoas que fazem uso diário de medicamentos ou possuem condições de saúde que exigem acompanhamento contínuo;
 - **Familiares e cuidadores:** pessoas responsáveis por gerenciar, organizar e acompanhar a rotina de medicação de entes queridos ou pacientes sob seus cuidados.
 
-## Telas do Aplicativo
+## Telas do aplicativo
 
 | Login e Cadastro | Início | Resumo do Dia | Menu Principal | Controle de Estoque |
 | :---: | :---: | :---: | :---: | :---: |
@@ -72,7 +77,7 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 
 Veja todas as telas em tamanho maior, com as versões de apresentação e o fluxo de navegação, em [docs/prototipo.md](./docs/prototipo.md).
 
-## Melhorias Futuras (Roadmap)
+## Melhorias futuras (roadmap)
 
 O **MedControl** foi desenvolvido para facilitar a organização de medicamentos e o acompanhamento de tratamentos contínuos. Nas próximas versões, planejamos ampliar suas funcionalidades, acessibilidade, segurança e praticidade, com foco em **suporte familiar**, **automação** e **facilidade de uso**.
 
@@ -93,7 +98,7 @@ O **MedControl** foi desenvolvido para facilitar a organização de medicamentos
 
 ---
 
-> **Aviso:** o MedControl é uma ferramenta de organização e acompanhamento e **não substitui a orientação de médicos ou outros profissionais de saúde**.
+> O MedControl é uma ferramenta de organização e **não substitui orientação médica**.
 
 ---
 
