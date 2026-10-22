@@ -67,11 +67,11 @@ O MedControl é voltado para o público geral, com foco na gestão da saúde e n
 
 ## Telas do aplicativo
 
-| Login e Cadastro | Início | Resumo do Dia | Menu Principal | Controle de Estoque |
+| Login e cadastro | Início | Resumo do dia | Menu principal | Controle de estoque |
 | :---: | :---: | :---: | :---: | :---: |
 | <img width="160" alt="Tela de Login e Cadastro" src="https://github.com/user-attachments/assets/7a5fbd88-3e3e-4865-8728-049e16e3a15e" /> | <img width="160" alt="Tela de Início" src="https://github.com/user-attachments/assets/30784122-c897-426d-9442-ad8b7272855a" /> | <img width="160" alt="Tela de Resumo do Dia" src="https://github.com/user-attachments/assets/5f317120-1b94-4ac9-bcc9-06c9f2c82b31" /> | <img width="160" alt="Tela do Menu Principal" src="https://github.com/user-attachments/assets/38dd3ca0-05f7-435a-89e9-654cf4561749" /> | <img width="160" alt="Tela de Controle de Estoque" src="https://github.com/user-attachments/assets/67336fbe-8fc8-4c88-b051-c3a3a4d1e1d0" /> |
 
-| Histórico | Consultas e Receitas | Perfil | Acessibilidade | Recompensas |
+| Histórico | Consultas e receitas | Perfil | Acessibilidade | Recompensas |
 | :---: | :---: | :---: | :---: | :---: |
 | <img width="160" alt="Tela de Histórico" src="https://github.com/user-attachments/assets/503584d8-d4af-4c29-8cb2-e77fbd851817" /> | <img width="160" alt="Tela de Consultas e Receitas" src="https://github.com/user-attachments/assets/cda53cc6-e459-4638-b156-4b9de5c55cf7" /> | <img width="160" alt="Tela de Perfil" src="https://github.com/user-attachments/assets/5a02c69f-4f70-4170-b42b-e15e7eb448b9" /> | <img width="160" alt="Tela de Acessibilidade" src="https://github.com/user-attachments/assets/d632254a-0e1d-4d59-843a-19a817d96957" /> | <img width="160" alt="Tela de Recompensas" src="https://github.com/user-attachments/assets/6bb4a966-13ba-41d5-8e38-c62cc29f884e" /> |
 
