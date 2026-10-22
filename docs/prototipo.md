@@ -10,14 +10,14 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 
 | Tela | Situação |
 | :--- | :--- |
-| Login e Cadastro | MVP |
+| Login e cadastro | MVP |
 | Início | MVP |
-| Resumo do Dia | MVP |
-| Menu Principal | MVP |
-| Controle de Estoque | MVP |
+| Resumo do dia | MVP |
+| Menu principal | MVP |
+| Controle de estoque | MVP |
 | Histórico | MVP |
 | Perfil | MVP |
-| Consultas e Receitas | Futura (fora do MVP) |
+| Consultas e receitas | Futura (fora do MVP) |
 | Acessibilidade | Futura (fora do MVP) |
 | Recompensas | Futura (fora do MVP) |
 
