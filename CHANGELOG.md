@@ -2,6 +2,26 @@
 
 > Registro das mudanças notáveis do projeto, seguindo o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [2026-10-25]
+
+### Adicionado
+- Criado `backend/README.md`, com como rodar, variáveis de ambiente, endpoints e banco de dados.
+- Seção "Divergências conhecidas" em `COMPONENTS.md` e seção "Testes realizados" em `ACCESSIBILITY.md`.
+- Criado `.github/ISSUE_TEMPLATE/config.yml`.
+
+### Alterado
+- `UI-UX.md`: adicionadas a paleta oficial, as cores por função, a tipografia, o espaçamento, os estados visuais, a tabela de contraste e as pendências de design.
+- `COMPONENTS.md`: catálogo refeito com os componentes reais do app (`AppButton`, `AppInput`, `MedicationCard`, `StatusBadge`, `StockStepper`, `SwitchRow`, `FilterChips`, `Section` e `Screen`).
+- `ACCESSIBILITY.md`: limitações atualizadas conforme o código (lembretes inexistentes, larguras fixas, alvos pequenos, contraste, emojis) e checklist ampliado.
+- `docs/diagramas.md`: refeito a partir de `tables.sql` e dos fluxos reais (status da dose calculado no app, registro por "Tomei" ou "Não tomei", sem desconto automático de estoque).
+- `docs/proposta.md`: adicionadas a situação das funcionalidades e as regras de negócio; lembretes movidos para o planejado.
+- `docs/privacidade.md`: incluídos telefone, data de nascimento e dados de saúde; esclarecidos o hash de senha (feito pela API) e a exclusão lógica da conta.
+- `docs/prototipo.md`: adicionada a correspondência entre as telas do protótipo e as do app implementado.
+- `README.md` e `frontend/README.md`: adicionadas a situação do projeto, a estrutura, variáveis de ambiente e pendências de integração.
+- `CONTRIBUTING.md`: Pull Requests passam a sair da `develop`; adicionados lint, tipos e as regras de privacidade e de segredos no front-end.
+- `SECURITY.md`, `SUPPORT.md` e `IGNORE.md`: ampliados.
+- Wiki: Home e barra lateral com os links do front-end e do back-end.
+
 ## [2026-10-21]
 
 ### Alterado
