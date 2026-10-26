@@ -14,15 +14,17 @@ Ao participar, você concorda em seguir o [Código de Conduta](./CODE_OF_CONDUCT
 ## Como contribuir?
 
 1. Combine a tarefa com a equipe (grupo do WhatsApp) para evitar trabalho duplicado;
-2. Atualize sua cópia local antes de começar;
+2. Atualize sua cópia local e parta da `develop`;
 3. Crie uma branch própria para a tarefa;
 4. Faça as alterações e teste localmente;
-5. Envie a branch e abra um Pull Request;
+5. Envie a branch e abra um Pull Request **para a `develop`**;
 6. Aguarde a revisão de pelo menos um integrante antes de mesclar.
+
+A `main` recebe apenas versões estáveis, vindas da `develop`.
 
 ## Branches
 
-Nunca trabalhe direto na `main`. Use nomes curtos, em minúsculas e com hífens, começando pelo tipo da alteração:
+Nunca trabalhe direto na `main` nem na `develop`. Use nomes curtos, em minúsculas e com hífens, começando pelo tipo da alteração:
 
 | Prefixo | Quando usar | Exemplo |
 | :--- | :--- | :--- |
@@ -51,22 +53,34 @@ Ao abrir um Pull Request, descreva:
 - **O que** foi alterado e **por quê**;
 - **Como testar** a alteração;
 - Se há **mudanças no banco de dados** (o restante da equipe precisa saber);
-- Prints das telas, quando a mudança for visual.
+- Prints das telas (antes e depois), quando a mudança for visual.
 
 O repositório já traz um modelo de Pull Request (`.github/PULL_REQUEST_TEMPLATE.md`) com esses campos. Basta preenchê-lo ao abrir o PR.
 
 Antes de pedir a revisão, confira se:
 
 - [ ] O código roda localmente sem erros;
+- [ ] `npm run lint` e `npx tsc --noEmit` passam (front-end);
 - [ ] Nenhum arquivo sensível foi incluído (veja a seção abaixo);
 - [ ] A documentação afetada foi atualizada;
 - [ ] O `CHANGELOG.md` recebeu uma entrada com a alteração.
 
+## Como rodar o projeto
+
+- **Back-end:** [backend/README.md](./backend/README.md);
+- **Front-end:** [frontend/README.md](./frontend/README.md).
+
 ## Segurança e segredos
 
 - **Nunca** envie o `.env`, chaves do Supabase, segredo do JWT, senhas ou certificados para o repositório. Veja a lista completa em [IGNORE.md](./IGNORE.md);
+- **Nunca** coloque chaves secretas no front-end: tudo que começa com `EXPO_PUBLIC_` fica visível no aplicativo;
 - Se um segredo for enviado por engano, avise a equipe e **troque imediatamente** as chaves do Supabase e o segredo do JWT;
 - Para relatar vulnerabilidades, siga o [SECURITY.md](./SECURITY.md). **Não abra issue pública.**
+
+## Privacidade
+
+- Nunca use dados reais de pessoas em testes, prints, issues ou Pull Requests, nem nos dados de teste do app. Use dados fictícios;
+- Mudanças que coletem novos dados devem atualizar [docs/privacidade.md](./docs/privacidade.md).
 
 ## Padrões do projeto
 
@@ -74,19 +88,21 @@ Antes de pedir a revisão, confira se:
 
 - Proteja as rotas com a autenticação JWT: cada usuário só acessa os próprios dados;
 - Valide os dados recebidos e retorne mensagens de erro claras;
-- Qualquer mudança na estrutura do banco deve ser comunicada à equipe e refletida em `docs/diagramas.md`.
+- A fonte do modelo de dados é o `backend/tables.sql`. Qualquer mudança na estrutura do banco deve ser comunicada à equipe, refletida em `backend/models.py` e `frontend/src/types/api.ts`, e atualizada em [docs/diagramas.md](./docs/diagramas.md);
+- Novos endpoints entram na tabela de [backend/README.md](./backend/README.md).
 
 ### Front-end
 
-- Siga a identidade visual definida em [UI-UX.md](./UI-UX.md) (cores, fontes e componentes);
+- Siga a identidade visual definida em [UI-UX.md](./UI-UX.md) (cores, fontes e componentes), usando os tokens de `src/theme/`;
 - Reutilize os componentes catalogados em [COMPONENTS.md](./COMPONENTS.md) antes de criar novos;
-- Mantenha a acessibilidade: fontes legíveis, bom contraste e telas simples, pensando em idosos;
-- Siga as expectativas de [ACCESSIBILITY.md](./ACCESSIBILITY.md) em toda mudança visual.
+- Mantenha os tipos de `src/types/api.ts` iguais aos modelos do back-end;
+- Siga as expectativas de [ACCESSIBILITY.md](./ACCESSIBILITY.md) em toda mudança visual: fonte legível, bom contraste, alvos de toque grandes, rótulos para leitor de tela e nada de informação só por cor ou emoji.
 
 ### Documentação
 
 - Os documentos seguem o padrão visual dos já existentes: título, descrição em citação (`>`) e seções com `##`;
-- Alterações em fluxos, telas ou dados devem atualizar `docs/diagramas.md` e `docs/proposta.md`;
+- Alterações em fluxos, telas ou dados devem atualizar `docs/diagramas.md`, `docs/proposta.md` e `docs/prototipo.md`;
+- Documente o que o código **faz hoje**. Funcionalidades futuras devem aparecer claramente como planejadas;
 - Mantenha o aviso de que o MedControl **não substitui orientação médica**.
 
 ## Registro de alterações
