@@ -35,8 +35,11 @@
 
 ## Checklist
 
+- [ ] O Pull Request aponta para a `develop`
 - [ ] O código roda localmente sem erros
+- [ ] `npm run lint` e `npx tsc --noEmit` passam (front-end)
 - [ ] Nenhum arquivo sensível foi incluído (`.env`, chaves do Supabase, segredo do JWT, senhas)
-- [ ] A documentação afetada foi atualizada
+- [ ] Não há dados reais de pessoas em prints, testes ou dados de teste
+- [ ] A documentação afetada foi atualizada (`COMPONENTS.md`, `docs/diagramas.md`, `docs/privacidade.md` etc.)
 - [ ] O `CHANGELOG.md` recebeu uma entrada com a alteração
 - [ ] Em mudanças visuais, as expectativas do `ACCESSIBILITY.md` foram seguidas
