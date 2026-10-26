@@ -4,26 +4,31 @@
 
 ## Por que isso importa?
 
-O MedControl lida com informações sobre medicamentos e tratamentos, que são **dados pessoais sensíveis** segundo a LGPD (dados referentes à saúde). Por isso, tratamos a privacidade como parte essencial do projeto, e não como um detalhe.
+O MedControl lida com informações sobre medicamentos, tratamentos, alergias e condições de saúde, que são **dados pessoais sensíveis** segundo a LGPD (dados referentes à saúde). Por isso, tratamos a privacidade como parte essencial do projeto, e não como um detalhe.
 
 Este documento explica quais dados coletamos, para que usamos, onde ficam guardados, quais são os seus direitos e como falar conosco.
 
-> O MedControl é um projeto acadêmico em desenvolvimento. Este documento descreve o funcionamento atual e as intenções da equipe, e **não é um parecer jurídico**.
+> O MedControl é um projeto acadêmico em desenvolvimento. Este documento descreve o funcionamento previsto e as intenções da equipe, e **não é um parecer jurídico**. Na versão atual, o aplicativo ainda usa dados de teste e **não envia dados para a API**; as regras abaixo valem para quando a integração for ativada.
 
 ## Quais dados coletamos?
 
-| Categoria | Dados | Para que serve |
-| :--- | :--- | :--- |
-| **Conta** | Nome, e-mail e senha | Criar a conta, fazer login e identificar o usuário |
-| **Medicamentos** | Nome, dose, frequência, horários e estoque (atual e mínimo) | Organizar o tratamento, enviar lembretes e alertar sobre estoque baixo |
-| **Histórico de doses** | Horário previsto, horário do registro e status (tomada, adiada ou perdida) | Mostrar o histórico e acompanhar a rotina |
-| **Dados técnicos** | Token de login (JWT) | Manter o usuário logado e garantir acesso apenas aos próprios dados |
+| Categoria | Dados | Para que serve | Obrigatório? |
+| :--- | :--- | :--- | :--- |
+| **Conta** | Nome, e-mail, telefone, data de nascimento e senha | Criar a conta, fazer login e identificar o usuário | Sim |
+| **Saúde (perfil)** | Tipo sanguíneo, alergias e condições crônicas | Manter as informações de saúde da pessoa à mão | Não |
+| **Contato de emergência** | Nome e telefone | Ter um contato de confiança registrado | Não |
+| **Medicamentos** | Nome, dosagem, quantidade por dose, tipo e instruções de uso, estoque e descrição | Organizar o tratamento e acompanhar o estoque | Nome, dosagem e quantidade |
+| **Horários** | Horário e dias da semana de cada medicamento | Montar a lista de doses do dia | Sim, para aparecer em "Hoje" |
+| **Histórico de doses** | Data e hora e se a dose foi tomada ou não | Mostrar o histórico e acompanhar a rotina | Sim, ao registrar uma dose |
+| **Dados técnicos** | Token de login (JWT), com validade de 7 dias | Manter o usuário logado e garantir acesso apenas aos próprios dados | Sim |
 
-**A senha nunca é guardada em texto puro.** Ela é armazenada apenas na forma de *hash*. **[CONFIRMAR: o hash é feito pela nossa API ou pelo serviço de autenticação do Supabase?]**
+**A senha nunca é guardada em texto puro.** A própria API do MedControl a transforma em *hash* (com bcrypt) antes de gravar no banco.
+
+As **preferências de notificação** (lembrete de dose e alerta de estoque) ficam somente no aparelho e não são enviadas ao servidor.
 
 ### O que não coletamos
 
-- Não coletamos localização, contatos, fotos ou documentos do aparelho;
+- Não coletamos localização, contatos do aparelho, fotos ou documentos;
 - Não coletamos dados de pagamento;
 - Não usamos os seus dados para publicidade nem para criar perfis comerciais.
 
@@ -35,19 +40,21 @@ Usamos os dados **somente** para fazer o aplicativo funcionar:
 
 - Criar e manter a sua conta;
 - Cadastrar e organizar os seus medicamentos e horários;
-- Enviar lembretes e avisos de estoque baixo;
-- Registrar e exibir o seu histórico de doses.
+- Registrar e exibir o seu histórico de doses;
+- Mostrar o selo de estoque baixo;
+- Guardar as informações de saúde e o contato de emergência que você escolher informar.
 
-Os dados de saúde são tratados com base no **consentimento** da pessoa usuária, que ocorre ao criar a conta e cadastrar os próprios medicamentos. **[CONFIRMAR: o app exibe um aceite deste documento no cadastro? Se não, vale incluir um checkbox "Li e concordo com a Política de Privacidade".]**
+Os dados de saúde são tratados com base no **consentimento** da pessoa usuária, que ocorre ao criar a conta e ao preencher as informações. Os campos de saúde e de contato de emergência são **opcionais**: informe apenas o que se sentir à vontade para informar. **[CONFIRMAR: o app exibe um aceite deste documento no cadastro? Se não, inclua um checkbox "Li e concordo com a Política de Privacidade".]**
 
 ## Onde os dados ficam?
 
-Os dados são armazenados no **Supabase** (banco de dados e infraestrutura), acessado exclusivamente pela API do MedControl (FastAPI). O Supabase atua como fornecedor de infraestrutura e pode armazenar dados em servidores fora do Brasil. **[CONFIRMAR: região do projeto Supabase.]**
+Os dados são armazenados no **Supabase** (banco de dados e infraestrutura), acessado exclusivamente pela API do MedControl (FastAPI). O Supabase atua como fornecedor de infraestrutura e pode armazenar dados em servidores fora do Brasil. **[CONFIRMAR: região do projeto Supabase, no painel do projeto.]**
 
 ## Como protegemos os dados?
 
 - **Autenticação por JWT:** as rotas da API exigem login;
 - **Acesso restrito:** cada usuário acessa somente os próprios dados;
+- **Senha com hash:** nunca em texto puro;
 - **Segredos fora do repositório:** chaves, senhas e o segredo do JWT ficam em variáveis de ambiente (`.env`), que nunca são versionadas (veja [IGNORE.md](../IGNORE.md));
 - **Monitoramento do repositório:** o GitHub está configurado com alertas de dependências vulneráveis, detecção de segredos e relato privado de vulnerabilidades (veja [SECURITY.md](../SECURITY.md)).
 
@@ -61,7 +68,9 @@ Os dados são acessados apenas pelo próprio usuário e pelos serviços técnico
 
 ## Por quanto tempo guardamos?
 
-Os dados ficam armazenados enquanto a conta existir. Ao excluir a conta, os dados associados devem ser removidos. **[CONFIRMAR: a exclusão do usuário também apaga medicamentos, horários e registros de dose (exclusão em cascata)? Se não, ajustar o back-end ou descrever aqui o que permanece.]**
+Os dados ficam armazenados enquanto a conta existir.
+
+**Como a exclusão funciona hoje:** ao excluir a conta, ela é **desativada** (exclusão lógica). A conta e os dados associados deixam de ser acessíveis pelo aplicativo, mas **permanecem no banco de dados**, marcados como inativos, até serem removidos manualmente. Para pedir a remoção definitiva, escreva para o e-mail de contato. **[CONFIRMAR: prazo e procedimento da remoção definitiva, e se o e-mail de uma conta desativada pode ser reutilizado.]**
 
 ## Seus direitos
 
@@ -69,9 +78,9 @@ De acordo com a LGPD (art. 18), você pode, a qualquer momento:
 
 | Direito | Como exercer |
 | :--- | :--- |
-| **Confirmar e acessar** os dados que temos sobre você | Pelo aplicativo (telas de perfil, medicamentos e histórico) ou por e-mail |
-| **Corrigir** dados incompletos ou incorretos | Editando o perfil e os medicamentos no aplicativo |
-| **Excluir** os seus dados | Excluindo a conta no aplicativo ou solicitando por e-mail |
+| **Confirmar e acessar** os dados que temos sobre você | Pelo aplicativo (Ajustes, Medicamentos e Histórico) ou por e-mail |
+| **Corrigir** dados incompletos ou incorretos | Editando o perfil, a conta e os medicamentos no aplicativo |
+| **Excluir** os seus dados | Excluindo a conta no aplicativo (desativação) e pedindo a remoção definitiva por e-mail |
 | **Revogar o consentimento** | Excluindo a conta ou solicitando por e-mail |
 | **Obter informações** sobre o tratamento e o compartilhamento | Por e-mail |
 | **Portabilidade** dos dados | Ainda não disponível. A exportação do histórico em PDF está prevista no roadmap |
@@ -86,8 +95,9 @@ Se houver um incidente que possa afetar os seus dados, a equipe irá investigar,
 
 ## Cuidados para quem contribui
 
-- Nunca use dados reais de pessoas em testes, prints, issues ou Pull Requests. Use dados fictícios;
-- Ao incluir prints de telas, confira se não aparecem nomes, e-mails ou medicamentos reais;
+- Nunca use dados reais de pessoas em testes, prints, issues ou Pull Requests. Use dados fictícios, inclusive nos dados de teste do app (`frontend/src/mocks/`);
+- Ao incluir prints de telas, confira se não aparecem nomes, e-mails, telefones, alergias ou medicamentos reais;
+- Em testes de acessibilidade com pessoas, peça consentimento antes de gravar ou fotografar, e use contas e medicamentos fictícios;
 - Mudanças que coletem novos dados, ou que mudem o compartilhamento, devem atualizar este documento e ser registradas no [CHANGELOG.md](../CHANGELOG.md).
 
 ## Contato
@@ -100,6 +110,6 @@ Responderemos em até 7 dias úteis.
 
 ## Atualizações deste documento
 
-Este documento deve ser revisado a cada nova versão do aplicativo e sempre que o tratamento de dados mudar. A data da última revisão é registrada no [CHANGELOG.md](../CHANGELOG.md).
+Este documento deve ser revisado a cada nova versão do aplicativo e sempre que o tratamento de dados mudar. A data da última revisão é registrada no [CHANGELOG.md](../CHANGELOG.md). Última revisão: 25/10/2026.
 
 > O MedControl é uma ferramenta de organização e **não substitui orientação médica**.
