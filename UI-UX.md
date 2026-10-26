@@ -62,7 +62,7 @@ Fonte principal: **Inter**. Fonte secundária: **Nunito Sans**. No Android, a fo
 
 Regras de uso:
 
-- O tamanho 14 (legenda) nunca é usado para horários, doses, estoque, avisos ou erros. Esses textos usam 16 ou mais;
+- O tamanho 14 (legenda) não deve ser usado para horários, doses, estoque, avisos ou erros. **Hoje o app usa 14 na dosagem e na data do Histórico**, o que está registrado em [COMPONENTS.md](./COMPONENTS.md#divergências-conhecidas);
 - Nenhum texto desativa o aumento de fonte do sistema. Se limitar, use `maxFontSizeMultiplier` de pelo menos 2;
 - Containers de texto não têm altura fixa, para crescerem com a fonte aumentada.
 
@@ -87,7 +87,7 @@ Todo estado é comunicado por **ícone + texto + cor**. A cor sozinha nunca bast
 
 O back-end não guarda "pendente". O status é calculado no app: sem registro no histórico hoje é pendente; com registro, depende de `fl_taken`.
 
-| Estado | Texto | Ícone | Fundo | Texto (cor) | Contraste |
+| Estado | Texto | Ícone (desejado) | Fundo | Texto (cor) | Contraste |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Tomado | Tomado | Check | `green300` `#BADBA2` | `blue900` | 6,06:1 |
 | Pendente | Pendente | Relógio | `blue100` `#BDDDFC` | `blue900` | 6,58:1 |
@@ -97,7 +97,7 @@ O back-end não guarda "pendente". O status é calculado no app: sem registro no
 
 O estado de estoque convive com o da dose no mesmo medicamento.
 
-| Estado | Texto | Ícone | Fundo | Texto (cor) | Contraste |
+| Estado | Texto | Ícone (desejado) | Fundo | Texto (cor) | Contraste |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Estoque baixo | Estoque baixo | Alerta | `#FFE8C2` | `#8A4B00` | 5,69:1 |
 
@@ -105,7 +105,7 @@ Pendências deste estado:
 
 - O guia oficial não tem cor de alerta. O laranja acima é **provisório** e precisa de aprovação do UX/UI;
 - O limite de estoque baixo é **5 unidades**, fixo no app. O banco não tem esse campo, e a sugestão ao back-end é criar `stock_alert` em `medicines`;
-- Hoje os ícones são emojis. Eles variam por aparelho e podem ser lidos de forma estranha pelos leitores de tela. A recomendação é trocar por ícones vetoriais (`@expo/vector-icons`), marcados como decorativos.
+- Hoje os ícones são emojis (✅ ⏰ ❌ ⚠️). Eles variam por aparelho e podem ser lidos de forma estranha pelos leitores de tela. A recomendação é trocá-los por ícones vetoriais (`@expo/vector-icons`), marcados como decorativos.
 
 ## Contraste
 
@@ -158,7 +158,9 @@ Configuração atual em `frontend/app.json`:
 - [ ] Substituir ícone, ícone adaptativo, splash e favicon pelo logo do MedControl;
 - [ ] Decidir a cor do texto secundário e a borda de campo (seção Contraste);
 - [ ] Aprovar a cor de alerta de estoque baixo e definir o tamanho da fonte secundária (Nunito Sans);
-- [ ] Trocar os emojis de status por ícones vetoriais;
+- [ ] Trocar os emojis de status, filtros e títulos de seção por ícones vetoriais;
+- [ ] Redesenhar o resumo de "Hoje" com texto ("3 tomadas, 1 pendente, 0 não tomadas");
+- [ ] Desenhar o botão de registrar dose (56 dp) para substituir o `Alert` de três botões;
 - [ ] Desenhar a paleta de alto contraste e as três escalas de fonte (normal, grande e muito grande);
 - [ ] Conferir os contrastes em ferramenta externa e registrar o resultado em [ACCESSIBILITY.md](./ACCESSIBILITY.md).
 
