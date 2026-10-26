@@ -1,15 +1,23 @@
 # Diagramas - MedControl
 
-> Fluxogramas e diagramas UML que descrevem o funcionamento, a arquitetura e os dados do aplicativo.
+> Fluxogramas e diagramas que descrevem o funcionamento, a arquitetura e os dados do aplicativo, conforme o código atual.
+
+A fonte do modelo de dados é o `backend/tables.sql`. Se o banco mudar, atualize este documento no mesmo Pull Request.
 
 ## Arquitetura
 
+Situação atual: o app usa dados de teste e ainda não chama a API.
+
 ```mermaid
 flowchart LR
-    A["App Mobile<br/>(Front-end)"] -->|"HTTP + JWT"| B["API FastAPI<br/>(Back-end)"]
-    B -->|"Consultas e gravações"| C[("Supabase<br/>Banco de dados")]
-    B -.->|"Valida token"| D["Autenticação JWT"]
+    T["Telas<br/>(Hoje, Medicamentos, Histórico, Ajustes)"] --> S["MedStore<br/>(estado do app)"]
+    S --> M["Dados de teste<br/>(mocks)"]
+    S -.->|"próxima etapa"| C["Cliente da API<br/>(services/api.ts)"]
+    C -.->|"HTTP + JWT"| B["API FastAPI"]
+    B --> D[("Supabase<br/>PostgreSQL")]
 ```
+
+As linhas tracejadas ainda **não estão ligadas**.
 
 ## Casos de uso
 
@@ -19,11 +27,13 @@ flowchart LR
 
     subgraph MedControl
         UC1(["Criar conta e fazer login"])
-        UC2(["Gerenciar medicamentos"])
-        UC3(["Receber lembretes"])
+        UC2(["Gerenciar medicamentos e horários"])
+        UC3(["Ver as doses do dia"])
         UC4(["Registrar dose"])
         UC5(["Consultar histórico"])
-        UC6(["Controlar estoque"])
+        UC6(["Ajustar estoque"])
+        UC7(["Editar perfil e dados de saúde"])
+        UC8(["Excluir conta"])
     end
 
     U --> UC1
@@ -32,65 +42,75 @@ flowchart LR
     U --> UC4
     U --> UC5
     U --> UC6
-    UC4 -.->|"atualiza"| UC6
+    U --> UC7
+    U --> UC8
 ```
 
 ## Fluxograma: cadastro e login
 
+Fluxo do back-end. A tela de login do app precisa ser confirmada.
+
 ```mermaid
 flowchart TD
-    A([Início]) --> B[Abrir o aplicativo]
-    B --> C{Possui conta?}
-    C -- Não --> D[Preencher cadastro]
-    D --> E{Dados válidos?}
-    E -- Não --> D
-    E -- Sim --> F[Criar conta]
-    F --> G[Tela de login]
-    C -- Sim --> G
-    G --> H[Informar e-mail e senha]
-    H --> I{Credenciais corretas?}
-    I -- Não --> J[Exibir mensagem de erro]
-    J --> H
-    I -- Sim --> K[Gerar token JWT]
-    K --> L[Manter usuário logado]
-    L --> M([Tela inicial])
+    A([Início]) --> B{Possui conta?}
+    B -- Não --> C[Informar dados do cadastro]
+    C --> D{E-mail já cadastrado?}
+    D -- Sim --> E[Exibir erro]
+    E --> C
+    D -- Não --> F[Criar conta e gerar token JWT]
+    B -- Sim --> G[Informar e-mail e senha]
+    G --> H{Credenciais corretas?}
+    H -- Não --> I[Exibir erro]
+    I --> G
+    H -- Sim --> F
+    F --> J([Tela inicial])
 ```
 
-## Fluxograma: lembrete e registro de dose
+## Fluxograma: status da dose
+
+O status de cada dose de hoje é calculado no app. O banco só guarda o que **aconteceu** (histórico).
 
 ```mermaid
 flowchart TD
-    A([Chegou o horário da dose]) --> B[Enviar notificação]
-    B --> C{Resposta do usuário}
-    C -- Tomei --> D[Registrar dose como tomada]
-    D --> E[Descontar do estoque]
-    E --> F{Estoque abaixo do mínimo?}
-    F -- Sim --> G[Enviar alerta de estoque baixo]
-    F -- Não --> H([Fim])
+    A[Rotina ativa de um medicamento ativo] --> B{Existe registro<br/>dessa rotina hoje?}
+    B -- Não --> C[Pendente]
+    B -- Sim --> D{Foi tomada?}
+    D -- Sim --> E[Tomada]
+    D -- Não --> F[Não tomada]
+```
+
+## Fluxograma: registro de dose
+
+```mermaid
+flowchart TD
+    A([Aba Hoje]) --> B{Status da dose}
+    B -- "Tomada ou não tomada" --> C[Nada acontece]
+    B -- Pendente --> D[Usuário toca na dose]
+    D --> E{Escolha}
+    E -- Cancelar --> A
+    E -- "Tomei" --> F[Registrar como tomada]
+    E -- "Não tomei" --> G[Registrar como não tomada]
+    F --> H[Aparece no Histórico]
     G --> H
-    C -- Adiar --> I[Registrar dose como adiada]
-    I --> J[Reagendar lembrete]
-    J --> B
-    C -- Sem resposta --> K[Registrar dose como perdida]
-    K --> H
 ```
+
+O registro **não desconta o estoque**. O estoque só muda quando a pessoa usa os botões de + e - em Medicamentos. O lembrete por notificação ainda não existe.
 
 ## Fluxograma: gestão de medicamentos
 
 ```mermaid
 flowchart TD
-    A([Tela de medicamentos]) --> B{Ação desejada}
-    B -- Cadastrar --> C[Informar nome, dose, frequência, horários e estoque]
-    C --> D[Salvar medicamento]
-    B -- Editar --> E[Selecionar medicamento]
-    E --> F[Alterar dados]
-    F --> D
-    B -- Excluir --> G[Selecionar medicamento]
-    G --> H{Confirmar exclusão?}
-    H -- Sim --> I[Remover medicamento]
-    H -- Não --> A
-    B -- Listar --> J[Exibir medicamentos do usuário]
+    A([Aba Medicamentos]) --> B{Ação desejada}
+    B -- Adicionar --> C[Preencher formulário e horários]
+    C --> D[Cadastrar medicamento e uma rotina por horário]
+    B -- "Tocar no card" --> E[Editar dados e horários]
+    E --> F[Salvar alterações]
+    E --> G{Excluir?}
+    G -- Sim --> H[Confirmar]
+    H --> I[Desativar medicamento e suas rotinas]
+    B -- "+ ou -" --> J[Ajustar estoque]
     D --> A
+    F --> A
     I --> A
     J --> A
 ```
@@ -105,19 +125,21 @@ sequenceDiagram
     participant DB as Supabase
 
     U->>App: Informa e-mail e senha
-    App->>API: POST /login
-    API->>DB: Busca usuário
+    App->>API: POST /api/auth/login
+    API->>DB: Busca usuário ativo pelo e-mail
     DB-->>API: Dados do usuário
     alt Credenciais válidas
-        API-->>App: Token JWT
+        API-->>App: Token JWT (7 dias)
         App-->>U: Acesso liberado
     else Credenciais inválidas
-        API-->>App: Erro de autenticação
+        API-->>App: Erro 401
         App-->>U: Exibe mensagem de erro
     end
 ```
 
 ## Diagrama de sequência: registro de dose
+
+Sequência prevista para quando o app estiver integrado.
 
 ```mermaid
 sequenceDiagram
@@ -126,113 +148,84 @@ sequenceDiagram
     participant API as API FastAPI
     participant DB as Supabase
 
-    App-->>U: Notificação no horário da dose
-    U->>App: Marca dose como tomada
-    App->>API: Registra dose (token JWT)
-    API->>DB: Salva no histórico
-    API->>DB: Atualiza estoque
-    DB-->>API: Estoque atual
-    alt Estoque abaixo do mínimo
-        API-->>App: Alerta de estoque baixo
-        App-->>U: Exibe alerta
-    else Estoque suficiente
-        API-->>App: Confirmação
+    U->>App: Toca na dose pendente e escolhe Tomei ou Não tomei
+    App->>API: POST /api/history (routine_id, fl_taken)
+    API->>DB: Confere se a rotina é do usuário
+    alt Rotina encontrada
+        API->>DB: Grava no histórico
+        API-->>App: Registro criado
+        App-->>U: Dose passa a Tomada ou Não tomada
+    else Rotina não encontrada
+        API-->>App: Erro 404
+        App-->>U: Exibe mensagem de erro
     end
-```
-
-## Diagrama de classes
-
-```mermaid
-classDiagram
-    class Usuario {
-        +int id
-        +string nome
-        +string email
-        +string senha_hash
-        +cadastrar()
-        +autenticar()
-        +atualizar()
-        +excluir()
-    }
-
-    class Medicamento {
-        +int id
-        +string nome
-        +string dose
-        +string frequencia
-        +int estoque_atual
-        +int estoque_minimo
-        +cadastrar()
-        +atualizar()
-        +excluir()
-        +verificarEstoque()
-    }
-
-    class Horario {
-        +int id
-        +time hora
-    }
-
-    class RegistroDose {
-        +int id
-        +datetime horario_previsto
-        +datetime registrado_em
-        +StatusDose status
-        +registrar()
-    }
-
-    class StatusDose {
-        <<enumeration>>
-        TOMADA
-        ADIADA
-        PERDIDA
-    }
-
-    Usuario "1" --> "*" Medicamento : possui
-    Medicamento "1" --> "*" Horario : tem
-    Medicamento "1" --> "*" RegistroDose : gera
-    RegistroDose --> StatusDose
 ```
 
 ## Modelo entidade-relacionamento
 
+Conforme `tables.sql`. As tabelas `users`, `medicines` e `routines` usam exclusão lógica (`fl_active`); `history` não tem esse campo.
+
 ```mermaid
 erDiagram
-    USUARIO ||--o{ MEDICAMENTO : possui
-    MEDICAMENTO ||--o{ HORARIO : tem
-    MEDICAMENTO ||--o{ REGISTRO_DOSE : gera
+    USERS ||--o{ MEDICINES : possui
+    USERS ||--o{ ROUTINES : possui
+    USERS ||--o{ HISTORY : possui
+    MEDICINES ||--o{ ROUTINES : "tem horários"
+    ROUTINES ||--o{ HISTORY : "gera registros"
 
-    USUARIO {
-        int id PK
-        string nome
-        string email
-        string senha_hash
-        datetime criado_em
+    USERS {
+        uuid id PK
+        text name
+        text email UK
+        text phone
+        text password_hash
+        date dt_birth
+        text blood_type
+        text emergency_contact_name
+        text emergency_contact_phone
+        text allergies
+        text chronic_conditions
+        boolean fl_active
+        timestamptz dt_created
+        timestamptz dt_updated
     }
 
-    MEDICAMENTO {
-        int id PK
-        int usuario_id FK
-        string nome
-        string dose
-        string frequencia
-        int estoque_atual
-        int estoque_minimo
+    MEDICINES {
+        uuid id PK
+        uuid user_id FK
+        text name
+        text dosage
+        int quantity
+        text usage_type
+        text usage_instructions
+        int stock
+        text description
+        boolean fl_active
+        timestamptz dt_created
+        timestamptz dt_updated
     }
 
-    HORARIO {
-        int id PK
-        int medicamento_id FK
-        time hora
+    ROUTINES {
+        uuid id PK
+        uuid user_id FK
+        uuid medicine_id FK
+        time time
+        text days_of_week
+        boolean fl_active
+        timestamptz dt_created
+        timestamptz dt_updated
     }
 
-    REGISTRO_DOSE {
-        int id PK
-        int medicamento_id FK
-        datetime horario_previsto
-        datetime registrado_em
-        string status
+    HISTORY {
+        uuid id PK
+        uuid routine_id FK
+        uuid user_id FK
+        timestamptz dt_hour
+        boolean fl_taken
+        timestamptz dt_created
     }
 ```
 
-> Os diagramas representam o escopo do MVP. O modo cuidador, as consultas e receitas e as recompensas serão adicionados quando forem desenvolvidos.
+Restrições do banco: `quantity > 0`, `stock >= 0` e `users.email` único.
+
+> Os diagramas representam o escopo do MVP. O modo cuidador, as consultas e receitas, as recompensas e os lembretes por notificação serão adicionados quando forem desenvolvidos.
