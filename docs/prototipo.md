@@ -4,25 +4,25 @@
 
 ## Sobre o protótipo
 
-As imagens abaixo mostram o **protótipo visual** do MedControl, feito para definir a aparência e a navegação do aplicativo. Elas podem diferir da versão implementada, que está em desenvolvimento. A paleta e a tipografia ficam em [UI-UX.md](../UI-UX.md).
+As imagens abaixo mostram o **protótipo visual** do MedControl, feito para definir a aparência e a navegação do aplicativo. Elas podem diferir da versão implementada, que está em desenvolvimento e usa dados de teste. A paleta e a tipografia ficam em [UI-UX.md](../UI-UX.md).
 
 ## Situação das telas
 
-| Tela | Situação |
-| :--- | :--- |
-| Login e cadastro | MVP |
-| Início | MVP |
-| Resumo do dia | MVP |
-| Menu principal | MVP |
-| Controle de estoque | MVP |
-| Histórico | MVP |
-| Perfil | MVP |
-| Consultas e receitas | Futura (fora do MVP) |
-| Acessibilidade | Futura (fora do MVP) |
-| Recompensas | Futura (fora do MVP) |
+| Tela do protótipo | Situação | Tela no app implementado |
+| :--- | :--- | :--- |
+| Login e cadastro | MVP | **[CONFIRMAR]** |
+| Início | MVP | Aba **Hoje** |
+| Resumo do dia | MVP | Resumo no topo da aba **Hoje** |
+| Menu principal | MVP | Barra de abas |
+| Controle de estoque | MVP | Aba **Medicamentos** (botões de + e -) |
+| Histórico | MVP | Aba **Histórico** |
+| Perfil | MVP | Aba **Ajustes** |
+| (sem tela no protótipo) | MVP | **Formulário de medicamento** |
+| Consultas e receitas | Futura (fora do MVP) | Não implementada |
+| Acessibilidade | Futura (fora do MVP) | Não implementada |
+| Recompensas | Futura (fora do MVP) | Não implementada |
 
 > As telas marcadas como **futuras** fazem parte do protótipo, mas **não estão implementadas** na versão atual. Veja o escopo em [proposta.md](./proposta.md).
-
 ## Índice
 
 - [Login e cadastro](#login-e-cadastro)
@@ -124,5 +124,9 @@ As imagens abaixo mostram o **protótipo visual** do MedControl, feito para defi
 ## Fluxo de navegação
 
 <img width="520" alt="Fluxo de navegação entre as telas do aplicativo" src="https://github.com/user-attachments/assets/558f113a-e67e-41bf-beed-48fd1a8513b7" />
+
+## Telas do aplicativo implementado
+
+Quando o app estiver estável, adicione aqui prints reais das cinco telas (Hoje, Medicamentos, Formulário, Histórico e Ajustes), **sempre com dados fictícios**.
 
 > O MedControl é uma ferramenta de organização e **não substitui orientação médica**.
