@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Vulnerabilidade de segurança
+    url: https://github.com/amandaadb/Projeto-Saude-em-dia-/security/advisories/new
+    about: Não abra issue pública. Relate de forma privada.
+  - name: Dúvidas sobre dados e privacidade
+    url: https://github.com/amandaadb/Projeto-Saude-em-dia-/blob/main/docs/privacidade.md
+    about: Veja como tratamos os dados e como exercer seus direitos.
