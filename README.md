@@ -1,12 +1,58 @@
 # Leia-me - MedControl
 
-> O **MedControl** é um aplicativo que ajuda os usuários a organizar medicamentos, horários, consultas e tratamentos, reduzindo o risco de esquecimentos ou de uso fora do horário recomendado.
+> O **MedControl** é um aplicativo que ajuda os usuários a organizar medicamentos, horários e tratamentos, reduzindo o risco de esquecimentos ou de uso fora do horário recomendado.
 
 <img width="1254" height="1254" alt="Logo" src="https://github.com/user-attachments/assets/2dbb2cc5-7597-4df6-a664-2821c9ec5589" />
 
-Documentação relacionada: [Proposta](./docs/proposta.md) · [Diagramas](./docs/diagramas.md) · [Protótipo](./docs/prototipo.md) · [UI/UX](./UI-UX.md) · [Componentes](./COMPONENTS.md) · [Acessibilidade](./ACCESSIBILITY.md) · [Changelog](./CHANGELOG.md) · [Suporte](./SUPPORT.md) · [Segurança](./SECURITY.md) · [Privacidade](./docs/privacidade.md) · [Código de Conduta](./CODE_OF_CONDUCT.md) · [Contribuindo](./CONTRIBUTING.md) · [Licença](./LICENSE) · [Licenciados](./LICENSED.md) · [Ignorados](./IGNORE.md) · [Wiki](https://github.com/amandaadb/Projeto-Saude-em-dia-/wiki)
+Documentação relacionada: [Proposta](./docs/proposta.md) · [Diagramas](./docs/diagramas.md) · [Protótipo](./docs/prototipo.md) · [UI/UX](./UI-UX.md) · [Componentes](./COMPONENTS.md) · [Acessibilidade](./ACCESSIBILITY.md) · [Front-end](./frontend/README.md) · [Back-end](./backend/README.md) · [Changelog](./CHANGELOG.md) · [Suporte](./SUPPORT.md) · [Segurança](./SECURITY.md) · [Privacidade](./docs/privacidade.md) · [Código de Conduta](./CODE_OF_CONDUCT.md) · [Contribuindo](./CONTRIBUTING.md) · [Licença](./LICENSE) · [Licenciados](./LICENSED.md) · [Ignorados](./IGNORE.md) · [Wiki](https://github.com/amandaadb/Projeto-Saude-em-dia-/wiki)
+
+> **Sobre o nome:** o produto se chama **MedControl**. O nome do repositório e o título da API ("Saúde em Dia") vêm de uma fase anterior do projeto.
 
 ---
+
+## Situação do projeto
+
+O projeto é acadêmico e está em desenvolvimento. O back-end e o front-end existem, mas **ainda não estão integrados**: o aplicativo funciona com dados de teste (`frontend/src/mocks/`).
+
+| Funcionalidade | Back-end | Front-end | Integrado |
+| :--- | :--- | :--- | :--- |
+| Cadastro, login e perfil | Sim | Perfil e conta em Ajustes; tela de login **[CONFIRMAR]** | Não |
+| Medicamentos (cadastrar, editar, excluir) | Sim | Sim | Não |
+| Horários dos medicamentos (rotinas) | Sim | Sim | Não |
+| Registro de dose (tomei / não tomei) e histórico | Sim | Sim | Não |
+| Estoque | Campo no banco | Ajuste manual (+/-) e selo de estoque baixo | Não |
+| Lembretes e notificações | Não | Não (o interruptor em Ajustes ainda não tem efeito) | Não |
+
+Observações importantes:
+
+- O estoque **não é descontado automaticamente** ao registrar uma dose;
+- O limite de "estoque baixo" é fixo em 5 unidades no app;
+- Os lembretes estão no roadmap e **não funcionam** na versão atual;
+- Telas de Consultas e receitas, Recompensas e Modo Cuidador estão fora do MVP.
+
+## Tecnologias
+
+| Camada | Tecnologias |
+| :--- | :--- |
+| Front-end | React Native, Expo (SDK 57), Expo Router, TypeScript |
+| Back-end | Python, FastAPI, autenticação JWT, bcrypt |
+| Banco de dados | Supabase (PostgreSQL) |
+
+## Estrutura do repositório
+
+```text
+.
+├── backend/      API em FastAPI e script do banco (tables.sql)
+├── frontend/     Aplicativo React Native + Expo
+├── docs/         Proposta, diagramas, protótipo e privacidade
+├── .github/      Modelos de issue e de Pull Request
+└── *.md          Documentos do projeto (acessibilidade, UI/UX etc.)
+```
+
+## Como rodar
+
+- **Back-end:** veja [backend/README.md](./backend/README.md);
+- **Front-end:** veja [frontend/README.md](./frontend/README.md).
 
 ## Equipe
 
@@ -27,21 +73,22 @@ Documentação relacionada: [Proposta](./docs/proposta.md) · [Diagramas](./docs
 - Organização do cronograma e das entregas;
 - Acompanhamento das tarefas da equipe;
 - Levantamento de requisitos;
-- Definição de objetivos, público-alvo e regras de negócio.
+- Definição de objetivos, público-alvo e regras de negócio;
+- Recebimento dos relatos de usuários (suporte, acessibilidade e privacidade).
 
-### UX/UI e protótipo - *Gabriel*
+### UX/UI, protótipo e GitHub - *Gabriel*
 
 - Criação da identidade visual (cores, fontes e componentes);
-- Prototipação das telas;
-- Elaboração do fluxo de navegação;
-- Elaboração do README com apresentação visual do projeto.
+- Prototipação das telas e fluxo de navegação;
+- Acessibilidade de design (contraste, tamanhos e estados visuais);
+- Organização do repositório e da documentação no GitHub.
 
 ### Front-end e telas - *Daniela e Luana*
 
-- Desenvolvimento e estilização das telas de login, cadastro, início etc.;
-- Implementação da responsividade e acessibilidade visual;
-- Configuração das rotas de navegação entre as telas do aplicativo;
-- Consumo dos endpoints da API fornecida pelo Back-end.
+- Desenvolvimento e estilização das telas;
+- Implementação da responsividade e da acessibilidade visual;
+- Configuração das rotas de navegação;
+- Integração com os endpoints da API fornecida pelo Back-end.
 
 ### Back-end e banco de dados - *Lucas e Renan*
 
@@ -63,36 +110,40 @@ Documentação relacionada: [Proposta](./docs/proposta.md) · [Diagramas](./docs
 O MedControl é voltado para o público geral, com foco na gestão da saúde e no acompanhamento de tratamentos contínuos. Público-alvo principal:
 
 - **Pacientes em tratamento:** pessoas que fazem uso diário de medicamentos ou possuem condições de saúde que exigem acompanhamento contínuo;
-- **Familiares e cuidadores:** pessoas responsáveis por gerenciar, organizar e acompanhar a rotina de medicação de entes queridos ou pacientes sob seus cuidados.
+- **Familiares e cuidadores:** pessoas responsáveis por gerenciar, organizar e acompanhar a rotina de medicação de entes queridos ou pacientes sob seus cuidados (o vínculo entre contas ainda é uma funcionalidade planejada).
 
 ## Telas do aplicativo
 
-| Login e cadastro | Início | Resumo do dia | Menu principal | Controle de estoque |
-| :---: | :---: | :---: | :---: | :---: |
-| <img width="160" alt="Tela de Login e Cadastro" src="https://github.com/user-attachments/assets/7a5fbd88-3e3e-4865-8728-049e16e3a15e" /> | <img width="160" alt="Tela de Início" src="https://github.com/user-attachments/assets/30784122-c897-426d-9442-ad8b7272855a" /> | <img width="160" alt="Tela de Resumo do Dia" src="https://github.com/user-attachments/assets/5f317120-1b94-4ac9-bcc9-06c9f2c82b31" /> | <img width="160" alt="Tela do Menu Principal" src="https://github.com/user-attachments/assets/38dd3ca0-05f7-435a-89e9-654cf4561749" /> | <img width="160" alt="Tela de Controle de Estoque" src="https://github.com/user-attachments/assets/67336fbe-8fc8-4c88-b051-c3a3a4d1e1d0" /> |
+O aplicativo implementado tem quatro abas e um formulário:
 
-| Histórico | Consultas e receitas | Perfil | Acessibilidade | Recompensas |
-| :---: | :---: | :---: | :---: | :---: |
-| <img width="160" alt="Tela de Histórico" src="https://github.com/user-attachments/assets/503584d8-d4af-4c29-8cb2-e77fbd851817" /> | <img width="160" alt="Tela de Consultas e Receitas" src="https://github.com/user-attachments/assets/cda53cc6-e459-4638-b156-4b9de5c55cf7" /> | <img width="160" alt="Tela de Perfil" src="https://github.com/user-attachments/assets/5a02c69f-4f70-4170-b42b-e15e7eb448b9" /> | <img width="160" alt="Tela de Acessibilidade" src="https://github.com/user-attachments/assets/d632254a-0e1d-4d59-843a-19a817d96957" /> | <img width="160" alt="Tela de Recompensas" src="https://github.com/user-attachments/assets/6bb4a966-13ba-41d5-8e38-c62cc29f884e" /> |
+| Tela | O que faz |
+| :--- | :--- |
+| Hoje | Próximas doses do dia, com status e registro de "Tomei" ou "Não tomei" |
+| Medicamentos | Lista, ajuste de estoque e acesso ao formulário |
+| Formulário de medicamento | Cadastro, edição e exclusão, com horários |
+| Histórico | Doses registradas, agrupadas por dia, com filtro |
+| Ajustes | Perfil, dados de saúde, conta, preferências de notificação, sair e excluir conta |
 
-Veja todas as telas em tamanho maior, com as versões de apresentação e o fluxo de navegação, em [docs/prototipo.md](./docs/prototipo.md).
+Abaixo, uma prévia do **protótipo visual**, que pode diferir do app implementado. Todas as telas, em tamanho maior, estão em [docs/prototipo.md](./docs/prototipo.md).
+
+<!-- manter aqui as duas tabelas de imagens atuais da seção "Telas do aplicativo" -->
 
 ## Melhorias futuras (roadmap)
 
 O **MedControl** foi desenvolvido para facilitar a organização de medicamentos e o acompanhamento de tratamentos contínuos. Nas próximas versões, planejamos ampliar suas funcionalidades, acessibilidade, segurança e praticidade, com foco em **suporte familiar**, **automação** e **facilidade de uso**.
 
-### Funcionalidades Planejadas
-
-- [ ] **Modo Cuidador:** vínculo entre contas para que familiares e cuidadores acompanhem a rotina de medicação, sempre mediante autorização do usuário.
-- [ ] **Notificações Inteligentes:** lembretes personalizáveis, alertas de doses atrasadas e opção de adiar notificações.
-- [ ] **Controle Avançado de Estoque:** estimativa de duração dos medicamentos disponíveis e aviso de reposição.
-- [ ] **Gestão de Consultas e Receitas:** registro de consultas e receitas, com lembretes de retorno e de renovação.
-- [ ] **Cadastro Facilitado de Medicamentos:** leitura de código de barras, QR Code ou OCR da embalagem para agilizar o cadastro.
-- [ ] **Relatórios e Estatísticas:** gráficos de adesão ao tratamento e exportação do histórico de doses em PDF para levar às consultas.
-- [ ] **Acessibilidade Aprimorada:** ajuste de fonte, alto contraste, suporte a leitores de tela e navegação simplificada.
-- [ ] **Segurança e Privacidade:** autenticação em dois fatores, controles de compartilhamento e proteção adicional dos dados, em conformidade com a LGPD.
-- [ ] **Modo Offline-First:** funcionamento sem internet, com sincronização automática via Supabase.
-- [ ] **Testes Automatizados:** testes unitários (Pytest) e de interface para maior estabilidade.
+- [ ] **Integração do app com a API:** trocar os dados de teste pelas chamadas reais.
+- [ ] **Lembretes de dose:** notificações no horário, com opção de vibração.
+- [ ] **Desconto automático de estoque** ao registrar uma dose, com limite de alerta configurável.
+- [ ] **Modo Cuidador:** vínculo entre contas, sempre mediante autorização do usuário.
+- [ ] **Notificações inteligentes:** alertas de doses atrasadas e opção de adiar.
+- [ ] **Gestão de consultas e receitas:** registro, com lembretes de retorno e renovação.
+- [ ] **Cadastro facilitado de medicamentos:** código de barras, QR Code ou OCR.
+- [ ] **Relatórios e estatísticas:** gráficos de adesão e exportação do histórico em PDF.
+- [ ] **Acessibilidade aprimorada:** ajuste de fonte, alto contraste, leitor de tela e navegação simplificada (veja [ACCESSIBILITY.md](./ACCESSIBILITY.md)).
+- [ ] **Segurança e privacidade:** autenticação em dois fatores e controles de compartilhamento, em conformidade com a LGPD.
+- [ ] **Modo offline-first:** funcionamento sem internet, com sincronização automática.
+- [ ] **Testes automatizados:** testes unitários e de interface.
 
 > As melhorias serão avaliadas conforme a viabilidade técnica, as necessidades dos usuários e a evolução do projeto. As funcionalidades listadas são possibilidades futuras e **não estão implementadas** na versão atual.
 
