@@ -42,7 +42,10 @@ Crie um arquivo `.env` na pasta `backend/`. **Nunca envie o `.env` ao repositór
 | `DEBUG` | Recarrega a API ao salvar arquivos | Padrão `True`. Use `False` fora do desenvolvimento |
 | `HOST` | Endereço do servidor | Padrão `0.0.0.0` |
 | `PORT` | Porta do servidor | Padrão `8000` |
-| `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REDIRECT_URI` | Reservadas para login com Google | **Ainda não usadas** por nenhuma rota |
+| `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REDIRECT_URI` | Reservadas para login com Google e para a integração com o Google Agenda | **Ainda não usadas** por nenhuma rota |
+| `WHATSAPP_TOKEN` | Chave de acesso do provedor de WhatsApp | **Planejada.** Segredo: nunca no front-end |
+| `WHATSAPP_PHONE_ID` | Identificador do número remetente | **Planejada** |
+| `WHATSAPP_VERIFY_TOKEN` | Valida o webhook do provedor | **Planejada**, se houver webhook |
 
 Modelo para o `.env.example` (sem valores reais):
 
@@ -126,12 +129,27 @@ Regras do banco que o front-end também precisa respeitar:
 - As exclusões feitas pela API são **lógicas** (`fl_active = false`). Nenhuma linha é apagada;
 - O banco **não guarda "pendente"**: a dose pendente é calculada no app, a partir das rotinas e do histórico.
 
+## Lembretes (planejado)
+
+Os lembretes de dose serão enviados por **WhatsApp**, a partir do servidor. **Nada disto existe ainda** no código nem em `tables.sql`.
+
+O que será necessário:
+
+- **Banco:** campos para número de WhatsApp, indicação de que a pessoa consentiu com os lembretes, data do consentimento e canal escolhido. Hoje a tabela `users` não os tem. Qualquer mudança deve ser refletida em `models.py`, `frontend/src/types/api.ts` e `docs/diagramas.md`;
+- **Endpoints:** ativar e desativar os lembretes e consultar as preferências;
+- **Agendador:** uma rotina que verifica, a cada minuto, as rotinas que vencem e dispara os envios. Hoje não há nenhuma tarefa agendada;
+- **Provedor de WhatsApp:** escolha, conta e custo **[CONFIRMAR]**. Mensagens iniciadas pela empresa costumam exigir modelos de mensagem aprovados e consentimento prévio;
+- **Conteúdo:** texto genérico, sem nome de medicamento nem dado de saúde (veja [docs/privacidade.md](../docs/privacidade.md)).
+
+Depois, em etapas separadas: notificações do celular (tratadas no app) e integração com o Google Agenda (usa as variáveis `GOOGLE_*`).
+
 ## Pendências conhecidas
 
 - A exclusão de um medicamento não desativa as rotinas dele;
 - O banco não tem campo de limite de estoque (sugestão: `stock_alert` em `medicines`);
 - O formato dos valores de `days_of_week` ainda não foi definido (hoje só existe `Todos`);
 - Não há testes automatizados.
+- Os lembretes por WhatsApp não existem: faltam campos no banco, endpoints, agendador e provedor;
 
 Questões de segurança devem ser tratadas pelo canal privado descrito em [SECURITY.md](../SECURITY.md).
 
