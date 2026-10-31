@@ -35,7 +35,9 @@ Por exemplo:
 - Contorno da autenticação ou do controle de acesso;
 - Exposição de segredos (chaves do Supabase, segredo do JWT, senhas);
 - Falhas que permitam alterar ou apagar dados de outras pessoas;
-- Dados de saúde enviados ou guardados sem proteção.
+- Dados de saúde enviados ou guardados sem proteção;
+- Envio de lembretes para o número de WhatsApp errado ou de outra pessoa;
+- Exposição dos tokens dos provedores de WhatsApp ou do Google.
 
 Não são consideradas vulnerabilidades: problemas de acessibilidade (veja [ACCESSIBILITY.md](./ACCESSIBILITY.md)), bugs sem impacto de segurança (use o modelo de bug) e relatos sobre dados de teste do app.
 
