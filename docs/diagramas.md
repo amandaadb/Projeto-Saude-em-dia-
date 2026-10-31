@@ -15,9 +15,13 @@ flowchart LR
     S -.->|"próxima etapa"| C["Cliente da API<br/>(services/api.ts)"]
     C -.->|"HTTP + JWT"| B["API FastAPI"]
     B --> D[("Supabase<br/>PostgreSQL")]
+    B -.->|"planejado: lembretes"| W["Provedor de WhatsApp"]
+    W -.-> U(["WhatsApp do usuário"])
+    B -.->|"planejado: agenda"| G["Google Agenda"]
+    S -.->|"planejado"| N["Notificações e calendário do celular"]
 ```
 
-As linhas tracejadas ainda **não estão ligadas**.
+As linhas tracejadas ainda **não estão ligadas**. Os lembretes por WhatsApp partem do servidor; as notificações e o calendário do celular são tratados no próprio aparelho.
 
 ## Casos de uso
 
@@ -94,7 +98,7 @@ flowchart TD
     G --> H
 ```
 
-O registro **não desconta o estoque**. O estoque só muda quando a pessoa usa os botões de + e - em Medicamentos. O lembrete por notificação ainda não existe.
+O registro **não desconta o estoque**. O estoque só muda quando a pessoa usa os botões de + e - em Medicamentos. Os lembretes (WhatsApp, notificações do celular e agendas) ainda não existem.
 
 ## Fluxograma: gestão de medicamentos
 
@@ -160,6 +164,32 @@ sequenceDiagram
         App-->>U: Exibe mensagem de erro
     end
 ```
+
+## Diagrama de sequência: lembrete por WhatsApp (planejado)
+
+Ainda **não implementado**. Mostra o fluxo previsto quando o envio for criado.
+
+```mermaid
+sequenceDiagram
+    participant AG as Agendador (servidor)
+    participant API as API FastAPI
+    participant DB as Supabase
+    participant WA as Provedor de WhatsApp
+    actor U as Usuário
+
+    AG->>API: Verifica rotinas que vencem agora
+    API->>DB: Busca rotinas ativas de usuários com lembrete ativado
+    DB-->>API: Rotinas e números de WhatsApp
+    loop Para cada dose no horário
+        API->>WA: Envia mensagem genérica ao número
+        WA-->>U: "Está na hora do seu medicamento"
+        WA-->>API: Confirmação de envio ou erro
+    end
+    U->>API: Registra "Tomei" ou "Não tomei" no app
+    API->>DB: Grava no histórico
+```
+
+O lembrete **não registra** a dose: quem registra é a pessoa, no app. A mensagem não cita o nome do medicamento (veja [privacidade.md](./privacidade.md)).
 
 ## Modelo entidade-relacionamento
 
@@ -228,4 +258,4 @@ erDiagram
 
 Restrições do banco: `quantity > 0`, `stock >= 0` e `users.email` único.
 
-> Os diagramas representam o escopo do MVP. O modo cuidador, as consultas e receitas, as recompensas e os lembretes por notificação serão adicionados quando forem desenvolvidos.
+> Os diagramas representam o escopo do MVP. O modo cuidador, as consultas e receitas, as recompensas, os lembretes (WhatsApp e notificações do celular) e a integração com agendas serão adicionados quando forem desenvolvidos. O diagrama de lembrete por WhatsApp acima é uma previsão.
