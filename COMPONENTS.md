@@ -124,7 +124,7 @@ Rótulos de leitor de tela: "Diminuir estoque de <medicamento>" e "Aumentar esto
 
 Propriedades usadas: `label`, `description`, `value` e `onChange`. Rótulo e descrição em texto ao lado do interruptor, com o estado anunciado por `accessibilityState`.
 
-> **Atenção:** as preferências de notificação ficam só no aparelho e o app ainda não envia notificações. Até os lembretes existirem, a tela deve mostrar "Em breve" ou desabilitar o interruptor, para ninguém confiar em um aviso que não acontece.
+> **Atenção:** as preferências de notificação hoje ficam só no aparelho e o app ainda não envia lembretes. Até os lembretes por WhatsApp existirem, a tela deve mostrar "Em breve" ou desabilitar o interruptor, para ninguém confiar em um aviso que não acontece. Quando existirem, o consentimento do WhatsApp deve ser pedido em uma tela ou opção própria, com o número informado e a política de privacidade à vista, e não apenas por um interruptor.
 
 ## `FilterChips`
 
@@ -157,7 +157,7 @@ Pontos em que o código atual não segue as regras acima. Cada item deve virar u
 | Histórico | Nome do medicamento com `numberOfLines={1}` | Informação cortada | Alta |
 | Histórico e Medicamentos | Dosagem e data em fonte 14 com `textMuted` | Tamanho e contraste (3,65:1) | Média |
 | Várias telas | Emojis como ícones (filtros, status, títulos de seção) | Ícone decorativo e leitor de tela | Média |
-| Ajustes | Interruptor de lembrete ligado por padrão, sem efeito | Informação enganosa | Alta |
+| Ajustes | Interruptor de lembrete ligado por padrão, sem efeito. Lembretes por WhatsApp exigirão consentimento próprio, desligado por padrão | Informação enganosa | Alta |
 
 ## Como adicionar ou alterar um componente
 
