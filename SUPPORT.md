@@ -17,6 +17,7 @@ Qual caminho seguir:
 | Quero sugerir uma funcionalidade | Modelo de sugestão em **Issues** (veja antes o roadmap no [README.md](./README.md)) |
 | Dúvidas sobre meus dados ou quero exercer meus direitos | [docs/privacidade.md](./docs/privacidade.md) |
 | Encontrei uma falha de segurança | [SECURITY.md](./SECURITY.md). **Não abra issue pública** |
+| Não recebi o lembrete, ou quero parar de recebê-lo | Os lembretes ainda não existem. Quando existirem, desative em Ajustes ou escreva para o e-mail acima |
 
 > Não inclua dados reais de saúde, senhas ou documentos em issues, prints ou e-mails.
 
