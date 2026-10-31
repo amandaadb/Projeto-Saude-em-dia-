@@ -109,7 +109,7 @@ Quando os testes forem feitos, esta seção listará os sistemas operacionais e 
 
 Estas são barreiras que já sabemos que existem, ou que ainda não foram tratadas:
 
-- **Os lembretes de dose ainda não existem.** O app não envia notificações. O interruptor "Lembrete de dose" em Ajustes ainda não tem efeito, e a pessoa precisa conferir a aba "Hoje" por conta própria. Quando os lembretes forem criados, haverá aviso sonoro e visual, com vibração configurável;
+- **Os lembretes de dose ainda não existem.** O app não envia avisos. O interruptor "Lembrete de dose" em Ajustes ainda não tem efeito, e a pessoa precisa conferir a aba "Hoje" por conta própria. O canal inicial planejado é o **WhatsApp**, que muitas pessoas idosas já usam e que acompanha o tamanho de fonte do aparelho. Som, vibração e exibição na tela bloqueada dependem das configurações do WhatsApp da própria pessoa, e **o MedControl não controla isso**. Depois virão as notificações do celular e a integração com agendas, que ainda não têm acessibilidade avaliada;
 - **O aplicativo não tem ajuste de tamanho de fonte próprio.** O texto acompanha o tamanho de fonte do aparelho, mas algumas telas têm largura fixa ou `numberOfLines` (por exemplo, o Histórico) e podem cortar ou quebrar o layout com a fonte muito grande;
 - **Alguns alvos de toque são pequenos**, como os chips de horário no formulário de medicamento;
 - **Parte das informações usa emojis como ícones** (resumo de "Hoje", status e filtros), e o resumo não tem texto equivalente;
