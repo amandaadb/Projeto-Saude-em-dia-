@@ -103,8 +103,9 @@ Para a equipe do front-end e do back-end alinharem antes de ligar o app à API:
 - Ao excluir um medicamento, o back-end **não desativa as rotinas**; o app precisa chamar a exclusão de cada rotina;
 - O back-end aceita registrar a **mesma dose duas vezes**; o app impede isso (só dose pendente pode ser registrada);
 - O filtro por `days_of_week` ainda não existe (`TODO` em `utils/doses.ts`), porque o formato dos valores não foi definido;
-- As preferências de notificação ficam só no aparelho e **não têm efeito**: o app não envia notificações;
-- O registro de dose usa `Alert.alert`, e a tela de login precisa ser confirmada ou criada.
+- As preferências de notificação ficam só no aparelho e **não têm efeito**: o app não envia notificações. Com os lembretes por WhatsApp, a preferência e o número passarão a ser **guardados no servidor**, então será preciso novo contrato com o back-end (campos e endpoints), e a tela de Ajustes deverá pedir o consentimento de forma separada;
+- O registro de dose usa `Alert.alert`, e a tela de login precisa ser confirmada ou criada;
+- As notificações do celular e a integração com Google Agenda e com o calendário do aparelho são etapas futuras e ainda não têm biblioteca instalada nem permissões configuradas.
 
 ## Acessibilidade
 
