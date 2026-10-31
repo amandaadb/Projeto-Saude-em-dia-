@@ -21,13 +21,15 @@ O projeto é acadêmico e está em desenvolvimento. O back-end e o front-end exi
 | Horários dos medicamentos (rotinas) | Sim | Sim | Não |
 | Registro de dose (tomei / não tomei) e histórico | Sim | Sim | Não |
 | Estoque | Campo no banco | Ajuste manual (+/-) e selo de estoque baixo | Não |
-| Lembretes e notificações | Não | Não (o interruptor em Ajustes ainda não tem efeito) | Não |
+| Lembretes por WhatsApp | Não | Não (o interruptor em Ajustes ainda não tem efeito) | Não |
+| Notificações do celular | Não | Não | Não |
+| Integração com Google Agenda e calendário do celular | Não | Não | Não |
 
 Observações importantes:
 
 - O estoque **não é descontado automaticamente** ao registrar uma dose;
 - O limite de "estoque baixo" é fixo em 5 unidades no app;
-- Os lembretes estão no roadmap e **não funcionam** na versão atual;
+- Os lembretes estão no roadmap e **não funcionam** na versão atual. O canal inicial será o **WhatsApp** (enviado pelo servidor); depois virão as notificações do celular e a integração com agendas;
 - Telas de Consultas e receitas, Recompensas e Modo Cuidador estão fora do MVP.
 
 ## Tecnologias
@@ -37,6 +39,7 @@ Observações importantes:
 | Front-end | React Native, Expo (SDK 57), Expo Router, TypeScript |
 | Back-end | Python, FastAPI, autenticação JWT, bcrypt |
 | Banco de dados | Supabase (PostgreSQL) |
+| Lembretes (planejado) | Provedor de WhatsApp (a definir), notificações do celular e Google Agenda |
 
 ## Estrutura do repositório
 
@@ -133,10 +136,12 @@ Abaixo, uma prévia do **protótipo visual**, que pode diferir do app implementa
 O **MedControl** foi desenvolvido para facilitar a organização de medicamentos e o acompanhamento de tratamentos contínuos. Nas próximas versões, planejamos ampliar suas funcionalidades, acessibilidade, segurança e praticidade, com foco em **suporte familiar**, **automação** e **facilidade de uso**.
 
 - [ ] **Integração do app com a API:** trocar os dados de teste pelas chamadas reais.
-- [ ] **Lembretes de dose:** notificações no horário, com opção de vibração.
+- [ ] **Lembretes de dose por WhatsApp:** mensagem no horário da dose, com consentimento próprio e opção de desativar.
+- [ ] **Notificações do celular:** avisos gerados pelo aparelho, com opção de vibração e de adiar.
+- [ ] **Integração com Google Agenda e calendário do celular:** criar os horários dos medicamentos na agenda, mediante autorização.
+- [ ] **Alertas inteligentes:** aviso de doses atrasadas e de estoque baixo pelos canais acima.
 - [ ] **Desconto automático de estoque** ao registrar uma dose, com limite de alerta configurável.
 - [ ] **Modo Cuidador:** vínculo entre contas, sempre mediante autorização do usuário.
-- [ ] **Notificações inteligentes:** alertas de doses atrasadas e opção de adiar.
 - [ ] **Gestão de consultas e receitas:** registro, com lembretes de retorno e renovação.
 - [ ] **Cadastro facilitado de medicamentos:** código de barras, QR Code ou OCR.
 - [ ] **Relatórios e estatísticas:** gráficos de adesão e exportação do histórico em PDF.
