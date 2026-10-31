@@ -2,6 +2,16 @@
 
 > Registro das mudanças notáveis do projeto, seguindo o padrão [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [2026-10-30]
+
+### Alterado
+- `docs/privacidade.md`: incluídos os lembretes por WhatsApp (número de telefone, consentimento próprio, texto genérico da mensagem), o compartilhamento com o provedor de WhatsApp e com o Google, e a integração com agendas, todos marcados como planejados.
+- `docs/proposta.md`: canais de lembrete (WhatsApp, notificações do celular e agendas) e novos requisitos planejados, com a situação atualizada.
+- `docs/diagramas.md`: arquitetura com WhatsApp e Google, e novo diagrama de sequência do lembrete (planejado).
+- `README.md`, `backend/README.md` e `frontend/README.md`: situação, roadmap, variáveis de ambiente previstas e pendências dos lembretes.
+- `ACCESSIBILITY.md` e `COMPONENTS.md`: limitação dos lembretes reescrita e aviso sobre o consentimento em Ajustes.
+- `SECURITY.md` e `SUPPORT.md`: casos de lembretes e de tokens dos provedores.
+
 ## [2026-10-25]
 
 ### Adicionado
