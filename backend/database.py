@@ -93,7 +93,7 @@ def delete_user(user_id: str):
         return None
 
 # Medicamentos.
-def insert_medicine(user_id: str, name: str, dosage: str = None, quantity: int = None,usage_type: str = None,usage_instructions: str = None, stock: int = None, description: str = None):
+def insert_medicine(user_id: str, name: str, dosage: str = None, quantity: int = None, usage_type: str = None, usage_instructions: str = None, stock: int = None, description: str = None, stock_limit: int = 5, notification_enabled: bool = True):
     """Insere um novo medicamento na tabela 'medicines'."""
     data = {
         "user_id": user_id,
@@ -104,6 +104,8 @@ def insert_medicine(user_id: str, name: str, dosage: str = None, quantity: int =
         "usage_instructions": usage_instructions,
         "stock": stock,
         "description": description,
+        "stock_limit": stock_limit,
+        "notification_enabled": notification_enabled,
         "fl_active": True
     }
     try:
@@ -123,7 +125,7 @@ def get_medicine_by_id(medicine_id: str, user_id: str):
     result = supabase.table("medicines").select("*").eq("id", medicine_id).eq("user_id", user_id).eq("fl_active", True).execute()
     return result.data[0] if result.data else None # Retorna o medicamento ou None.
 
-def update_medicine(medicine_id: str, user_id: str, name: str = None, dosage: str = None,quantity: int = None,usage_type: str = None,usage_instructions: str = None, stock: int = None, description: str = None):
+def update_medicine(medicine_id: str, user_id: str, name: str = None, dosage: str = None, quantity: int = None, usage_type: str = None, usage_instructions: str = None, stock: int = None, description: str = None, stock_limit: int = None, notification_enabled: bool = None):
     """Atualiza um medicamento existente."""
     data = {}
 
@@ -141,6 +143,10 @@ def update_medicine(medicine_id: str, user_id: str, name: str = None, dosage: st
         data["stock"] = stock
     if description is not None:
         data["description"] = description
+    if stock_limit is not None:
+        data["stock_limit"] = stock_limit
+    if notification_enabled is not None:
+        data["notification_enabled"] = notification_enabled
     if not data:
         return None
     try:
@@ -151,8 +157,17 @@ def update_medicine(medicine_id: str, user_id: str, name: str = None, dosage: st
         return None
 
 def delete_medicine(medicine_id: str, user_id: str):
-    """Deleta um medicamento e todos seus dados (soft delete)."""
+    """Deleta um medicamento e desativa suas rotinas (soft delete)."""
     try:
+        # Buscar todas as rotinas do medicamento
+        routines_query = supabase.table("routines").select("id").eq("medicine_id", medicine_id).execute()
+        
+        # Desativar todas as rotinas associadas
+        if routines_query.data:
+            for routine in routines_query.data:
+                supabase.table("routines").update({"fl_active": False}).eq("id", routine["id"]).execute()
+        
+        # Desativar o medicamento
         result = (supabase.table("medicines").update({"fl_active": False}).eq("id", medicine_id).eq("user_id", user_id).eq("fl_active", True).execute())
         return result.data[0] if result.data else None
     except Exception as e:
@@ -213,17 +228,45 @@ def delete_routine(routine_id: str, user_id: str):
 
 # Histórico.
 def insert_history(user_id: str, routine_id: str, fl_taken: bool, dt_hour: str = None):
-    """Insere um registro no histórico de uma rotina."""
-    data = {
-        "user_id": user_id,
-        "routine_id": routine_id,
-        "fl_taken": fl_taken,
-    }
-    if dt_hour is not None:
-        data["dt_hour"] = dt_hour
+    """Insere um registro no histórico de uma rotina e desconta estoque se tomou."""
     try:
+        # Buscar a rotina para obter o medicamento
+        routine_query = supabase.table("routines").select("*").eq("id", routine_id).execute()
+        if not routine_query.data:
+            print(f"Erro: Rotina {routine_id} não encontrada.")
+            return None
+        
+        routine = routine_query.data[0]
+        medicine_id = routine["medicine_id"]
+        
+        # Se tomou medicamento, decrementar estoque
+        if fl_taken:
+            # Buscar medicamento atual
+            medicine_query = supabase.table("medicines").select("stock").eq("id", medicine_id).execute()
+            if medicine_query.data:
+                current_stock = medicine_query.data[0]["stock"]
+                
+                # Garantir que não fica negativo (não desce abaixo de 0)
+                new_stock = max(0, current_stock - 1)
+                
+                # Atualizar estoque
+                try:
+                    supabase.table("medicines").update({"stock": new_stock}).eq("id", medicine_id).execute()
+                except Exception as e:
+                    print(f"Erro ao atualizar estoque: {e}")
+                    return None
+        
+        # Registrar no histórico
+        data = {
+            "user_id": user_id,
+            "routine_id": routine_id,
+            "fl_taken": fl_taken,
+        }
+        if dt_hour is not None:
+            data["dt_hour"] = dt_hour
+        
         result = supabase.table("history").insert(data).execute()
-        return result.data[0] if result.data else None # Retorna o registro criado.
+        return result.data[0] if result.data else None
     except Exception as e:
         print(f"Erro ao inserir histórico: {e}")
         return None

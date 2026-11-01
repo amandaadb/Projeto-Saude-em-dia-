@@ -13,7 +13,12 @@ def list_history(user_id: str = Depends(get_current_user)):
 
 @router.post("",response_model=HistoryResponse,tags=["History"])
 def create_history(history: HistoryCreate,user_id: str = Depends(get_current_user)):
-    """Registra se o usuário tomou ou não o medicamento."""
+    """
+    Registra se o usuário tomou ou não o medicamento.
+    
+    Importante: Quando fl_taken=True, o estoque do medicamento é decrementado automaticamente.
+    """
+    # 🔍Valida se a rotina existe
     routine = get_routine_by_id(
         routine_id=history.routine_id,
         user_id=user_id
@@ -23,6 +28,8 @@ def create_history(history: HistoryCreate,user_id: str = Depends(get_current_use
             status_code=404,
             detail="Rotina não encontrada."
         )
+    
+    # 🔍 PASSO 2: Registra o histórico (e desconta estoque se tomou)
     new_history = insert_history(
         routine_id=history.routine_id,
         user_id=user_id,

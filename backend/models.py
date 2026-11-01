@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, Field, validator
 from typing import Optional
 from datetime import date, datetime, time as Time
 
@@ -15,6 +15,14 @@ class UserCreate(BaseModel):
     emergency_contact_phone: Optional[str] = None # Telefone do contato de emergência (opcional).
     allergies: Optional[str] = None # Alergias (opcional).
     chronic_conditions: Optional[str] = None # Condições crônicas (opcional).
+    
+    @validator('phone')
+    def validate_phone(cls, v):
+        """Validar que telefone contém apenas números e caracteres válidos (+, -, espaço)."""
+        cleaned = v.replace('+', '').replace('-', '').replace(' ', '').replace('(', '').replace(')', '')
+        if not cleaned.isdigit():
+            raise ValueError('Telefone deve conter apenas números e caracteres válidos (+, -, parênteses)')
+        return v
 
 class UserLogin(BaseModel):
     """Dados para fazer login."""
@@ -55,33 +63,39 @@ class MedicineCreate(BaseModel):
     """Dados para criar um medicamento."""
     name: str # Nome (obrigatório). 
     dosage: str # Dosagem (obrigatório).
-    quantity: int # Quantidade (obrigatório).
+    quantity: int = Field(..., gt=0) # Quantidade (obrigatório e deve ser > 0).
     usage_type: Optional[str] = None # Tipo de uso (opcional).
     usage_instructions: Optional[str] = None # Instruções de uso (opcional).
-    stock: int = 0 # Estoque (padrão: 0).
+    stock: int = Field(default=0, ge=0) # Estoque (padrão: 0, deve ser >= 0).
     description: Optional[str] = None # Descrição (opcional).
+    stock_limit: int = Field(default=5, ge=0) # Limite de estoque para alertas (padrão: 5, deve ser >= 0).
+    notification_enabled: bool = True # Habilitar notificações de baixo estoque (padrão: True).
 
 class MedicineUpdate(BaseModel):
     """Dados para atualizar um medicamento."""
     name: Optional[str] = None # Nome (opcional).
     dosage: Optional[str] = None # Dosagem (opcional).
-    quantity: Optional[int] = None # Quantidade (opcional).
+    quantity: Optional[int] = Field(None, gt=0) # Quantidade (opcional, deve ser > 0 se informado).
     usage_type: Optional[str] = None # Tipo de uso (opcional).
     usage_instructions: Optional[str] = None # Instruções de uso (opcional).
-    stock: Optional[int] = None # Estoque (opcional).
+    stock: Optional[int] = Field(None, ge=0) # Estoque (opcional, deve ser >= 0 se informado).
     description: Optional[str] = None # Descrição (opcional).
+    stock_limit: Optional[int] = Field(None, ge=0) # Limite de estoque (opcional, deve ser >= 0 se informado).
+    notification_enabled: Optional[bool] = None # Habilitar/desabilitar notificações (opcional).
 
 class MedicineResponse(BaseModel):
     """Medicamento retornado."""
     id: str # ID do medicamento.
     user_id: str # ID do usuário (dono do medicamento).
     name: str # Nome.
-    dosage: str # Dosagem (pode ser None).
-    quantity: int # Quantidade (pode ser None).
-    usage_type: Optional[str] = None # Tipo de uso (pode ser None).
-    usage_instructions: Optional[str] = None # Instruções de uso (pode ser None).
-    stock: int # Estoque (pode ser None).
-    description: Optional[str] # Descrição (pode ser None).
+    dosage: str # Dosagem.
+    quantity: int # Quantidade.
+    usage_type: Optional[str] = None # Tipo de uso.
+    usage_instructions: Optional[str] = None # Instruções de uso.
+    stock: int # Estoque.
+    description: Optional[str] # Descrição.
+    stock_limit: int # Limite de estoque para alertas.
+    notification_enabled: bool # Se notificações estão habilitadas.
     fl_active: bool # Indica se o medicamento está ativo.
     dt_created: datetime # Data de criação.
     dt_updated: datetime # Data de atualização.

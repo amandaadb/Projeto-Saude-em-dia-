@@ -25,6 +25,8 @@ CREATE TABLE public.medicines (
     usage_instructions TEXT,
     stock INTEGER NOT NULL DEFAULT 0 CHECK (stock >= 0),
     description TEXT,
+    stock_limit INTEGER NOT NULL DEFAULT 5 CHECK (stock_limit >= 0),
+    notification_enabled BOOLEAN NOT NULL DEFAULT TRUE,
     fl_active BOOLEAN NOT NULL DEFAULT TRUE,
     dt_created TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     dt_updated TIMESTAMPTZ NOT NULL DEFAULT NOW(),

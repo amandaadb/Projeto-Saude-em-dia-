@@ -6,6 +6,26 @@ Documentação relacionada: [Leia-me principal](../README.md) · [Front-end](../
 
 ---
 
+## ✨ NOVIDADES (Outubro 2026)
+
+Foram implementados **6 ajustes importantes**:
+
+1. ✅ **Campo de limite de estoque** (`stock_limit`) - Customizável por medicamento
+2. ✅ **Controle de notificações** (`notification_enabled`) - Habilitar/desabilitar alertas
+3. ✅ **Desconto automático de estoque** - Quando registra dose (`fl_taken: true`)
+4. ✅ **Desativação de rotinas** - Ao deletar medicamento, rotinas são desativadas
+5. ✅ **Validação de números** - Campos numéricos não aceitam valores inválidos
+6. ✅ **Documentação melhorada** - Código com comentários explicativos
+
+📚 **Documentação completa:**
+- [`ANALISE_BACKEND.md`](./ANALISE_BACKEND.md) - Análise técnica completa
+- [`ENDPOINTS_ATUALIZADOS.md`](./ENDPOINTS_ATUALIZADOS.md) - Todos os endpoints
+- [`MIGRATION_GUIDE.md`](./MIGRATION_GUIDE.md) - Passo a passo da migração do banco
+- [`RESUMO_AJUSTES.md`](./RESUMO_AJUSTES.md) - Resumo visual dos ajustes
+- [`TESTE_APIS.sh`](./TESTE_APIS.sh) - Script para testar todas as APIs
+
+---
+
 ## Como rodar?
 
 ### Pré-requisitos

@@ -14,6 +14,7 @@ def list_routines(user_id: str = Depends(get_current_user)):
 @router.post("", response_model=RoutineResponse, tags=["Routines"])
 def create_routine(routine: RoutineCreate, user_id: str = Depends(get_current_user)):
     """Cria uma rotina para um medicamento do usuário."""
+    # Valida se o medicamento existe
     medicine = get_medicine_by_id(
         medicine_id=routine.medicine_id,
         user_id=user_id
@@ -23,6 +24,8 @@ def create_routine(routine: RoutineCreate, user_id: str = Depends(get_current_us
             status_code=404,
             detail="Medicamento não encontrado."
         )
+    
+    # Cria a rotina
     new_routine = insert_routine(
         user_id=user_id,
         medicine_id=routine.medicine_id,
@@ -61,6 +64,7 @@ def get_routine(routine_id: str, user_id: str = Depends(get_current_user)):
 )
 def update_routine(routine_id: str, routine: RoutineUpdate, user_id: str = Depends(get_current_user)):
     """Atualiza uma rotina."""
+    # Busca a rotina existente
     existing_routine = get_routine_by_id(
         routine_id=routine_id,
         user_id=user_id
@@ -70,6 +74,8 @@ def update_routine(routine_id: str, routine: RoutineUpdate, user_id: str = Depen
             status_code=404,
             detail="Rotina não encontrada."
         )
+    
+    # Atualiza a rotina
     updated_routine = update_routine_db(
         routine_id=routine_id,
         user_id=user_id,
@@ -91,6 +97,7 @@ def update_routine(routine_id: str, routine: RoutineUpdate, user_id: str = Depen
 @router.delete("/{routine_id}", tags=["Routines"])
 def delete_routine(routine_id: str, user_id: str = Depends(get_current_user)):
     """Desativa uma rotina."""
+    # Valida se a rotina existe
     existing_routine = get_routine_by_id(
         routine_id=routine_id,
         user_id=user_id
@@ -100,6 +107,8 @@ def delete_routine(routine_id: str, user_id: str = Depends(get_current_user)):
             status_code=404,
             detail="Rotina não encontrada."
         )
+    
+    # Desativa a rotina
     deleted_routine = delete_routine_db(
         routine_id=routine_id,
         user_id=user_id
