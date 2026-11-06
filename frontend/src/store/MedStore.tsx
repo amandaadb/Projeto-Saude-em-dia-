@@ -12,6 +12,7 @@
 import { createContext, ReactNode, useContext, useState } from 'react';
 import * as mock from '../mocks/data';
 import { History, Medicine, MedicineInput, Routine, User, UserInput } from '../types/api';
+import { MAX_STOCK } from '../utils/doses';
 
 export type NotificationPrefs = {
   doseReminders: boolean;
@@ -93,9 +94,12 @@ export function MedStoreProvider({ children }: { children: ReactNode }) {
   }
 
   // PUT /api/medicines/{id}  { stock }
+  // Estoque fica sempre entre 0 e MAX_STOCK (o piso é regra do banco; o teto, do app).
   function adjustStock(id: string, delta: number) {
     setMedicines((prev) =>
-      prev.map((m) => (m.id === id ? { ...m, stock: Math.max(0, m.stock + delta) } : m))
+      prev.map((m) =>
+        m.id === id ? { ...m, stock: Math.min(MAX_STOCK, Math.max(0, m.stock + delta)) } : m
+      )
     );
   }
 

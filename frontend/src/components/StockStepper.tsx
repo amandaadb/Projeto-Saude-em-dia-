@@ -6,15 +6,21 @@ import { colors, radius, spacing, typography } from '../theme';
 type Props = {
   value: number;
   onChange: (delta: number) => void;
+  max?: number; // com teto definido, o "+" desativa ao chegar nele
 };
 
-export function StockStepper({ value, onChange }: Props) {
+export function StockStepper({ value, onChange, max }: Props) {
   return (
     <View style={styles.row}>
       <Text style={styles.label}>Estoque</Text>
       <Step symbol="−" label="Diminuir estoque" onPress={() => onChange(-1)} disabled={value === 0} />
       <Text style={styles.value}>{value} un.</Text>
-      <Step symbol="+" label="Aumentar estoque" onPress={() => onChange(1)} />
+      <Step
+        symbol="+"
+        label="Aumentar estoque"
+        onPress={() => onChange(1)}
+        disabled={max !== undefined && value >= max}
+      />
     </View>
   );
 }

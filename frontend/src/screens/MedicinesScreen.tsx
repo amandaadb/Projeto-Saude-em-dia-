@@ -8,7 +8,7 @@ import { MedicationCard } from '../components/MedicationCard';
 import { StockStepper } from '../components/StockStepper';
 import { AppButton } from '../components/AppButton';
 import { useMedStore } from '../store/MedStore';
-import { LOW_STOCK_THRESHOLD } from '../utils/doses';
+import { isLowStock, MAX_STOCK } from '../utils/doses';
 
 type Props = {
   onAdd: () => void;
@@ -46,10 +46,10 @@ export function MedicinesScreen({ onAdd, onEdit }: Props) {
             name={item.name}
             dosage={item.dosage}
             subtitle={timesOf(item.id) || 'Sem horários definidos'}
-            lowStock={item.stock <= LOW_STOCK_THRESHOLD}
+            lowStock={isLowStock(item)}
             onPress={() => onEdit(item.id)}
           >
-            <StockStepper value={item.stock} onChange={(delta) => adjustStock(item.id, delta)} />
+            <StockStepper value={item.stock} max={MAX_STOCK} onChange={(delta) => adjustStock(item.id, delta)} />
           </MedicationCard>
         )}
       />

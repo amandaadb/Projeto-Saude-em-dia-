@@ -24,5 +24,9 @@ export const formatDate = (iso: string) => new Date(iso).toLocaleDateString('pt-
 export const formatTime = (iso: string) =>
   new Date(iso).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
 
+// Só dígitos: tira letras, espaços, sinais e pontuação. O keyboardType numérico
+// não basta (na web e ao colar texto ainda entram letras), então filtramos no onChangeText.
+export const onlyDigits = (v: string) => v.replace(/\D/g, '');
+
 // Campo de texto vazio vira null (o back espera null, não "")
 export const emptyToNull = (v: string) => (v.trim() === '' ? null : v.trim());

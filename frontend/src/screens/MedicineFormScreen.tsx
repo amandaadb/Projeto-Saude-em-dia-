@@ -8,8 +8,10 @@ import { colors, palette, radius, spacing, typography } from '../theme';
 import { AppInput } from '../components/AppInput';
 import { AppButton } from '../components/AppButton';
 import { Section } from '../components/Section';
+import { SwitchRow } from '../components/SwitchRow';
 import { useMedStore } from '../store/MedStore';
-import { emptyToNull, isValidTime } from '../utils/format';
+import { emptyToNull, isValidTime, onlyDigits } from '../utils/format';
+import { LOW_STOCK_THRESHOLD, MAX_DOSE_QUANTITY, MAX_STOCK } from '../utils/doses';
 
 type Props = {
   medicineId?: string;
@@ -25,6 +27,8 @@ export function MedicineFormScreen({ medicineId, onDone }: Props) {
   const [dosage, setDosage] = useState(editing?.dosage ?? '');
   const [quantity, setQuantity] = useState(String(editing?.quantity ?? 1));
   const [stock, setStock] = useState(String(editing?.stock ?? 0));
+  // Aviso de estoque baixo: ligado por padrão (e para remédios sem o campo ainda)
+  const [stockAlert, setStockAlert] = useState(editing?.stock_alert ?? true);
   const [usageType, setUsageType] = useState(editing?.usage_type ?? '');
   const [instructions, setInstructions] = useState(editing?.usage_instructions ?? '');
   const [description, setDescription] = useState(editing?.description ?? '');
@@ -44,13 +48,15 @@ export function MedicineFormScreen({ medicineId, onDone }: Props) {
     setErrors({ ...errors, time: '' });
   }
 
-  // Validação espelha as regras do banco (tables.sql)
+  // Validação espelha as regras do banco (tables.sql) + os tetos do app (MAX_*)
   function validate() {
     const e: Record<string, string> = {};
     if (!name.trim()) e.name = 'Informe o nome';
     if (!dosage.trim()) e.dosage = 'Informe a dosagem';
     if (!/^\d+$/.test(quantity) || Number(quantity) <= 0) e.quantity = 'Número inteiro maior que zero';
+    else if (Number(quantity) > MAX_DOSE_QUANTITY) e.quantity = `Máximo de ${MAX_DOSE_QUANTITY} por dose`;
     if (!/^\d+$/.test(stock)) e.stock = 'Número inteiro (0 ou mais)';
+    else if (Number(stock) > MAX_STOCK) e.stock = `Máximo de ${MAX_STOCK} unidades`;
     setErrors(e);
     return Object.keys(e).length === 0;
   }
@@ -69,6 +75,7 @@ export function MedicineFormScreen({ medicineId, onDone }: Props) {
       dosage: dosage.trim(),
       quantity: Number(quantity),
       stock: Number(stock),
+      stock_alert: stockAlert,
       usage_type: emptyToNull(usageType),
       usage_instructions: emptyToNull(instructions),
       description: emptyToNull(description),
@@ -92,8 +99,28 @@ export function MedicineFormScreen({ medicineId, onDone }: Props) {
         <Section title="Dados do medicamento">
           <AppInput label="Nome *" value={name} onChangeText={setName} error={errors.name} placeholder="Ex.: Losartana" />
           <AppInput label="Dosagem *" value={dosage} onChangeText={setDosage} error={errors.dosage} placeholder="Ex.: 50 mg" />
-          <AppInput label="Quantidade por dose *" value={quantity} onChangeText={setQuantity} error={errors.quantity} keyboardType="number-pad" />
-          <AppInput label="Estoque atual (unidades)" value={stock} onChangeText={setStock} error={errors.stock} keyboardType="number-pad" />
+          <AppInput
+            label="Quantidade por dose *"
+            value={quantity}
+            onChangeText={(v) => setQuantity(onlyDigits(v))}
+            error={errors.quantity}
+            keyboardType="number-pad"
+            maxLength={String(MAX_DOSE_QUANTITY).length}
+          />
+          <AppInput
+            label="Estoque atual (unidades)"
+            value={stock}
+            onChangeText={(v) => setStock(onlyDigits(v))}
+            error={errors.stock}
+            keyboardType="number-pad"
+            maxLength={String(MAX_STOCK).length}
+          />
+          <SwitchRow
+            label="Avisar quando o estoque estiver baixo"
+            description={`Mostra o alerta ⚠️ com ${LOW_STOCK_THRESHOLD} unidades ou menos`}
+            value={stockAlert}
+            onChange={setStockAlert}
+          />
           <AppInput label="Tipo de uso" value={usageType} onChangeText={setUsageType} placeholder="Ex.: Oral, Tópico" />
           <AppInput label="Instruções de uso" value={instructions} onChangeText={setInstructions} placeholder="Ex.: Após o café" />
           <AppInput label="Descrição" value={description} onChangeText={setDescription} multiline />
