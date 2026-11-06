@@ -11,9 +11,19 @@
 import { DoseStatus } from '../theme';
 import { History, Medicine, Routine } from '../types/api';
 
-// ⚠️ O banco não tem campo de limite de estoque. Valor provisório no front;
-// sugerir ao back um campo `stock_alert` em medicines.
+// Tetos de cadastro, usados no formulário (validate) e no store (adjustStock).
+// ⚠️ O banco só exige quantity > 0 e stock >= 0; estes máximos valem só no app.
+export const MAX_STOCK = 999;
+export const MAX_DOSE_QUANTITY = 20;
+
+// ⚠️ O banco não tem campo de limite de estoque. Valor provisório no front.
+// O liga/desliga do aviso por remédio é `stock_alert` (types/api.ts), também ainda sem coluna no back.
 export const LOW_STOCK_THRESHOLD = 5;
+
+// Regra do ⚠️ — usada em Hoje e em Medicamentos, para as duas abas sempre concordarem.
+// `!== false`: remédio sem o campo (o back ainda não devolve) continua avisando, como antes.
+export const isLowStock = (m: Pick<Medicine, 'stock' | 'stock_alert'>) =>
+  m.stock_alert !== false && m.stock <= LOW_STOCK_THRESHOLD;
 
 export type TodayDose = {
   routineId: string;
@@ -56,7 +66,7 @@ export function buildTodayDoses(
         medicine,
         time: r.time.slice(0, 5),
         status,
-        lowStock: medicine.stock <= LOW_STOCK_THRESHOLD,
+        lowStock: isLowStock(medicine),
       };
     })
     .filter((d): d is TodayDose => d !== null)

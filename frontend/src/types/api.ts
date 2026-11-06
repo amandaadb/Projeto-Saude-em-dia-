@@ -9,7 +9,11 @@ export type Medicine = {
   quantity: number;                  // obrigatório e > 0 no banco (semântica: confirmar com o back)
   usage_type: string | null;
   usage_instructions: string | null;
-  stock: number;                     // >= 0
+  stock: number;                     // >= 0 (teto de 999 só no app: MAX_STOCK em utils/doses.ts)
+  // Liga/desliga do aviso ⚠️ de estoque baixo, por remédio.
+  // ⚠️ CAMPO NOVO: ainda NÃO existe no back (falta a coluna em tables.sql e o campo em models.py).
+  // Enquanto o back não devolver, `undefined` é tratado como ligado (ver isLowStock em utils/doses.ts).
+  stock_alert: boolean;
   description: string | null;
   fl_active: boolean;
   dt_created: string;
@@ -60,7 +64,7 @@ export type User = {
 // Campos que o formulário envia (MedicineCreate / MedicineUpdate)
 export type MedicineInput = Pick<
   Medicine,
-  'name' | 'dosage' | 'quantity' | 'usage_type' | 'usage_instructions' | 'stock' | 'description'
+  'name' | 'dosage' | 'quantity' | 'usage_type' | 'usage_instructions' | 'stock' | 'stock_alert' | 'description'
 >;
 
 // Campos editáveis do perfil (UserUpdate, sem senha)

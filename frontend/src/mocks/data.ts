@@ -7,7 +7,7 @@ const USER = 'u1';
 
 const med = (id: string, name: string, dosage: string, stock: number): Medicine => ({
   id, user_id: USER, name, dosage, quantity: 1, usage_type: 'Oral',
-  usage_instructions: null, stock, description: null, fl_active: true,
+  usage_instructions: null, stock, stock_alert: true, description: null, fl_active: true,
   dt_created: now, dt_updated: now,
 });
 
