@@ -1,6 +1,37 @@
 from pydantic import BaseModel, EmailStr, Field, validator
 from typing import Optional
 from datetime import date, datetime, time as Time
+from typing import Literal
+import re
+
+def normalize_days_of_week(value: str) -> str:
+    """Padroniza os dias aceitos pelo agendador."""
+    value = value.strip().lower()
+    if value == "todos":
+        return "Todos"
+    days = [day.strip() for day in value.split(",")]
+    valid_days = {"seg", "ter", "qua", "qui", "sex", "sab", "dom"}
+    if not days or any(day not in valid_days for day in days) or len(days) != len(set(days)):
+        raise ValueError("Use Todos ou dias separados por vírgula: seg,ter,qua,qui,sex,sab,dom.")
+    return ",".join(days)
+
+class ReminderPreferencesUpdate(BaseModel):
+    """Canal e número para lembretes, com consentimento explícito."""
+    channel: Literal["sms"]
+    phone: str
+    consent: Literal[True]
+
+    @validator("phone")
+    def validate_reminder_phone(cls, value):
+        if not re.fullmatch(r"\+[1-9][0-9]{7,14}", value):
+            raise ValueError("Use o formato internacional E.164, por exemplo +5511999999999.")
+        return value
+
+class ReminderPreferencesResponse(BaseModel):
+    enabled: bool
+    channel: Optional[Literal["sms", "whatsapp"]] = None
+    phone: Optional[str] = None
+    consent_at: Optional[datetime] = None
 
 # Usuários.
 class UserCreate(BaseModel):
@@ -107,10 +138,16 @@ class RoutineCreate(BaseModel):
     time: Time # Horário  - Formato HH:MM.
     days_of_week: str = "Todos" # Dias da semana.
 
+    _normalize_days = validator("days_of_week", allow_reuse=True)(normalize_days_of_week)
+
 class RoutineUpdate(BaseModel):
     """Dados para atualizar uma rotina."""
     time: Optional[Time] = None # Mudar horário (opcional).
     days_of_week: Optional[str] = None # Mudar dias da semana (opcional).
+
+    @validator("days_of_week")
+    def validate_days(cls, value):
+        return normalize_days_of_week(value) if value is not None else value
 
 class RoutineResponse(BaseModel):
     """Rotina retornada"""

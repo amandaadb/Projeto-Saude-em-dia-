@@ -6,3 +6,9 @@ supabase
 PyJWT
 bcrypt
 python-multipart
+APScheduler>=3.10,<4
+twilio
+tzdata
+requests
+httpx
+postgrest

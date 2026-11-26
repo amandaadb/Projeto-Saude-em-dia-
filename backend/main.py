@@ -2,11 +2,23 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from config import settings
+from contextlib import asynccontextmanager
+from reminders import start_reminder_scheduler
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    scheduler = start_reminder_scheduler() if settings.REMINDERS_ENABLED else None
+    try:
+        yield
+    finally:
+        if scheduler:
+            scheduler.shutdown(wait=True)
 
 # Criar a API.
 app = FastAPI(
     title="API: Saúde em Dia",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 # Permitir requisições do frontend.
@@ -40,6 +52,9 @@ app.include_router(routines.router, prefix="/api/routines")
 
 from routes import history # Histórico.
 app.include_router(history.router, prefix="/api/history")
+
+from routes import reminders as reminder_routes
+app.include_router(reminder_routes.router, prefix="/api/reminders")
 
 # Executar a API.
 if __name__ == "__main__":

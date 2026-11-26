@@ -228,48 +228,14 @@ def delete_routine(routine_id: str, user_id: str):
 
 # Histórico.
 def insert_history(user_id: str, routine_id: str, fl_taken: bool, dt_hour: str = None):
-    """Insere um registro no histórico de uma rotina e desconta estoque se tomou."""
-    try:
-        # Buscar a rotina para obter o medicamento
-        routine_query = supabase.table("routines").select("*").eq("id", routine_id).execute()
-        if not routine_query.data:
-            print(f"Erro: Rotina {routine_id} não encontrada.")
-            return None
-        
-        routine = routine_query.data[0]
-        medicine_id = routine["medicine_id"]
-        
-        # Se tomou medicamento, decrementar estoque
-        if fl_taken:
-            # Buscar medicamento atual
-            medicine_query = supabase.table("medicines").select("stock").eq("id", medicine_id).execute()
-            if medicine_query.data:
-                current_stock = medicine_query.data[0]["stock"]
-                
-                # Garantir que não fica negativo (não desce abaixo de 0)
-                new_stock = max(0, current_stock - 1)
-                
-                # Atualizar estoque
-                try:
-                    supabase.table("medicines").update({"stock": new_stock}).eq("id", medicine_id).execute()
-                except Exception as e:
-                    print(f"Erro ao atualizar estoque: {e}")
-                    return None
-        
-        # Registrar no histórico
-        data = {
-            "user_id": user_id,
-            "routine_id": routine_id,
-            "fl_taken": fl_taken,
-        }
-        if dt_hour is not None:
-            data["dt_hour"] = dt_hour
-        
-        result = supabase.table("history").insert(data).execute()
-        return result.data[0] if result.data else None
-    except Exception as e:
-        print(f"Erro ao inserir histórico: {e}")
-        return None
+    """Registra o histórico e atualiza o estoque na mesma transação."""
+    result = supabase.rpc("record_dose_history", {
+        "p_user_id": user_id,
+        "p_routine_id": routine_id,
+        "p_fl_taken": fl_taken,
+        "p_dt_hour": dt_hour,
+    }).execute()
+    return result.data[0] if result.data else None
 
 def get_history_by_user(user_id: str):
     """Retorna todo o histórico de um usuário."""
