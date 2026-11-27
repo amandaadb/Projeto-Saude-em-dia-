@@ -16,6 +16,13 @@ class Settings:
     GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
     GOOGLE_REDIRECT_URI = os.getenv("GOOGLE_REDIRECT_URI")
 
+    # Lembretes por Twilio.
+    REMINDERS_ENABLED = os.getenv("REMINDERS_ENABLED", "False").lower() == "true"
+    TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
+    TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+    TWILIO_SMS_FROM = os.getenv("TWILIO_SMS_FROM")
+    TWILIO_TRIAL_MODE = os.getenv("TWILIO_TRIAL_MODE", "False").lower() == "true"
+
     # JWT (segurança).
     SECRET_KEY = os.getenv("SECRET_KEY")
     ALGORITHM = os.getenv("ALGORITHM", "HS256")
